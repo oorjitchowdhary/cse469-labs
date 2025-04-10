@@ -24,7 +24,7 @@ module mux32_1 (
 		.i12(i12), .i13(i13), .i14(i14), .i15(i15),
 		.sel0(sel0), .sel1(sel1), .sel2(sel2), .sel3(sel3)
 	);
-	mux16_1 m0 (
+	mux16_1 m1 (
 		.out(out1),
 		.i0(i16), .i1(i17), .i2(i18), .i3(i19),
 		.i4(i20), .i5(i21), .i6(i22), .i7(i23),
