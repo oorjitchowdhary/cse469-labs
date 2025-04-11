@@ -1,5 +1,5 @@
 module decoder_5to32 (
-    input  logic [4:0] input,
+    input  logic [4:0] in,
     input  logic       enable,
     output logic [31:0] RegNo
 );
@@ -12,7 +12,7 @@ module decoder_5to32 (
     generate
         for (i = 0; i < 31; i = i + 1) begin
             for (j = 0; j < 5; j = j + 1) begin
-                assign match[i][j] = ~(input[j] ^ i[j]);
+                assign match[i][j] = ~(in[j] ^ i[j]);
             end
 
             assign eq_match[i] = match[i][0] & match[i][1] & match[i][2] & match[i][3] & match[i][4];

@@ -27,4 +27,27 @@ module mux16_1 (
 	
 	mux2_1 m (.out(out), .i0(out0), .i1(out1), .sel(sel3));
 endmodule
-	
+
+module mux16_1_testbench();
+  logic i0, i1, i2, i3, i4, i5, i6, i7;
+  logic i8, i9, i10, i11, i12, i13, i14, i15;
+  logic sel0, sel1, sel2, sel3;
+  logic out;
+
+  mux16_1 dut (.out(out),
+               .i0(i0), .i1(i1), .i2(i2), .i3(i3),
+               .i4(i4), .i5(i5), .i6(i6), .i7(i7),
+               .i8(i8), .i9(i9), .i10(i10), .i11(i11),
+               .i12(i12), .i13(i13), .i14(i14), .i15(i15),
+               .sel0(sel0), .sel1(sel1), .sel2(sel2), .sel3(sel3));
+
+  integer i;
+  initial begin
+    {i0, i1, i2, i3, i4, i5, i6, i7,
+     i8, i9, i10, i11, i12, i13, i14, i15} = 16'b1001011001101001;
+
+    for (i = 0; i < 16; i++) begin
+      {sel3, sel2, sel1, sel0} = i; #10;
+    end
+  end
+endmodule

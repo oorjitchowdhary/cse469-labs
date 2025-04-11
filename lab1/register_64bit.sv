@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 module register_64bit (q, d, clk, enable, reset);
 	output logic [63:0] q;
 	input logic [63:0] d;
@@ -22,7 +24,7 @@ module register_64bit (q, d, clk, enable, reset);
 			or #50 or_mux (mux_result, sel_d, sel_q);
 			assign next_d[i] = mux_result;
 			
-			dff dff_i (.q(q[i]), .d(next_d[i]), .reset(reset), .clk(clk));
+			D_FF dff_i (.q(q[i]), .d(next_d[i]), .reset(reset), .clk(clk));
 		end
 	endgenerate
 endmodule

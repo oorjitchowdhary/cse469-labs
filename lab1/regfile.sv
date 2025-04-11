@@ -1,62 +1,69 @@
+`timescale 1ns/10ps
+
 module regfile (
-    output logic [63:0] ReadData1, ReadData2,
-    input  logic [63:0] WriteData,
-    input  logic [4:0]  ReadRegister1, ReadRegister2, WriteRegister,
-    input  logic        RegWrite, clk
+  output logic [63:0] ReadData1,
+  output logic [63:0] ReadData2,
+  input  logic [63:0] WriteData,
+  input  logic [4:0] ReadRegister1,
+  input  logic [4:0] ReadRegister2,
+  input  logic [4:0] WriteRegister,
+  input  logic RegWrite,
+  input  logic clk
 );
 
-    logic [63:0] registers [0:30]; // 31 registers (0–30), 64-bit wide
-    logic [31:0] decoder_out;
+  // One-hot write enable lines for 32 registers
+  logic [31:0] write_enable;
+  logic [63:0] reg_out[31:0]; // 32 outputs of Register64s
 
     // Instantiate 5-to-32 decoder
-    decoder_5to32 decoder (
-        .input(WriteRegister),
-        .enable(RegWrite),
-        .RegNo(decoder_out)
-    );
+  decoder_5to32 decoder (
+    .RegNo(write_enable),
+    .in(WriteRegister),
+    .enable(RegWrite)
+  );
 
-    genvar i;
-    generate
-        for (i = 0; i < 31; i = i + 1) begin : reg_block
-            register_64bit reg_i (
-                .q(registers[i]),
-                .d(WriteData),
-                .clk(clk),
-                .enable(decoder_out[i]),
-                .reset(1'b0) // no external reset for now
-            );
-        end
-    endgenerate
+  genvar i;
+  generate
+    for (i = 0; i < 32; i = i + 1) begin : regfile_gen
+      register_64bit reg_i (
+        .q(reg_out[i]),
+        .d(WriteData),
+        .clk(clk),
+        .reset(1'b0),
+        .enable(write_enable[i])
+      );
+    end
+  endgenerate
 
-    // Tie register 31 to constant 0s
-    logic [63:0] zero;
-    assign zero = 64'h0000000000000000;
+  // Register 31 is hardwired to zero
+  assign reg_out[31] = 64'b0;
 
-    // Output multiplexer for ReadData1 and ReadData2
-    mux32_64bit readmux1 (
-        .out(ReadData1),
-        .in0(registers[0]),  .in1(registers[1]),  .in2(registers[2]),  .in3(registers[3]),
-        .in4(registers[4]),  .in5(registers[5]),  .in6(registers[6]),  .in7(registers[7]),
-        .in8(registers[8]),  .in9(registers[9]),  .in10(registers[10]),.in11(registers[11]),
-        .in12(registers[12]),.in13(registers[13]),.in14(registers[14]),.in15(registers[15]),
-        .in16(registers[16]),.in17(registers[17]),.in18(registers[18]),.in19(registers[19]),
-        .in20(registers[20]),.in21(registers[21]),.in22(registers[22]),.in23(registers[23]),
-        .in24(registers[24]),.in25(registers[25]),.in26(registers[26]),.in27(registers[27]),
-        .in28(registers[28]),.in29(registers[29]),.in30(registers[30]),.in31(zero),
-        .sel(ReadRegister1)
-    );
+  // Read Mux 1
+  mux32_64bit read_mux1 (
+    .out(ReadData1),
+    .in0(reg_out[0]),  .in1(reg_out[1]),  .in2(reg_out[2]),  .in3(reg_out[3]),
+    .in4(reg_out[4]),  .in5(reg_out[5]),  .in6(reg_out[6]),  .in7(reg_out[7]),
+    .in8(reg_out[8]),  .in9(reg_out[9]),  .in10(reg_out[10]),.in11(reg_out[11]),
+    .in12(reg_out[12]),.in13(reg_out[13]),.in14(reg_out[14]),.in15(reg_out[15]),
+    .in16(reg_out[16]),.in17(reg_out[17]),.in18(reg_out[18]),.in19(reg_out[19]),
+    .in20(reg_out[20]),.in21(reg_out[21]),.in22(reg_out[22]),.in23(reg_out[23]),
+    .in24(reg_out[24]),.in25(reg_out[25]),.in26(reg_out[26]),.in27(reg_out[27]),
+    .in28(reg_out[28]),.in29(reg_out[29]),.in30(reg_out[30]),.in31(reg_out[31]),
+    .sel(ReadRegister1)
+  );
 
-    mux32_64bit readmux2 (
-        .out(ReadData2),
-        .in0(registers[0]),  .in1(registers[1]),  .in2(registers[2]),  .in3(registers[3]),
-        .in4(registers[4]),  .in5(registers[5]),  .in6(registers[6]),  .in7(registers[7]),
-        .in8(registers[8]),  .in9(registers[9]),  .in10(registers[10]),.in11(registers[11]),
-        .in12(registers[12]),.in13(registers[13]),.in14(registers[14]),.in15(registers[15]),
-        .in16(registers[16]),.in17(registers[17]),.in18(registers[18]),.in19(registers[19]),
-        .in20(registers[20]),.in21(registers[21]),.in22(registers[22]),.in23(registers[23]),
-        .in24(registers[24]),.in25(registers[25]),.in26(registers[26]),.in27(registers[27]),
-        .in28(registers[28]),.in29(registers[29]),.in30(registers[30]),.in31(zero),
-        .sel(ReadRegister2)
-    );
+  // Read Mux 2
+  mux32_64bit read_mux2 (
+    .out(ReadData2),
+    .in0(reg_out[0]),  .in1(reg_out[1]),  .in2(reg_out[2]),  .in3(reg_out[3]),
+    .in4(reg_out[4]),  .in5(reg_out[5]),  .in6(reg_out[6]),  .in7(reg_out[7]),
+    .in8(reg_out[8]),  .in9(reg_out[9]),  .in10(reg_out[10]),.in11(reg_out[11]),
+    .in12(reg_out[12]),.in13(reg_out[13]),.in14(reg_out[14]),.in15(reg_out[15]),
+    .in16(reg_out[16]),.in17(reg_out[17]),.in18(reg_out[18]),.in19(reg_out[19]),
+    .in20(reg_out[20]),.in21(reg_out[21]),.in22(reg_out[22]),.in23(reg_out[23]),
+    .in24(reg_out[24]),.in25(reg_out[25]),.in26(reg_out[26]),.in27(reg_out[27]),
+    .in28(reg_out[28]),.in29(reg_out[29]),.in30(reg_out[30]),.in31(reg_out[31]),
+    .sel(ReadRegister2)
+  );
 
 endmodule

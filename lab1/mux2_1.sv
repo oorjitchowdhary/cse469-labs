@@ -6,19 +6,15 @@ module mux2_1 (out, i0, i1, sel);
 endmodule
 
 module mux2_1_testbench();
-	logic i0, i1, sel;
-	logic out;
+  logic i0, i1, sel;
+  logic out;
 
-	mux2_1 dut (.out, .i0, .i1, .sel);
+  mux2_1 dut (.out(out), .i0(i0), .i1(i1), .sel(sel));
 
-	initial begin
-		sel=0; i0=0; i1=0; #10;
-		sel=0; i0=0; i1=1; #10;
-		sel=0; i0=1; i1=0; #10;
-		sel=0; i0=1; i1=1; #10;
-		sel=1; i0=0; i1=0; #10;
-		sel=1; i0=0; i1=1; #10;
-		sel=1; i0=1; i1=0; #10;
-		sel=1; i0=1; i1=1; #10;
-	end
+  integer i;
+  initial begin
+    for (i = 0; i < 8; i++) begin
+      {sel, i0, i1} = i; #10;
+    end
+  end
 endmodule
