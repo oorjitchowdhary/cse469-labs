@@ -675,3 +675,10 @@ set_global_assignment -name SYSTEMVERILOG_FILE math.sv
 set_global_assignment -name SYSTEMVERILOG_FILE instructmem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE datamem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alustim.sv
+set_global_assignment -name SYSTEMVERILOG_FILE dff.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux16_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux32_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux32_64bit.sv
