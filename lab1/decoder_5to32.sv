@@ -12,11 +12,17 @@ module decoder_5to32 (
     generate
         for (i = 0; i < 31; i = i + 1) begin
             for (j = 0; j < 5; j = j + 1) begin
-                assign match[i][j] = ~(in[j] ^ i[j]);
+                wire xor_out;
+					 xor (xor_out, in[j], i[j]);      // xor_out = in[j] ^ i[j]
+					 not (match[i][j], xor_out);  
             end
 
-            assign eq_match[i] = match[i][0] & match[i][1] & match[i][2] & match[i][3] & match[i][4];
-            assign RegNo[i] = enable & eq_match[i];
+            wire and1_out, and2_out;
+				and (and1_out, match[i][0], match[i][1], match[i][2]); 
+				and (and2_out, match[i][3], match[i][4]);             
+				and (eq_match[i], and1_out, and2_out);                 
+
+            and (RegNo[i], enable, eq_match[i]);
         end
     endgenerate
 

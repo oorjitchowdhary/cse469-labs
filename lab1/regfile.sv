@@ -11,11 +11,9 @@ module regfile (
   input  logic clk
 );
 
-  // One-hot write enable lines for 32 registers
   logic [31:0] write_enable;
   logic [63:0] reg_out[31:0]; // 32 outputs of Register64s
 
-    // Instantiate 5-to-32 decoder
   decoder_5to32 decoder (
     .RegNo(write_enable),
     .in(WriteRegister),
@@ -35,10 +33,8 @@ module regfile (
     end
   endgenerate
 
-  // Register 31 is hardwired to zero
   assign reg_out[31] = 64'b0;
 
-  // Read Mux 1
   mux32_64bit read_mux1 (
     .out(ReadData1),
     .in0(reg_out[0]),  .in1(reg_out[1]),  .in2(reg_out[2]),  .in3(reg_out[3]),
@@ -52,7 +48,6 @@ module regfile (
     .sel(ReadRegister1)
   );
 
-  // Read Mux 2
   mux32_64bit read_mux2 (
     .out(ReadData2),
     .in0(reg_out[0]),  .in1(reg_out[1]),  .in2(reg_out[2]),  .in3(reg_out[3]),
