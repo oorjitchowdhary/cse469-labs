@@ -16,7 +16,7 @@ module adder_64bit (
 	// loop for bits between LSB and MSB
 	genvar i;
 	generate
-		for (i = 1; i < 63; i = i + 1) begin
+		for (i = 1; i < 63; i = i + 1) begin: add_loop
 			adder ai (.a(a[i]), .b(b[i]), .cin(carrys[i-1]), .sum(sum[i]), .cout(carrys[i]));
 		end
 	endgenerate

@@ -1,147 +1,117 @@
 # Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
 do runlab.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:00 on Apr 11,2025
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
+# Start time: 13:06:27 on Apr 18,2025
+# vlog -reportprogress 300 ./adder.sv 
+# -- Compiling module adder
 # 
 # Top level modules:
-# 	mux2_1_testbench
-# End time: 15:21:00 on Apr 11,2025, Elapsed time: 0:00:00
+# 	adder
+# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:00 on Apr 11,2025
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# -- Compiling module mux4_1_testbench
+# Start time: 13:06:28 on Apr 18,2025
+# vlog -reportprogress 300 ./or_64bit.sv 
+# -- Compiling module or_64bit
 # 
 # Top level modules:
-# 	mux4_1_testbench
-# End time: 15:21:00 on Apr 11,2025, Elapsed time: 0:00:00
+# 	or_64bit
+# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:01 on Apr 11,2025
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
+# Start time: 13:06:28 on Apr 18,2025
+# vlog -reportprogress 300 ./and_64bit.sv 
+# -- Compiling module and_64bit
 # 
 # Top level modules:
-# 	mux8_1_testbench
-# End time: 15:21:01 on Apr 11,2025, Elapsed time: 0:00:00
+# 	and_64bit
+# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:01 on Apr 11,2025
-# vlog -reportprogress 300 ./mux16_1.sv 
-# -- Compiling module mux16_1
-# -- Compiling module mux16_1_testbench
+# Start time: 13:06:28 on Apr 18,2025
+# vlog -reportprogress 300 ./xor_64bit.sv 
+# -- Compiling module xor_64bit
 # 
 # Top level modules:
-# 	mux16_1_testbench
-# End time: 15:21:01 on Apr 11,2025, Elapsed time: 0:00:00
+# 	xor_64bit
+# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:01 on Apr 11,2025
-# vlog -reportprogress 300 ./mux32_1.sv 
-# -- Compiling module mux32_1
-# -- Compiling module mux32_1_testbench
+# Start time: 13:06:28 on Apr 18,2025
+# vlog -reportprogress 300 ./not_64bit.sv 
+# -- Compiling module not_64bit
 # 
 # Top level modules:
-# 	mux32_1_testbench
-# End time: 15:21:01 on Apr 11,2025, Elapsed time: 0:00:00
+# 	not_64bit
+# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:01 on Apr 11,2025
-# vlog -reportprogress 300 ./mux32_64bit.sv 
-# -- Compiling module mux32_64bit
+# Start time: 13:06:29 on Apr 18,2025
+# vlog -reportprogress 300 ./adder_64bit.sv 
+# -- Compiling module adder_64bit
 # 
 # Top level modules:
-# 	mux32_64bit
-# End time: 15:21:01 on Apr 11,2025, Elapsed time: 0:00:00
+# 	adder_64bit
+# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:01 on Apr 11,2025
-# vlog -reportprogress 300 ./dff.sv 
-# -- Compiling module D_FF
+# Start time: 13:06:29 on Apr 18,2025
+# vlog -reportprogress 300 ./subtractor_64bit.sv 
+# -- Compiling module subtractor_64bit
 # 
 # Top level modules:
-# 	D_FF
-# End time: 15:21:02 on Apr 11,2025, Elapsed time: 0:00:01
+# 	subtractor_64bit
+# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:02 on Apr 11,2025
-# vlog -reportprogress 300 ./register_64bit.sv 
-# -- Compiling module register_64bit
+# Start time: 13:06:29 on Apr 18,2025
+# vlog -reportprogress 300 ./alu.sv 
+# -- Compiling module alu
 # 
 # Top level modules:
-# 	register_64bit
-# End time: 15:21:02 on Apr 11,2025, Elapsed time: 0:00:00
+# 	alu
+# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:02 on Apr 11,2025
-# vlog -reportprogress 300 ./decoder_5to32.sv 
-# -- Compiling module decoder_5to32
+# Start time: 13:06:30 on Apr 18,2025
+# vlog -reportprogress 300 ./alustim.sv 
+# -- Compiling module alustim
 # 
 # Top level modules:
-# 	decoder_5to32
-# End time: 15:21:02 on Apr 11,2025, Elapsed time: 0:00:00
+# 	alustim
+# End time: 13:06:30 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:02 on Apr 11,2025
-# vlog -reportprogress 300 ./regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 15:21:02 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:21:02 on Apr 11,2025
-# vlog -reportprogress 300 ./regstim.sv 
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# End time: 15:21:02 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
-# Start time: 15:21:03 on Apr 11,2025
+# vsim -voptargs=""+acc"" -t 1ps -lib work alustim 
+# Start time: 13:06:30 on Apr 18,2025
 # Loading sv_std.std
-# Loading work.regstim
-# Loading work.regfile
-# Loading work.decoder_5to32
-# Loading work.mux32_64bit
-# Loading work.mux32_1
-# Loading work.mux16_1
-# Loading work.mux8_1
-# Loading work.mux4_1
-# Loading work.mux2_1
-# Loading work.register_64bit
-# Loading work.D_FF
-# ** Warning: (vsim-3839) ./regfile.sv(39): Variable '/regstim/dut/reg_out[31]', driven via a port connection, is multiply driven. See ./regfile.sv(28).
-#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut File: ./regfile.sv
-# ** Warning: Design size of 7973 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# 2500.00 ns Attempting overwrite of register 31, which should always be 0
-# 7500.00 ns Writing pattern to all registers.
-# 317500.00 ns Checking pattern.
-# ** Note: $stop    : ./regstim.sv(69)
-#    Time: 477500 ns  Iteration: 1  Instance: /regstim
-# Break in Module regstim at ./regstim.sv line 69
-add wave -position end  sim:/regstim/RegWrite
-add wave -position end  sim:/regstim/ClockDelay
-add wave -position end  sim:/regstim/ReadRegister1
-add wave -position end  sim:/regstim/ReadRegister2
-add wave -position end  sim:/regstim/WriteRegister
-add wave -position end  sim:/regstim/WriteData
-add wave -position end  sim:/regstim/RegWrite
-add wave -position end  sim:/regstim/clk
-add wave -position end  sim:/regstim/ReadData1
-add wave -position end  sim:/regstim/ReadData2
-add wave -position end  sim:/regstim/i
-# End time: 15:41:49 on Apr 11,2025, Elapsed time: 0:20:46
-# Errors: 0, Warnings: 2
+# Loading work.alustim
+# Loading work.alu
+# Loading work.adder_64bit
+# Loading work.adder
+# Loading work.subtractor_64bit
+# Loading work.not_64bit
+# Loading work.and_64bit
+# Loading work.or_64bit
+# Loading work.xor_64bit
+# ** Error: Cannot open macro file: alustim_wave.do
+# Error in macro ./runlab.do line 26
+# Cannot open macro file: alustim_wave.do
+#     while executing
+# "do alustim_wave.do"
+add wave -position end  sim:/alustim/delay
+add wave -position end  sim:/alustim/ALU_PASS_B
+add wave -position end  sim:/alustim/ALU_ADD
+add wave -position end  sim:/alustim/ALU_SUBTRACT
+add wave -position end  sim:/alustim/ALU_AND
+add wave -position end  sim:/alustim/ALU_OR
+add wave -position end  sim:/alustim/ALU_XOR
+add wave -position end  sim:/alustim/A
+add wave -position end  sim:/alustim/B
+add wave -position end  sim:/alustim/cntrl
+add wave -position end  sim:/alustim/result
+add wave -position end  sim:/alustim/negative
+add wave -position end  sim:/alustim/zero
+add wave -position end  sim:/alustim/overflow
+add wave -position end  sim:/alustim/carry_out
+add wave -position end  sim:/alustim/i
+add wave -position end  sim:/alustim/test_val

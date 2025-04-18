@@ -4,7 +4,7 @@ module and_64bit (A, B, out);
 	
 	genvar i;
 	generate
-		for (i = 0; i < 64; i = i + 1) begin
+		for (i = 0; i < 64; i = i + 1) begin: and_loop
 			and ab (out[i], A[i], B[i]);
 		end
 	endgenerate

@@ -4,7 +4,7 @@ module xor_64bit (A, B, out);
 	
 	genvar i;
 	generate
-		for (i = 0; i < 64; i = i + 1) begin
+		for (i = 0; i < 64; i = i + 1) begin: xor_loop
 			xor a_xor_b (out[i], A[i], B[i]);
 		end
 	endgenerate

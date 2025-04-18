@@ -1,4 +1,4 @@
-module subtractor_64bit (A, B, result, cout);
+module subtractor_64bit (A, B, diff, cout);
 	input logic [63:0] A, B;
 	output logic [63:0] diff;
 	output logic cout;
