@@ -673,10 +673,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder_5to32.sv
 set_global_assignment -name SDC_FILE DE1_SoC.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE regstim.sv
-set_global_assignment -name SYSTEMVERILOG_FILE math.sv
-set_global_assignment -name SYSTEMVERILOG_FILE instructmem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE datamem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alustim.sv
 set_global_assignment -name SYSTEMVERILOG_FILE dff.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
@@ -686,3 +682,10 @@ set_global_assignment -name SYSTEMVERILOG_FILE mux16_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux32_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux32_64bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE register_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE adder_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE not_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE subtractor_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE or_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE xor_64bit.sv
