@@ -10,11 +10,19 @@ module alu (
 	logic add_cout, sub_cout;
 	logic add_overflow, sub_overflow;
 
+	// decoder output
+	logic [7:0] sel;
+
+	// decoder inst
+	decoder_3to8 decoder_inst (
+		.in(cntrl),
+		.out(sel)
+	);
+
 	// pass_b
 	assign pass_b_result = B;
 
 	// adder inst
-	logic [63:0] add_temp;
 	adder_64bit add_inst (
 		.a(A), .b(B), .cin(1'b0),
 		.sum(add_result), .cout(add_cout)
@@ -28,48 +36,39 @@ module alu (
 	);
 	assign sub_overflow = (A[63] != B[63]) && (sub_result[63] != A[63]);
 
-	// and inst
+	// logic gates
 	and_64bit and_inst (.A(A), .B(B), .out(and_result));
-
-	// or inst
-	or_64bit or_inst (.A(A), .B(B), .out(or_result));
-
-	// xor inst
+	or_64bit  or_inst  (.A(A), .B(B), .out(or_result));
 	xor_64bit xor_inst (.A(A), .B(B), .out(xor_result));
 
-	// ALU output based on cntrl
-	always_comb begin
-		case (cntrl)
-			3'b000: result = pass_b_result;
-			3'b010: result = add_result;
-			3'b011: result = sub_result;
-			3'b100: result = and_result;
-			3'b101: result = or_result;
-			3'b110: result = xor_result;
-			default: result = 64'd0;
-		endcase
-	end
+	// use sel signals to mux the result using AND-OR logic
+	genvar i;
+	generate
+		for (i = 0; i < 64; i = i + 1) begin : result_mux
+			assign result[i] = (pass_b_result[i] & sel[0]) |
+			                   (add_result[i]     & sel[2]) |
+			                   (sub_result[i]     & sel[3]) |
+			                   (and_result[i]     & sel[4]) |
+			                   (or_result[i]      & sel[5]) |
+			                   (xor_result[i]     & sel[6]);
+		end
+	endgenerate
 
-	// Flag logic
-	always_comb begin
-		zero = (result == 0);
-		negative = result[63];
+	// flags
+	assign negative = result[63];
 
-		// carry out and overflow matter only for add and subtract
-		case (cntrl)
-			3'b010: begin
-				carry_out = add_cout;
-				overflow = add_overflow;
-			end
-			3'b011: begin
-				carry_out = sub_cout;
-				overflow = sub_overflow;
-			end
-			default: begin
-				carry_out = 0;
-				overflow = 0;
-			end
-		endcase
-	end
+	// zero flag = NOR tree of result bits
+	logic [63:0] result_inv;
+	genvar j;
+	generate
+		for (j = 0; j < 64; j = j + 1) begin : zero_gen
+			not (result_inv[j], result[j]);
+		end
+	endgenerate
+	assign zero = &result_inv;
+
+	// overflow and carry_out (only valid for ADD and SUB)
+	assign carry_out = (sel[2] & add_cout) | (sel[3] & sub_cout);
+	assign overflow  = (sel[2] & add_overflow) | (sel[3] & sub_overflow);
 
 endmodule
