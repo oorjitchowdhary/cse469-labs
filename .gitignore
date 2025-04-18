@@ -1,3 +1,14 @@
-db/
-work/
+# Ignore Quartus temp and lock files
+*.flock
+*.rpt
+*.smsg
 *.bak
+*.log
+*.qmsg
+*.rdb
+*.wdb
+
+# Ignore Quartus-generated folders
+db/
+incremental_db/
+output_files/
