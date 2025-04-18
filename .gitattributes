@@ -1,0 +1,13 @@
+# Normalize all text files
+* text=auto
+
+# Explicit settings for SystemVerilog and Verilog
+*.sv text eol=lf
+*.v  text eol=lf
+
+# Quartus-specific project files - let Git normalize them too
+*.qpf text eol=lf
+*.qsf text eol=lf
+*.sdc text eol=lf
+*.cdf text eol=lf
+*.do  text eol=lf

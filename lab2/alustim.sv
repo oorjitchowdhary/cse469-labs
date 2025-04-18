@@ -96,6 +96,114 @@ module alustim();
 		$display("%t testing subtraction", $time);
 		cntrl = ALU_SUBTRACT;
 		
+		// pos - pos = pos (5 - 3 = 2)
+		A = 64'd5; B = 64'd3;
+		#(delay);
+		assert(result == 64'd2 && carry_out == 1 && overflow == 0 && negative == 0 && zero == 0);
+
+		// pos - pos = neg (3 - 5 = -2)
+		A = 64'd3; B = 64'd5;
+		#(delay);
+		assert(result == -64'd2 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
+
+		// neg - pos = neg (-5 - 3 = -8)
+		A = -64'd5; B = 64'd3;
+		#(delay);
+		assert(result == -64'd8 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
+
+		// pos - neg = pos (5 - (-3) = 8)
+		A = 64'd5; B = -64'd3;
+		#(delay);
+		assert(result == 64'd8 && carry_out == 1 && overflow == 0 && negative == 0 && zero == 0);
+		
+		// pos - neg = neg (1 - 2 = -1)
+		A = 64'd1; B = 64'd2;
+		#(delay);
+		assert(result == -64'd1 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
+
+		// neg - neg = pos (-3 - (-5) = 2)
+		A = -64'd3; B = -64'd5;
+		#(delay);
+		assert(result == 64'd2 && carry_out == 1 && overflow == 0 && negative == 0 && zero == 0);
+
+		// neg - neg = neg (-5 - (-3) = -2)
+		A = -64'd5; B = -64'd3;
+		#(delay);
+		assert(result == -64'd2 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
+
+		// pos - pos = 0 (1234 - 1234 = 0)
+		A = 64'd1234; B = 64'd1234;
+		#(delay);
+		assert(result == 64'd0 && carry_out == 1 && overflow == 0 && negative == 0 && zero == 1);
+
+		// MAX - (-1) = overflow
+		A = 64'h7FFFFFFFFFFFFFFF; B = -64'd1;
+		#(delay);
+		assert(result == 64'h8000000000000000 && overflow == 1 && negative == 1 && zero == 0);
+
+		// MIN - 1 = overflow
+		A = 64'h8000000000000000; B = 64'd1;
+		#(delay);
+		assert(result == 64'h7FFFFFFFFFFFFFFF && overflow == 1 && negative == 0 && zero == 0);
+
+		$display("%t testing bitwise AND", $time);
+		cntrl = ALU_AND;
+		
+		// all ones & all zeroes = 0
+		A = 64'hFFFFFFFFFFFFFFFF; B = 64'h0000000000000000;
+		#(delay);
+		assert(result == 64'h0000000000000000 && zero == 1 && negative == 0);
+		
+		//MSB & MSB = MSB
+		A = 64'h8000000000000000; B = 64'h8000000000000000;
+		#(delay);
+		assert(result == 64'h8000000000000000 && negative == 1 && zero == 0);
+		
+		//all 1s & all 1s = all 1s
+		A = 64'hFFFFFFFFFFFFFFFF; B = 64'hFFFFFFFFFFFFFFFF;
+		#(delay);
+		assert(result == 64'hFFFFFFFFFFFFFFFF && zero == 0 && negative == 1);
+
+		$display("%t testing bitwise OR", $time);
+		cntrl = ALU_OR;
+
+		//0 | anything = 0
+		A = 64'h0000000000000000; B = 64'h0F0F0F0F0F0F0F0F;
+		#(delay);
+		assert(result == (A | B) && negative == 0 && zero == 0);
+
+		//alternating pattern = all 1s
+		A = 64'hF0F0F0F0F0F0F0F0; B = 64'h0F0F0F0F0F0F0F0F;
+		#(delay);
+		assert(result == 64'hFFFFFFFFFFFFFFFF && negative == 1 && zero == 0);
+
+		//0 | 0 = 0 
+		A = 64'h0000000000000000; B = 64'h0000000000000000;
+		#(delay);
+		assert(result == 64'h0000000000000000 && zero == 1 && negative == 0);
+
+		$display("%t testing bitwise XOR", $time);
+		cntrl = ALU_XOR;
+
+		// alternating A and B = all 1s
+		A = 64'hAAAAAAAAAAAAAAAA; B = 64'h5555555555555555;
+		#(delay);
+		assert(result == 64'hFFFFFFFFFFFFFFFF && negative == 1 && zero == 0);
+
+		// A xor B = 0
+		A = 64'hFFFFFFFFFFFFFFFF; B = 64'hFFFFFFFFFFFFFFFF;
+		#(delay);
+		assert(result == 64'h0000000000000000 && zero == 1 && negative == 0);
+
+		// MSB ^ LSB = MSB
+		A = 64'h8000000000000000; B = 64'h0000000000000001;
+		#(delay);
+		assert(result == 64'h8000000000000001 && negative == 1 && zero == 0);
+
+		// random A ^ B
+		A = 64'h123456789ABCDEF0; B = 64'h0F0F0F0F0F0F0F0F;
+		#(delay);
+		assert(result == (A ^ B) && negative == result[63]);
 		
 	end
 endmodule
