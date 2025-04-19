@@ -41,7 +41,7 @@ module alu (
 	or_64bit  or_inst  (.A(A), .B(B), .out(or_result));
 	xor_64bit xor_inst (.A(A), .B(B), .out(xor_result));
 
-	// use sel signals to mux the result using AND-OR logic
+	// use sel signals
 	genvar i;
 	generate
 		for (i = 0; i < 64; i = i + 1) begin : result_mux

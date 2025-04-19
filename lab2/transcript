@@ -1,91 +1,309 @@
 # Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
 do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:27 on Apr 18,2025
+# Start time: 17:51:46 on Apr 18,2025
 # vlog -reportprogress 300 ./adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:01
+# End time: 17:51:47 on Apr 18,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:28 on Apr 18,2025
+# Start time: 17:51:47 on Apr 18,2025
 # vlog -reportprogress 300 ./or_64bit.sv 
 # -- Compiling module or_64bit
 # 
 # Top level modules:
 # 	or_64bit
-# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:47 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:28 on Apr 18,2025
+# Start time: 17:51:47 on Apr 18,2025
 # vlog -reportprogress 300 ./and_64bit.sv 
 # -- Compiling module and_64bit
 # 
 # Top level modules:
 # 	and_64bit
-# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:47 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:28 on Apr 18,2025
+# Start time: 17:51:47 on Apr 18,2025
 # vlog -reportprogress 300 ./xor_64bit.sv 
 # -- Compiling module xor_64bit
 # 
 # Top level modules:
 # 	xor_64bit
-# End time: 13:06:28 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:47 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:28 on Apr 18,2025
+# Start time: 17:51:47 on Apr 18,2025
 # vlog -reportprogress 300 ./not_64bit.sv 
 # -- Compiling module not_64bit
 # 
 # Top level modules:
 # 	not_64bit
-# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:01
+# End time: 17:51:47 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:29 on Apr 18,2025
+# Start time: 17:51:48 on Apr 18,2025
 # vlog -reportprogress 300 ./adder_64bit.sv 
 # -- Compiling module adder_64bit
 # 
 # Top level modules:
 # 	adder_64bit
-# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:48 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:29 on Apr 18,2025
+# Start time: 17:51:48 on Apr 18,2025
 # vlog -reportprogress 300 ./subtractor_64bit.sv 
 # -- Compiling module subtractor_64bit
 # 
 # Top level modules:
 # 	subtractor_64bit
-# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:48 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:29 on Apr 18,2025
+# Start time: 17:51:48 on Apr 18,2025
 # vlog -reportprogress 300 ./alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 13:06:29 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:48 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:06:30 on Apr 18,2025
+# Start time: 17:51:49 on Apr 18,2025
 # vlog -reportprogress 300 ./alustim.sv 
 # -- Compiling module alustim
 # 
 # Top level modules:
 # 	alustim
-# End time: 13:06:30 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 17:51:49 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -lib work alustim 
-# Start time: 13:06:30 on Apr 18,2025
+# Start time: 17:51:49 on Apr 18,2025
 # Loading sv_std.std
 # Loading work.alustim
 # Loading work.alu
+# ** Error: (vsim-3033) ./alu.sv(17): Instantiation of 'decoder_3to8' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /alustim/dut File: ./alu.sv
+#         Searched libraries:
+#             C:/Users/ankit/OneDrive/Desktop/UW/Spring 2025/ee469labs/cse469-labs-main/lab2/work
+# Loading work.adder_64bit
+# Loading work.adder
+# Loading work.subtractor_64bit
+# Loading work.not_64bit
+# Loading work.and_64bit
+# Loading work.or_64bit
+# Loading work.xor_64bit
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 21
+
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:57 on Apr 18,2025
+# vlog -reportprogress 300 ./adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 17:51:57 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:57 on Apr 18,2025
+# vlog -reportprogress 300 ./or_64bit.sv 
+# -- Compiling module or_64bit
+# 
+# Top level modules:
+# 	or_64bit
+# End time: 17:51:57 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:57 on Apr 18,2025
+# vlog -reportprogress 300 ./and_64bit.sv 
+# -- Compiling module and_64bit
+# 
+# Top level modules:
+# 	and_64bit
+# End time: 17:51:58 on Apr 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:58 on Apr 18,2025
+# vlog -reportprogress 300 ./xor_64bit.sv 
+# -- Compiling module xor_64bit
+# 
+# Top level modules:
+# 	xor_64bit
+# End time: 17:51:58 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:58 on Apr 18,2025
+# vlog -reportprogress 300 ./not_64bit.sv 
+# -- Compiling module not_64bit
+# 
+# Top level modules:
+# 	not_64bit
+# End time: 17:51:58 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:58 on Apr 18,2025
+# vlog -reportprogress 300 ./adder_64bit.sv 
+# -- Compiling module adder_64bit
+# 
+# Top level modules:
+# 	adder_64bit
+# End time: 17:51:58 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:58 on Apr 18,2025
+# vlog -reportprogress 300 ./subtractor_64bit.sv 
+# -- Compiling module subtractor_64bit
+# 
+# Top level modules:
+# 	subtractor_64bit
+# End time: 17:51:59 on Apr 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:59 on Apr 18,2025
+# vlog -reportprogress 300 ./alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 17:51:59 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:51:59 on Apr 18,2025
+# vlog -reportprogress 300 ./alustim.sv 
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# End time: 17:51:59 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work alustim 
+# Start time: 17:51:49 on Apr 18,2025
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# ** Error: (vsim-3033) ./alu.sv(17): Instantiation of 'decoder_3to8' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /alustim/dut File: ./alu.sv
+#         Searched libraries:
+#             C:/Users/ankit/OneDrive/Desktop/UW/Spring 2025/ee469labs/cse469-labs-main/lab2/work
+# Loading work.adder_64bit
+# Loading work.adder
+# Loading work.subtractor_64bit
+# Loading work.not_64bit
+# Loading work.and_64bit
+# Loading work.or_64bit
+# Loading work.xor_64bit
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 21
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:20 on Apr 18,2025
+# vlog -reportprogress 300 ./adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 17:53:20 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:20 on Apr 18,2025
+# vlog -reportprogress 300 ./or_64bit.sv 
+# -- Compiling module or_64bit
+# 
+# Top level modules:
+# 	or_64bit
+# End time: 17:53:21 on Apr 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:21 on Apr 18,2025
+# vlog -reportprogress 300 ./and_64bit.sv 
+# -- Compiling module and_64bit
+# 
+# Top level modules:
+# 	and_64bit
+# End time: 17:53:21 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:21 on Apr 18,2025
+# vlog -reportprogress 300 ./xor_64bit.sv 
+# -- Compiling module xor_64bit
+# 
+# Top level modules:
+# 	xor_64bit
+# End time: 17:53:21 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:21 on Apr 18,2025
+# vlog -reportprogress 300 ./not_64bit.sv 
+# -- Compiling module not_64bit
+# 
+# Top level modules:
+# 	not_64bit
+# End time: 17:53:21 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:22 on Apr 18,2025
+# vlog -reportprogress 300 ./adder_64bit.sv 
+# -- Compiling module adder_64bit
+# 
+# Top level modules:
+# 	adder_64bit
+# End time: 17:53:22 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:22 on Apr 18,2025
+# vlog -reportprogress 300 ./subtractor_64bit.sv 
+# -- Compiling module subtractor_64bit
+# 
+# Top level modules:
+# 	subtractor_64bit
+# End time: 17:53:22 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:22 on Apr 18,2025
+# vlog -reportprogress 300 ./alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 17:53:22 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:22 on Apr 18,2025
+# vlog -reportprogress 300 ./alustim.sv 
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# End time: 17:53:23 on Apr 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:53:23 on Apr 18,2025
+# vlog -reportprogress 300 ./decoder_3to8.sv 
+# -- Compiling module decoder_3to8
+# 
+# Top level modules:
+# 	decoder_3to8
+# End time: 17:53:23 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work alustim 
+# Start time: 17:51:49 on Apr 18,2025
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.decoder_3to8
 # Loading work.adder_64bit
 # Loading work.adder
 # Loading work.subtractor_64bit
@@ -94,10 +312,27 @@ do runlab.do
 # Loading work.or_64bit
 # Loading work.xor_64bit
 # ** Error: Cannot open macro file: alustim_wave.do
-# Error in macro ./runlab.do line 26
+# Error in macro ./runlab.do line 27
 # Cannot open macro file: alustim_wave.do
 #     while executing
 # "do alustim_wave.do"
+run -all
+#    0.00 ns testing PASS_B operations
+# 10000000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10200 us  Scope: alustim File: ./alustim.sv Line: 59
+# ** Error: Assertion error.
+#    Time: 10300 us  Scope: alustim File: ./alustim.sv Line: 64
+# ** Error: Assertion error.
+#    Time: 10400 us  Scope: alustim File: ./alustim.sv Line: 69
+# 10900000.00 ns testing subtraction
+# ** Error: Assertion error.
+#    Time: 11200 us  Scope: alustim File: ./alustim.sv Line: 112
+# ** Error: Assertion error.
+#    Time: 11300 us  Scope: alustim File: ./alustim.sv Line: 117
+# 11900000.00 ns testing bitwise AND
+# 12200000.00 ns testing bitwise OR
+# 12500000.00 ns testing bitwise XOR
 add wave -position end  sim:/alustim/delay
 add wave -position end  sim:/alustim/ALU_PASS_B
 add wave -position end  sim:/alustim/ALU_ADD
@@ -115,3 +350,26 @@ add wave -position end  sim:/alustim/overflow
 add wave -position end  sim:/alustim/carry_out
 add wave -position end  sim:/alustim/i
 add wave -position end  sim:/alustim/test_val
+# Break key hit
+run -all
+add wave -position insertpoint  \
+sim:/alustim/delay \
+sim:/alustim/ALU_PASS_B \
+sim:/alustim/ALU_ADD \
+sim:/alustim/ALU_SUBTRACT \
+sim:/alustim/ALU_AND \
+sim:/alustim/ALU_OR \
+sim:/alustim/ALU_XOR \
+sim:/alustim/A \
+sim:/alustim/B \
+sim:/alustim/cntrl \
+sim:/alustim/result \
+sim:/alustim/negative \
+sim:/alustim/zero \
+sim:/alustim/overflow \
+sim:/alustim/carry_out \
+sim:/alustim/i \
+sim:/alustim/test_val
+run -all
+# Break key hit
+run -all

@@ -13,6 +13,7 @@ vlog "./adder_64bit.sv"
 vlog "./subtractor_64bit.sv"
 vlog "./alu.sv"
 vlog "./alustim.sv"
+vlog "./decoder_3to8.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
