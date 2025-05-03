@@ -44,7 +44,7 @@ module control_unit (
 			11'b11101011000: begin
 				reg_write = 1'b1;
 				alu_src = 1'b0;
-				alu_cntrl = 3'011; // ALU control code for SUB
+				alu_cntrl = 3'b011; // ALU control code for SUB
 				flag_write = 1'b1;
 			end
 			
