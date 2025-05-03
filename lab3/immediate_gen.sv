@@ -19,11 +19,23 @@ module immediate_gen (
 	logic [11:0] imm_I;
 	logic sign_I;
 	buf1 buf_sign_I (.in(instruction[21]), .out(sign_I));
+	genvar i;
+	generate
+		for (i = 10; i < 22; i = i + 1) begin : I_in
+			buf1 buf1_in_immI (.in(instruction[i]), .out(imm_I[i]));
+		end
+	endgenerate
 	
 	// 9 bit immediate for D-type = DT_address [20:12] in 32 bit instruction
 	logic [8:0] imm_D;
 	logic sign_D;
 	buf1 buf_sign_D (.in(instruction[20]), .out(sign_D));
+	genvar i;
+	generate
+		for (i = 12; i < 21; i = i + 1) begin : D_in
+			buf1 buf1_in_immD (.in(instruction[i]), .out(immD[i]));
+		end
+	endgenerate
 	
 	// extended immediate for I-type
 	logic [63:0] imm_I_ext;
