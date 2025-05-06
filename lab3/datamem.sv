@@ -50,6 +50,7 @@ module datamem (
 	end
 	
 	// Handle the reads.
+	
 	integer i;
 	always_comb begin
 		read_data = 'x;
@@ -57,6 +58,7 @@ module datamem (
 			for(i=0; i<xfer_size; i++)
 				read_data[8*i+7 -: 8] = mem[aligned_address + i]; // 8*i+7 -: 8 means "start at 8*i+7, for 8 bits total"
 	end
+	
 	
 	// Handle the writes.
 	integer j;
