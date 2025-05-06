@@ -10,8 +10,8 @@ module decoder_5to32 (
 
     genvar i, j;
     generate
-        for (i = 0; i < 31; i = i + 1) begin
-            for (j = 0; j < 5; j = j + 1) begin
+        for (i = 0; i < 31; i = i + 1) begin: row
+            for (j = 0; j < 5; j = j + 1) begin: col
                 wire xor_out;
 					 xor (xor_out, in[j], i[j]);      // xor_out = in[j] ^ i[j]
 					 not (match[i][j], xor_out);  
