@@ -103,12 +103,12 @@ module cpu_tb;
 
     initial begin
         clk = 0;
-        forever #250 clk = ~clk;  // 500 ns period
+        forever #50 clk = ~clk;  // 100 ns period
     end
 
     initial begin
         reset = 1;
-        #1000;
+        #100;
         reset = 0;
 
         // Run for enough cycles (adjust if needed)
