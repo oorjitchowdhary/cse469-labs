@@ -19,7 +19,7 @@ module regfile (
     .in(WriteRegister),
     .enable(RegWrite)
   );
-
+  
   genvar i;
   generate
     for (i = 0; i < 32; i = i + 1) begin : regfile_gen
@@ -32,8 +32,6 @@ module regfile (
       );
     end
   endgenerate
-
-  assign reg_out[31] = 64'b0;
 
   mux32_64bit read_mux1 (
     .out(ReadData1),
