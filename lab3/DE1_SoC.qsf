@@ -683,7 +683,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE instructmem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder_5to32.sv
 set_global_assignment -name SYSTEMVERILOG_FILE datamem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
-set_global_assignment -name SYSTEMVERILOG_FILE alustim.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder_64bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE not_64bit.sv

@@ -64,7 +64,7 @@ module cpu (
 	logic [63:0] input_b, alu_result;
 	logic zero, negative, overflow, carry_out;
 	
-	mux2_1 alu_src_mux (.out(input_b), .i0(reg_read2), .i1(imm_ext), .sel(alu_src));
+	mux2_1_64bit alu_src_mux (.out(input_b), .i0(reg_read2), .i1(imm_ext), .sel(alu_src));
 	
 	alu alu_inst (
 		.A(reg_read1),
@@ -89,7 +89,7 @@ module cpu (
 		.read_data(mem_read_data)
 	);
 	
-	mux2_1 write_mux (.out(reg_write_data), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
+	mux2_1_64bit write_mux (.out(reg_write_data), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
 	
 	// pc update
 	assign next_pc = curr_pc + 4;
@@ -103,12 +103,12 @@ module cpu_tb;
 
     initial begin
         clk = 0;
-        forever #50 clk = ~clk;  // 100 ns period
+        forever #250 clk = ~clk;  // 500 ns period
     end
 
     initial begin
         reset = 1;
-        #100;
+        #1000;
         reset = 0;
 
         // Run for enough cycles (adjust if needed)
