@@ -4,6 +4,7 @@ vlib work
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
+vlog "./dff.sv"
 vlog "./adder.sv"
 vlog "./or_64bit.sv"
 vlog "./and_64bit.sv"
@@ -22,26 +23,22 @@ vlog "./mux32_64bit.sv"
 vlog "./mux32_1.sv"
 vlog "./register_64bit.sv"
 vlog "./regfile.sv"
-vlog "./pc_64bit.sv"
+vlog "./pc.sv"
 vlog "./immediate_gen.sv"
 vlog "./control_unit.sv"
 vlog "./datamem.sv"
 vlog "./instructmem.sv"
 vlog "./cpu.sv"
-vlog "./cpu_tb.sv"
-vlog "./comparator_11bit.sv"
-vlog "./pc_64bit.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-# vsim -voptargs="+acc" -t 1ps -lib work regstim
 vsim -voptargs="+acc" -t 1ps -lib work cpu_tb
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-do alustim_wave.do
+do cpu_wave.do
 
 # Set the window types
 view wave
