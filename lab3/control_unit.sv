@@ -4,7 +4,7 @@ module control_unit (
 	input logic [31:0] instruction, //signal that will decide which instruction is being useds
 	output logic reg_write,
 	output logic alu_src, // 0 = use register, 1 = use immediate
-	output logic [2:0] alu_cntrl,
+	output logic [2:0] alu_op,
 	output logic mem_read,
 	output logic mem_write,
 	output logic mem_to_reg, // 0 = use ALU result, 1 = use datamem result for regfile WriteData
@@ -29,7 +29,7 @@ module control_unit (
 		// defaults
 		reg_write = 1'b0;
 		alu_src = 1'b0;
-		alu_cntrl = 3'b000;
+		alu_op = 3'b000;
 		mem_read = 1'b0;
 		mem_write = 1'b0;
 		mem_to_reg = 1'b0;
@@ -46,7 +46,7 @@ module control_unit (
 			11'b10101011000: begin
 				reg_write = 1'b1;
 				alu_src = 1'b0; // use register
-				alu_cntrl = 3'b010; // ALU control code for ADD
+				alu_op = 3'b010; // ALU control code for ADD
 				flag_write = 1'b1;
 			end
 			
@@ -54,7 +54,7 @@ module control_unit (
 			11'b11101011000: begin
 				reg_write = 1'b1;
 				alu_src = 1'b0;
-				alu_cntrl = 3'b011; // ALU control code for SUB
+				alu_op = 3'b011; // ALU control code for SUB
 				flag_write = 1'b1;
 			end
 			
@@ -62,7 +62,7 @@ module control_unit (
 			11'b11111000010: begin
 				reg_write = 1'b1;
 				alu_src = 1'b1;
-				alu_cntrl = 3'b010; // ALU to calculate address
+				alu_op = 3'b010; // ALU to calculate address
 				mem_read = 1'b1;
 				mem_to_reg = 1'b1;
 			end
@@ -70,7 +70,7 @@ module control_unit (
 			// STUR (D)
 			11'b11111000000: begin
 				alu_src = 1'b1;
-				alu_cntrl = 3'b010; // ALU to calculate address
+				alu_op = 3'b010; // ALU to calculate address
 				mem_write = 1'b1;
 			end
 		endcase
@@ -81,7 +81,7 @@ module control_unit (
 			10'b1001000100: begin
 				reg_write = 1'b1;
 				alu_src = 1'b1;
-				alu_cntrl = 3'b010;
+				alu_op = 3'b010;
 			end
 		endcase
 		
