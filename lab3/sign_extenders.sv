@@ -8,8 +8,8 @@ module buf1 (
     assign out = in;
 endmodule
 
-// I-type sign extender - 12 bits to 64 bits
-module sign_extender_itype (
+// I-type zero extender - 12 bits to 64 bits
+module zero_extender_itype (
     input logic [11:0] in,
     output logic [63:0] out
 );
@@ -19,7 +19,7 @@ module sign_extender_itype (
             buf1 b_copy (.in(in[i]), .out(out[i]));
         end
         for (i = 12; i < 64; i = i + 1) begin : extend_sign
-            buf1 b_sign (.in(in[11]), .out(out[i]));
+            buf1 b_sign (.in(1'b0), .out(out[i]));
         end
     endgenerate
 endmodule
@@ -45,13 +45,17 @@ module sign_extender_btype (
     input logic [25:0] in,
     output logic [63:0] out
 );
+
+	 logic [25:0] shift_in;
+	 assign shift_in = in << 2;
+
     genvar i;
     generate
         for (i = 0; i < 26; i = i + 1) begin : copy_bits
-            buf1 b_copy (.in(in[i]), .out(out[i]));
+            buf1 b_copy (.in(shift_in[i]), .out(out[i]));
         end
         for (i = 26; i < 64; i = i + 1) begin : extend_sign
-            buf1 b_sign (.in(in[25]), .out(out[i]));
+            buf1 b_sign (.in(shift_in[25]), .out(out[i]));
         end
     endgenerate
 endmodule
@@ -61,13 +65,17 @@ module sign_extender_cbtype (
     input logic [18:0] in,
     output logic [63:0] out
 );
+
+	logic [18:0] shift_in;
+	assign shift_in = in << 2;
+
     genvar i;
     generate
         for (i = 0; i < 19; i = i + 1) begin : copy_bits
-            buf1 b_copy (.in(in[i]), .out(out[i]));
+            buf1 b_copy (.in(shift_in[i]), .out(out[i]));
         end
         for (i = 19; i < 64; i = i + 1) begin : extend_sign
-            buf1 b_sign (.in(in[18]), .out(out[i]));
+            buf1 b_sign (.in(shift_in[18]), .out(out[i]));
         end
     endgenerate
 endmodule

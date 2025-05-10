@@ -18,7 +18,7 @@ module cpu (
 	);
 	
 	// control unit
-	logic reg_write, alu_src, mem_read, mem_write, mem_to_reg, flag_write, branch, reg2loc;
+	logic reg_write, alu_src, mem_read, mem_write, mem_to_reg, flag_write, take_branch, uncond_branch, reg_branch, reg2loc;
 	logic [1:0] itype; // 00 = I, 01 = D/R, 10 = B, 11 = CB
 	logic [2:0] alu_op;
 	control_unit ctrl (
@@ -31,7 +31,9 @@ module cpu (
 		.mem_write(mem_write),
 		.mem_to_reg(mem_to_reg),
 		.flag_write(flag_write),
-		.branch(branch),
+		.take_branch(take_branch),
+		.uncond_branch(uncond_branch),
+		.reg_branch(reg_branch),
 		.reg2loc(reg2loc)
 	);
 	
@@ -60,7 +62,7 @@ module cpu (
 	
 	// immediate generators
 	logic [63:0] imm_ext_i, imm_ext_d, imm_ext_b, imm_ext_cb;
-	sign_extender_itype ext_i (.in(instruction[21:10]), .out(imm_ext_i));
+	zero_extender_itype ext_i (.in(instruction[21:10]), .out(imm_ext_i));
 	sign_extender_dtype ext_d (.in(instruction[20:12]), .out(imm_ext_d));
 	sign_extender_btype ext_b (.in(instruction[25:0]), .out(imm_ext_b));
 	sign_extender_cbtype ext_cb (.in(instruction[23:5]), .out(imm_ext_cb));
@@ -124,7 +126,17 @@ module cpu (
 	mux2_1_64bit write_mux (.out(reg_write_data), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
 	
 	// pc update
-	assign next_pc = curr_pc + 4;
+	// sequential
+	logic [31:0] seq_pc;
+	assign seq_pc = curr_pc + 4;
+	
+	// branch
+	logic [63:0] branch_offset, branch_target;
+	assign branch_offset = (itype == 2'b10) ? (imm_ext_b) : (itype == 2'b11) ? (imm_ext_cb) : 64'd0;
+	assign branch_target = curr_pc + branch_offset;
+	
+	// update
+	assign next_pc = reg_branch ? reg_read1 : take_branch ? branch_target : seq_pc;
 endmodule
 
 // CPU testbench
