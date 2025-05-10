@@ -10,10 +10,10 @@ module mux4_1_64bit (
     generate
         for (i = 0; i < 64; i = i + 1) begin : bit_mux
             mux4_1 bitmux (
-                .in0(in0[i]),
-                .in1(in1[i]),
-                .in2(in2[i]),
-                .in3(in3[i]),
+                .i0(in0[i]),
+                .i1(in1[i]),
+                .i2(in2[i]),
+                .i3(in3[i]),
                 .sel0(sel[0]),   // LSB
                 .sel1(sel[1]),   // MSB
                 .out(out[i])

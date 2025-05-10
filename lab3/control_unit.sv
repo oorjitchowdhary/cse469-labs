@@ -103,12 +103,14 @@ module control_unit (
 				branch = 1'b1;
 				alu_op = 3'b000; // ALU pass B
 				reg2loc = 1'b1;
+				alu_src = 1'b1;
 			end
 			
 			// B.LT
 			8'b01010100: if (instruction[4:0] == 5'b01011) begin
 				itype = 2'b11; // CB-type selector
 				branch = 1'b1;
+				alu_src = 1'b1;
 			end
 		endcase
 		
@@ -118,6 +120,7 @@ module control_unit (
 			6'b000101: begin
 				itype = 2'b10; // B-type selector
 				branch = 1'b1;
+				alu_src = 1'b1;
 			end
 			
 			// BL
@@ -125,6 +128,7 @@ module control_unit (
 				itype = 2'b10;
 				branch = 1'b1;
 				reg_write = 1'b1;
+				alu_src = 1'b1;
 			end
 		endcase
 	end

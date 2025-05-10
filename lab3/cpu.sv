@@ -93,6 +93,22 @@ module cpu (
 		.carry_out(carry_out)
 	);
 	
+	// flags
+	logic negative_d, negative_q;
+	logic zero_d, zero_q;
+	logic carry_d, carry_q;
+	logic overflow_d, overflow_q;
+	
+	mux2_1 mux_n (.out(negative_d), .i0(negative_q), .i1(negative), .sel(flag_write));
+	mux2_1 mux_z (.out(zero_d), .i0(zero_q), .i1(zero), .sel(flag_write));
+	mux2_1 mux_c (.out(carry_d), .i0(carry_q), .i1(carry_out), .sel(flag_write));
+	mux2_1 mux_v (.out(overflow_d), .i0(overflow_q), .i1(overflow), .sel(flag_write));
+	
+	D_FF dff_n (.q(negative_q), .d(negative_d), .reset(reset), .clk(clk));
+	D_FF dff_z (.q(zero_q), .d(zero_d), .reset(reset), .clk(clk));
+	D_FF dff_c (.q(carry_q), .d(carry_d), .reset(reset), .clk(clk));
+	D_FF dff_v (.q(overflow_q), .d(overflow_d), .reset(reset), .clk(clk));
+	
 	// data memory
 	logic [63:0] mem_read_data;
 	datamem dmem (
@@ -108,7 +124,7 @@ module cpu (
 	mux2_1_64bit write_mux (.out(reg_write_data), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
 	
 	// pc update
-	assign next_pc = branch ? alu_result : curr_pc + 4; // TODO: remove RTL
+	assign next_pc = curr_pc + 4;
 endmodule
 
 // CPU testbench
