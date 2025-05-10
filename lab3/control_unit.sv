@@ -46,7 +46,6 @@ module control_unit (
 				alu_src = 1'b0; // use register
 				alu_op = 3'b010; // ALU ADD
 				flag_write = 1'b1;
-				reg2loc = 1'b1;
 			end
 			
 			// SUBS (R)
@@ -56,7 +55,6 @@ module control_unit (
 				alu_src = 1'b0;
 				alu_op = 3'b011; // ALU SUB
 				flag_write = 1'b1;
-				reg2loc = 1'b1;
 			end
 			
 			// BR (R)
@@ -104,6 +102,7 @@ module control_unit (
 				itype = 2'b11; // CB-type selector
 				branch = 1'b1;
 				alu_op = 3'b000; // ALU pass B
+				reg2loc = 1'b1;
 			end
 			
 			// B.LT
