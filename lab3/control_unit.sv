@@ -10,7 +10,9 @@ module control_unit (
 	output logic mem_write,
 	output logic mem_to_reg, // 0 = use ALU result, 1 = use datamem result for regfile WriteData
 	output logic flag_write,
-	output logic branch, // 0 = no branch to be used, 1 = use branch address
+	output logic take_branch, // 0 = no branch to be used, 1 = use branch address
+	output logic uncond_branch, // 1 = if B, BR, BL
+	output logic reg_branch, // 1 = if BR
 	output logic reg2loc // 0 = use Rm (ALU ops), 1 = use Rt (STUR/CBZ/CBNZ)
 );
 
@@ -34,7 +36,9 @@ module control_unit (
 		mem_to_reg = 1'b0;
 		flag_write = 1'b0;
 		itype = 2'b00;
-		branch = 1'b0;
+		take_branch = 1'b0;
+		uncond_branch = 1'b0;
+		reg_branch = 1'b0;
 		reg2loc = 1'b0;
 		
 		// R-type or D-type
@@ -60,7 +64,9 @@ module control_unit (
 			// BR (R)
 			11'b11010110000: begin
 				itype = 2'b01; // don't care selector
-				branch = 1'b1;
+				take_branch = 1'b1;
+				uncond_branch = 1'b1;
+				reg_branch = 1'b1;
 				alu_op = 3'b000; // ALU pass B
 			end
 			
@@ -100,7 +106,7 @@ module control_unit (
 			// CBZ 
 			8'b10110100: begin
 				itype = 2'b11; // CB-type selector
-				branch = 1'b1;
+				take_branch = 1'b1;
 				alu_op = 3'b000; // ALU pass B
 				reg2loc = 1'b1;
 				alu_src = 1'b1;
@@ -109,7 +115,7 @@ module control_unit (
 			// B.LT
 			8'b01010100: if (instruction[4:0] == 5'b01011) begin
 				itype = 2'b11; // CB-type selector
-				branch = 1'b1;
+				take_branch = 1'b1;
 				alu_src = 1'b1;
 			end
 		endcase
@@ -119,14 +125,16 @@ module control_unit (
 			// B
 			6'b000101: begin
 				itype = 2'b10; // B-type selector
-				branch = 1'b1;
+				take_branch = 1'b1;
+				uncond_branch = 1'b1;
 				alu_src = 1'b1;
 			end
 			
 			// BL
 			6'b100101: begin
 				itype = 2'b10;
-				branch = 1'b1;
+				take_branch = 1'b1;
+				uncond_branch = 1'b1;
 				reg_write = 1'b1;
 				alu_src = 1'b1;
 			end
