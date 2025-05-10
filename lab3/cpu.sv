@@ -18,17 +18,21 @@ module cpu (
 	);
 	
 	// control unit
-	logic reg_write, alu_src, mem_read, mem_write, mem_to_reg, flag_write;
+	logic reg_write, alu_src, mem_read, mem_write, mem_to_reg, flag_write, branch, reg2loc;
+	logic [1:0] itype; // 00 = I, 01 = D/R, 10 = B, 11 = CB
 	logic [2:0] alu_op;
 	control_unit ctrl (
 		.instruction(instruction),
+		.itype(itype),
 		.reg_write(reg_write),
 		.alu_src(alu_src),
 		.alu_op(alu_op),
 		.mem_read(mem_read),
 		.mem_write(mem_write),
 		.mem_to_reg(mem_to_reg),
-		.flag_write(flag_write)
+		.flag_write(flag_write),
+		.branch(branch),
+		.reg2loc(reg2loc)
 	);
 	
 	// register file
@@ -37,10 +41,15 @@ module cpu (
 	assign Rn = instruction[9:5];
 	assign Rm = instruction[20:16];
 	
+	// choose Rm or Rt for second register
+	// reg2loc = 0 (Rm), 1 (Rt)
+	logic [4:0] reg2_addr;
+	mux2_1_5bit reg2loc_mux (.i0(Rm), .i1(Rd), .sel(reg2loc), .out(reg2_addr));
+	
 	logic [63:0] reg_read1, reg_read2, reg_write_data;
 	regfile regs (
 		.ReadRegister1(Rn),
-		.ReadRegister2(Rm),
+		.ReadRegister2(reg2_addr),
 		.WriteRegister(Rd),
 		.ReadData1(reg_read1),
 		.ReadData2(reg_read2),
@@ -49,25 +58,32 @@ module cpu (
 		.clk(clk)
 	);
 	
-	// sign extender
-	logic [63:0] imm_ext;
-	logic is_d_type;
-   assign is_d_type = (instruction[31:21] == 11'b11111000010 || instruction[31:21] == 11'b11111000000);
+	// immediate generators
+	logic [63:0] imm_ext_i, imm_ext_d, imm_ext_b, imm_ext_cb;
+	sign_extender_itype ext_i (.in(instruction[21:10]), .out(imm_ext_i));
+	sign_extender_dtype ext_d (.in(instruction[20:12]), .out(imm_ext_d));
+	sign_extender_btype ext_b (.in(instruction[25:0]), .out(imm_ext_b));
+	sign_extender_cbtype ext_cb (.in(instruction[23:5]), .out(imm_ext_cb));
 	
-	immediate_gen imm_gen (
-		.instruction(instruction),
-		.is_d_type(is_d_type),
-		.imm_out(imm_ext)
+	logic [63:0] imm_selected;
+	mux4_1_64bit imm_mux (
+    .in0(imm_ext_i),    // 00 = I-type
+    .in1(imm_ext_d),    // 01 = D/R-type
+    .in2(imm_ext_b),    // 10 = B-type
+    .in3(imm_ext_cb),   // 11  = CB-type
+    .sel(itype),      // 2-bit itype selector
+    .out(imm_selected)
 	);
 	
 	// ALU
+	logic [63:0] input_a = (itype == 2'b11) ? reg_read2 : reg_read1; // TODO: use mux
 	logic [63:0] input_b, alu_result;
 	logic zero, negative, overflow, carry_out;
 	
-	mux2_1_64bit alu_src_mux (.out(input_b), .i0(reg_read2), .i1(imm_ext), .sel(alu_src));
+	mux2_1_64bit alu_src_mux (.out(input_b), .i0(reg_read2), .i1(imm_selected), .sel(alu_src));
 	
 	alu alu_inst (
-		.A(reg_read1),
+		.A(input_a),
 		.B(input_b),
 		.cntrl(alu_op),
 		.result(alu_result),
@@ -92,7 +108,7 @@ module cpu (
 	mux2_1_64bit write_mux (.out(reg_write_data), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
 	
 	// pc update
-	assign next_pc = curr_pc + 4;
+	assign next_pc = branch ? alu_result : curr_pc + 4; // TODO: remove RTL
 endmodule
 
 // CPU testbench
