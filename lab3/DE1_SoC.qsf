@@ -694,5 +694,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE decoder_3to8.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cpu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE comparator_11bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE control_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE immediate_gen.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2_1_64bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sign_extenders.sv
