@@ -2,219 +2,219 @@
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:52 on May 09,2025
+# Start time: 22:06:45 on May 10,2025
 # vlog -reportprogress 300 ./dff.sv 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 22:02:52 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:52 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 22:02:52 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:52 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./or_64bit.sv 
 # -- Compiling module or_64bit
 # 
 # Top level modules:
 # 	or_64bit
-# End time: 22:02:52 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:52 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./and_64bit.sv 
 # -- Compiling module and_64bit
 # 
 # Top level modules:
 # 	and_64bit
-# End time: 22:02:52 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:52 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./xor_64bit.sv 
 # -- Compiling module xor_64bit
 # 
 # Top level modules:
 # 	xor_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:01
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./not_64bit.sv 
 # -- Compiling module not_64bit
 # 
 # Top level modules:
 # 	not_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./adder_64bit.sv 
 # -- Compiling module adder_64bit
 # 
 # Top level modules:
 # 	adder_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./subtractor_64bit.sv 
 # -- Compiling module subtractor_64bit
 # 
 # Top level modules:
 # 	subtractor_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./decoder_3to8.sv 
 # -- Compiling module decoder_3to8
 # 
 # Top level modules:
 # 	decoder_3to8
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./decoder_5to32.sv 
 # -- Compiling module decoder_5to32
 # 
 # Top level modules:
 # 	decoder_5to32
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # -- Compiling module mux4_1_testbench
 # 
 # Top level modules:
 # 	mux4_1_testbench
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux16_1.sv 
 # -- Compiling module mux16_1
 # -- Compiling module mux16_1_testbench
 # 
 # Top level modules:
 # 	mux16_1_testbench
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux32_1.sv 
 # -- Compiling module mux32_1
 # -- Compiling module mux32_1_testbench
 # 
 # Top level modules:
 # 	mux32_1_testbench
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1_64bit.sv 
 # -- Compiling module mux2_1_64bit
 # 
 # Top level modules:
 # 	mux2_1_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1_5bit.sv 
 # -- Compiling module mux2_1_5bit
 # 
 # Top level modules:
 # 	mux2_1_5bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:46 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:46 on May 10,2025
 # vlog -reportprogress 300 ./mux4_1_64bit.sv 
 # -- Compiling module mux4_1_64bit
 # 
 # Top level modules:
 # 	mux4_1_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./mux32_64bit.sv 
 # -- Compiling module mux32_64bit
 # 
 # Top level modules:
 # 	mux32_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./register_64bit.sv 
 # -- Compiling module register_64bit
 # 
 # Top level modules:
 # 	register_64bit
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:53 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./pc.sv 
 # -- Compiling module pc
 # 
 # Top level modules:
 # 	pc
-# End time: 22:02:53 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:54 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./sign_extenders.sv 
 # -- Compiling module buf1
 # -- Compiling module zero_extender_itype
@@ -227,2570 +227,313 @@ do runlab.do
 # 	sign_extender_dtype
 # 	sign_extender_btype
 # 	sign_extender_cbtype
-# End time: 22:02:54 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:54 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./control_unit.sv 
 # -- Compiling module control_unit
 # 
 # Top level modules:
 # 	control_unit
-# End time: 22:02:54 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:54 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./datamem.sv 
 # -- Compiling module datamem
 # -- Compiling module datamem_testbench
 # 
 # Top level modules:
 # 	datamem_testbench
-# End time: 22:02:54 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:54 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./instructmem.sv 
 # -- Compiling module instructmem
 # -- Compiling module instructmem_testbench
 # 
 # Top level modules:
 # 	instructmem_testbench
-# End time: 22:02:54 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:02:54 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # vlog -reportprogress 300 ./cpu.sv 
 # -- Compiling module cpu
 # -- Compiling module cpu_tb
 # 
 # Top level modules:
 # 	cpu_tb
-# End time: 22:02:54 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:06:47 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
-# Start time: 22:02:54 on May 09,2025
+# Start time: 22:06:47 on May 10,2025
 # Loading sv_std.std
 # Loading work.cpu_tb
 # Loading work.cpu
-# Loading work.pc
-# Loading work.instructmem
 # Loading work.control_unit
-# Loading work.mux2_1_5bit
-# Loading work.regfile
-# Loading work.decoder_5to32
-# Loading work.mux32_64bit
+# Loading work.mux2_1
+# Loading work.D_FF
 # Loading work.zero_extender_itype
 # Loading work.sign_extender_dtype
 # Loading work.sign_extender_btype
 # Loading work.sign_extender_cbtype
-# Loading work.mux4_1_64bit
-# Loading work.mux2_1_64bit
-# Loading work.alu
-# Loading work.decoder_3to8
+# Loading work.pc
 # Loading work.adder_64bit
 # Loading work.adder
+# Loading work.mux2_1_64bit
+# Loading work.instructmem
+# Loading work.mux2_1_5bit
+# Loading work.regfile
+# Loading work.decoder_5to32
+# Loading work.mux32_64bit
+# Loading work.alu
+# Loading work.decoder_3to8
 # Loading work.subtractor_64bit
 # Loading work.not_64bit
 # Loading work.and_64bit
 # Loading work.or_64bit
 # Loading work.xor_64bit
-# Loading work.mux2_1
-# Loading work.D_FF
 # Loading work.datamem
+# Loading work.buf1
 # Loading work.mux32_1
 # Loading work.mux16_1
 # Loading work.mux8_1
 # Loading work.mux4_1
 # Loading work.register_64bit
-# Loading work.buf1
-# ** Warning: Design size of 8808 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 8908 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
-#           Attempting to use alternate WLF file "./wlftw0kyw8".
+#           Attempting to use alternate WLF file "./wlft2vcjvy".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftw0kyw8
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# Running benchmark: ./benchmarks/test02_AddsSubs.arm
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Note: $stop    : ./cpu.sv(160)
-#    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
-# Break in Module cpu_tb at ./cpu.sv line 160
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./dff.sv 
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./adder.sv 
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./or_64bit.sv 
-# -- Compiling module or_64bit
-# 
-# Top level modules:
-# 	or_64bit
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./and_64bit.sv 
-# -- Compiling module and_64bit
-# 
-# Top level modules:
-# 	and_64bit
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./xor_64bit.sv 
-# -- Compiling module xor_64bit
-# 
-# Top level modules:
-# 	xor_64bit
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./not_64bit.sv 
-# -- Compiling module not_64bit
-# 
-# Top level modules:
-# 	not_64bit
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./adder_64bit.sv 
-# -- Compiling module adder_64bit
-# 
-# Top level modules:
-# 	adder_64bit
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:01 on May 09,2025
-# vlog -reportprogress 300 ./subtractor_64bit.sv 
-# -- Compiling module subtractor_64bit
-# 
-# Top level modules:
-# 	subtractor_64bit
-# End time: 22:26:01 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./alu.sv 
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./decoder_3to8.sv 
-# -- Compiling module decoder_3to8
-# 
-# Top level modules:
-# 	decoder_3to8
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./decoder_5to32.sv 
-# -- Compiling module decoder_5to32
-# 
-# Top level modules:
-# 	decoder_5to32
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# -- Compiling module mux4_1_testbench
-# 
-# Top level modules:
-# 	mux4_1_testbench
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux16_1.sv 
-# -- Compiling module mux16_1
-# -- Compiling module mux16_1_testbench
-# 
-# Top level modules:
-# 	mux16_1_testbench
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux32_1.sv 
-# -- Compiling module mux32_1
-# -- Compiling module mux32_1_testbench
-# 
-# Top level modules:
-# 	mux32_1_testbench
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux2_1_64bit.sv 
-# -- Compiling module mux2_1_64bit
-# 
-# Top level modules:
-# 	mux2_1_64bit
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux2_1_5bit.sv 
-# -- Compiling module mux2_1_5bit
-# 
-# Top level modules:
-# 	mux2_1_5bit
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux4_1_64bit.sv 
-# -- Compiling module mux4_1_64bit
-# 
-# Top level modules:
-# 	mux4_1_64bit
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./mux32_64bit.sv 
-# -- Compiling module mux32_64bit
-# 
-# Top level modules:
-# 	mux32_64bit
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./register_64bit.sv 
-# -- Compiling module register_64bit
-# 
-# Top level modules:
-# 	register_64bit
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./pc.sv 
-# -- Compiling module pc
-# 
-# Top level modules:
-# 	pc
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./sign_extenders.sv 
-# -- Compiling module buf1
-# -- Compiling module zero_extender_itype
-# -- Compiling module sign_extender_dtype
-# -- Compiling module sign_extender_btype
-# -- Compiling module sign_extender_cbtype
-# 
-# Top level modules:
-# 	zero_extender_itype
-# 	sign_extender_dtype
-# 	sign_extender_btype
-# 	sign_extender_cbtype
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:02 on May 09,2025
-# vlog -reportprogress 300 ./control_unit.sv 
-# -- Compiling module control_unit
-# 
-# Top level modules:
-# 	control_unit
-# End time: 22:26:02 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:03 on May 09,2025
-# vlog -reportprogress 300 ./datamem.sv 
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# End time: 22:26:03 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:03 on May 09,2025
-# vlog -reportprogress 300 ./instructmem.sv 
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# End time: 22:26:03 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:26:03 on May 09,2025
-# vlog -reportprogress 300 ./cpu.sv 
-# -- Compiling module cpu
-# -- Compiling module cpu_tb
-# 
-# Top level modules:
-# 	cpu_tb
-# End time: 22:26:03 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:26:07 on May 09,2025, Elapsed time: 0:23:13
-# Errors: 2, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
-# Start time: 22:26:07 on May 09,2025
-# Loading sv_std.std
-# Loading work.cpu_tb
-# Loading work.cpu
-# Loading work.pc
-# Loading work.instructmem
-# Loading work.control_unit
-# Loading work.mux2_1_5bit
-# Loading work.regfile
-# Loading work.decoder_5to32
-# Loading work.mux32_64bit
-# Loading work.zero_extender_itype
-# Loading work.sign_extender_dtype
-# Loading work.sign_extender_btype
-# Loading work.sign_extender_cbtype
-# Loading work.mux4_1_64bit
-# Loading work.mux2_1_64bit
-# Loading work.alu
-# Loading work.decoder_3to8
-# Loading work.adder_64bit
-# Loading work.adder
-# Loading work.subtractor_64bit
-# Loading work.not_64bit
-# Loading work.and_64bit
-# Loading work.or_64bit
-# Loading work.xor_64bit
-# Loading work.mux2_1
-# Loading work.D_FF
-# Loading work.datamem
-# Loading work.mux32_1
-# Loading work.mux16_1
-# Loading work.mux8_1
-# Loading work.mux4_1
-# Loading work.register_64bit
-# Loading work.buf1
-# ** Warning: Design size of 8808 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
-#           Attempting to use alternate WLF file "./wlftirhtdn".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftirhtdn
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# Running benchmark: ./benchmarks/test02_AddsSubs.arm
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 20050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 20050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Note: $stop    : ./cpu.sv(160)
-#    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
-# Break in Module cpu_tb at ./cpu.sv line 160
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:13 on May 09,2025
-# vlog -reportprogress 300 ./dff.sv 
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# End time: 22:27:13 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:13 on May 09,2025
-# vlog -reportprogress 300 ./adder.sv 
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# End time: 22:27:13 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:13 on May 09,2025
-# vlog -reportprogress 300 ./or_64bit.sv 
-# -- Compiling module or_64bit
-# 
-# Top level modules:
-# 	or_64bit
-# End time: 22:27:13 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:13 on May 09,2025
-# vlog -reportprogress 300 ./and_64bit.sv 
-# -- Compiling module and_64bit
-# 
-# Top level modules:
-# 	and_64bit
-# End time: 22:27:13 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./xor_64bit.sv 
-# -- Compiling module xor_64bit
-# 
-# Top level modules:
-# 	xor_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./not_64bit.sv 
-# -- Compiling module not_64bit
-# 
-# Top level modules:
-# 	not_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./adder_64bit.sv 
-# -- Compiling module adder_64bit
-# 
-# Top level modules:
-# 	adder_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./subtractor_64bit.sv 
-# -- Compiling module subtractor_64bit
-# 
-# Top level modules:
-# 	subtractor_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./alu.sv 
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./decoder_3to8.sv 
-# -- Compiling module decoder_3to8
-# 
-# Top level modules:
-# 	decoder_3to8
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./decoder_5to32.sv 
-# -- Compiling module decoder_5to32
-# 
-# Top level modules:
-# 	decoder_5to32
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# -- Compiling module mux4_1_testbench
-# 
-# Top level modules:
-# 	mux4_1_testbench
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux16_1.sv 
-# -- Compiling module mux16_1
-# -- Compiling module mux16_1_testbench
-# 
-# Top level modules:
-# 	mux16_1_testbench
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux32_1.sv 
-# -- Compiling module mux32_1
-# -- Compiling module mux32_1_testbench
-# 
-# Top level modules:
-# 	mux32_1_testbench
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux2_1_64bit.sv 
-# -- Compiling module mux2_1_64bit
-# 
-# Top level modules:
-# 	mux2_1_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux2_1_5bit.sv 
-# -- Compiling module mux2_1_5bit
-# 
-# Top level modules:
-# 	mux2_1_5bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux4_1_64bit.sv 
-# -- Compiling module mux4_1_64bit
-# 
-# Top level modules:
-# 	mux4_1_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./mux32_64bit.sv 
-# -- Compiling module mux32_64bit
-# 
-# Top level modules:
-# 	mux32_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./register_64bit.sv 
-# -- Compiling module register_64bit
-# 
-# Top level modules:
-# 	register_64bit
-# End time: 22:27:14 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:14 on May 09,2025
-# vlog -reportprogress 300 ./regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:15 on May 09,2025
-# vlog -reportprogress 300 ./pc.sv 
-# -- Compiling module pc
-# 
-# Top level modules:
-# 	pc
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:15 on May 09,2025
-# vlog -reportprogress 300 ./sign_extenders.sv 
-# -- Compiling module buf1
-# -- Compiling module zero_extender_itype
-# -- Compiling module sign_extender_dtype
-# -- Compiling module sign_extender_btype
-# -- Compiling module sign_extender_cbtype
-# 
-# Top level modules:
-# 	zero_extender_itype
-# 	sign_extender_dtype
-# 	sign_extender_btype
-# 	sign_extender_cbtype
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:15 on May 09,2025
-# vlog -reportprogress 300 ./control_unit.sv 
-# -- Compiling module control_unit
-# 
-# Top level modules:
-# 	control_unit
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:15 on May 09,2025
-# vlog -reportprogress 300 ./datamem.sv 
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:15 on May 09,2025
-# vlog -reportprogress 300 ./instructmem.sv 
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:15 on May 09,2025
-# vlog -reportprogress 300 ./cpu.sv 
-# -- Compiling module cpu
-# -- Compiling module cpu_tb
-# 
-# Top level modules:
-# 	cpu_tb
-# End time: 22:27:15 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:27:16 on May 09,2025, Elapsed time: 0:01:09
-# Errors: 402, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
-# Start time: 22:27:16 on May 09,2025
-# Loading sv_std.std
-# Loading work.cpu_tb
-# Loading work.cpu
-# Loading work.pc
-# Loading work.instructmem
-# Loading work.control_unit
-# Loading work.mux2_1_5bit
-# Loading work.regfile
-# Loading work.decoder_5to32
-# Loading work.mux32_64bit
-# Loading work.zero_extender_itype
-# Loading work.sign_extender_dtype
-# Loading work.sign_extender_btype
-# Loading work.sign_extender_cbtype
-# Loading work.mux4_1_64bit
-# Loading work.mux2_1_64bit
-# Loading work.alu
-# Loading work.decoder_3to8
-# Loading work.adder_64bit
-# Loading work.adder
-# Loading work.subtractor_64bit
-# Loading work.not_64bit
-# Loading work.and_64bit
-# Loading work.or_64bit
-# Loading work.xor_64bit
-# Loading work.mux2_1
-# Loading work.D_FF
-# Loading work.datamem
-# Loading work.mux32_1
-# Loading work.mux16_1
-# Loading work.mux8_1
-# Loading work.mux4_1
-# Loading work.register_64bit
-# Loading work.buf1
-# ** Warning: Design size of 8808 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
-#           Attempting to use alternate WLF file "./wlftx2vrk4".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftx2vrk4
+#           Using alternate file: ./wlft2vcjvy
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
 # Running benchmark: ./benchmarks/test01_AddiB.arm
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 1950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 1950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 2950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 2950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 3950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 3950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 4950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 4950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 5950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 5950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 6950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 6950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 7950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 7950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 8950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 8950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 9950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 9950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 10950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 10950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 11950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 11950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 12950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 12950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 13950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 13950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 14950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 14950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 15950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 15950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 16950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 16950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 17950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 17950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 18950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 18950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19150 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19250 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19350 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19450 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19550 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19650 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19750 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19850 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 19950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 19950 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Error: Assertion error.
-#    Time: 20050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 20050 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Note: $stop    : ./cpu.sv(160)
+# ** Note: $stop    : ./cpu.sv(164)
 #    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
-# Break in Module cpu_tb at ./cpu.sv line 160
+# Break in Module cpu_tb at ./cpu.sv line 164
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./dff.sv 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./or_64bit.sv 
 # -- Compiling module or_64bit
 # 
 # Top level modules:
 # 	or_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./and_64bit.sv 
 # -- Compiling module and_64bit
 # 
 # Top level modules:
 # 	and_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./xor_64bit.sv 
 # -- Compiling module xor_64bit
 # 
 # Top level modules:
 # 	xor_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./not_64bit.sv 
 # -- Compiling module not_64bit
 # 
 # Top level modules:
 # 	not_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./adder_64bit.sv 
 # -- Compiling module adder_64bit
 # 
 # Top level modules:
 # 	adder_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./subtractor_64bit.sv 
 # -- Compiling module subtractor_64bit
 # 
 # Top level modules:
 # 	subtractor_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./decoder_3to8.sv 
 # -- Compiling module decoder_3to8
 # 
 # Top level modules:
 # 	decoder_3to8
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./decoder_5to32.sv 
 # -- Compiling module decoder_5to32
 # 
 # Top level modules:
 # 	decoder_5to32
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # -- Compiling module mux4_1_testbench
 # 
 # Top level modules:
 # 	mux4_1_testbench
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:11 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:11 on May 10,2025
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./mux16_1.sv 
 # -- Compiling module mux16_1
 # -- Compiling module mux16_1_testbench
 # 
 # Top level modules:
 # 	mux16_1_testbench
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./mux32_1.sv 
 # -- Compiling module mux32_1
 # -- Compiling module mux32_1_testbench
 # 
 # Top level modules:
 # 	mux32_1_testbench
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1_64bit.sv 
 # -- Compiling module mux2_1_64bit
 # 
 # Top level modules:
 # 	mux2_1_64bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:39 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1_5bit.sv 
 # -- Compiling module mux2_1_5bit
 # 
 # Top level modules:
 # 	mux2_1_5bit
-# End time: 22:27:39 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./mux4_1_64bit.sv 
 # -- Compiling module mux4_1_64bit
 # 
 # Top level modules:
 # 	mux4_1_64bit
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./mux32_64bit.sv 
 # -- Compiling module mux32_64bit
 # 
 # Top level modules:
 # 	mux32_64bit
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./register_64bit.sv 
 # -- Compiling module register_64bit
 # 
 # Top level modules:
 # 	register_64bit
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./pc.sv 
 # -- Compiling module pc
 # 
 # Top level modules:
 # 	pc
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./sign_extenders.sv 
 # -- Compiling module buf1
 # -- Compiling module zero_extender_itype
@@ -2803,320 +546,315 @@ do runlab.do
 # 	sign_extender_dtype
 # 	sign_extender_btype
 # 	sign_extender_cbtype
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./control_unit.sv 
 # -- Compiling module control_unit
 # 
 # Top level modules:
 # 	control_unit
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./datamem.sv 
 # -- Compiling module datamem
 # -- Compiling module datamem_testbench
 # 
 # Top level modules:
 # 	datamem_testbench
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./instructmem.sv 
 # -- Compiling module instructmem
 # -- Compiling module instructmem_testbench
 # 
 # Top level modules:
 # 	instructmem_testbench
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:27:40 on May 09,2025
+# Start time: 22:12:12 on May 10,2025
 # vlog -reportprogress 300 ./cpu.sv 
 # -- Compiling module cpu
 # -- Compiling module cpu_tb
 # 
 # Top level modules:
 # 	cpu_tb
-# End time: 22:27:40 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:12:12 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 22:27:44 on May 09,2025, Elapsed time: 0:00:28
-# Errors: 402, Warnings: 3
+# End time: 22:12:17 on May 10,2025, Elapsed time: 0:05:30
+# Errors: 0, Warnings: 3
 # vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
-# Start time: 22:27:44 on May 09,2025
+# Start time: 22:12:17 on May 10,2025
 # Loading sv_std.std
 # Loading work.cpu_tb
 # Loading work.cpu
-# Loading work.pc
-# Loading work.instructmem
 # Loading work.control_unit
-# Loading work.mux2_1_5bit
-# Loading work.regfile
-# Loading work.decoder_5to32
-# Loading work.mux32_64bit
+# Loading work.mux2_1
+# Loading work.D_FF
 # Loading work.zero_extender_itype
 # Loading work.sign_extender_dtype
 # Loading work.sign_extender_btype
 # Loading work.sign_extender_cbtype
-# Loading work.mux4_1_64bit
-# Loading work.mux2_1_64bit
-# Loading work.alu
-# Loading work.decoder_3to8
+# Loading work.pc
 # Loading work.adder_64bit
 # Loading work.adder
+# Loading work.mux2_1_64bit
+# Loading work.instructmem
+# Loading work.mux2_1_5bit
+# Loading work.regfile
+# Loading work.decoder_5to32
+# Loading work.mux32_64bit
+# Loading work.alu
+# Loading work.decoder_3to8
 # Loading work.subtractor_64bit
 # Loading work.not_64bit
 # Loading work.and_64bit
 # Loading work.or_64bit
 # Loading work.xor_64bit
-# Loading work.mux2_1
-# Loading work.D_FF
 # Loading work.datamem
+# Loading work.buf1
 # Loading work.mux32_1
 # Loading work.mux16_1
 # Loading work.mux8_1
 # Loading work.mux4_1
 # Loading work.register_64bit
-# Loading work.buf1
-# ** Warning: Design size of 8808 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 8908 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
-#           Attempting to use alternate WLF file "./wlftncvscb".
+#           Attempting to use alternate WLF file "./wlft436dia".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftncvscb
+#           Using alternate file: ./wlft436dia
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Running benchmark: ./benchmarks/test01_AddiB.arm
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Note: $stop    : ./cpu.sv(160)
+# Running benchmark: ./benchmarks/test02_AddsSubs.arm
+# ** Note: $stop    : ./cpu.sv(164)
 #    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
-# Break in Module cpu_tb at ./cpu.sv line 160
+# Break in Module cpu_tb at ./cpu.sv line 164
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./dff.sv 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./or_64bit.sv 
 # -- Compiling module or_64bit
 # 
 # Top level modules:
 # 	or_64bit
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./and_64bit.sv 
 # -- Compiling module and_64bit
 # 
 # Top level modules:
 # 	and_64bit
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./xor_64bit.sv 
 # -- Compiling module xor_64bit
 # 
 # Top level modules:
 # 	xor_64bit
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./not_64bit.sv 
 # -- Compiling module not_64bit
 # 
 # Top level modules:
 # 	not_64bit
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./adder_64bit.sv 
 # -- Compiling module adder_64bit
 # 
 # Top level modules:
 # 	adder_64bit
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./subtractor_64bit.sv 
 # -- Compiling module subtractor_64bit
 # 
 # Top level modules:
 # 	subtractor_64bit
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./decoder_3to8.sv 
 # -- Compiling module decoder_3to8
 # 
 # Top level modules:
 # 	decoder_3to8
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./decoder_5to32.sv 
 # -- Compiling module decoder_5to32
 # 
 # Top level modules:
 # 	decoder_5to32
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:57 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:57 on May 10,2025
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # -- Compiling module mux4_1_testbench
 # 
 # Top level modules:
 # 	mux4_1_testbench
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux16_1.sv 
 # -- Compiling module mux16_1
 # -- Compiling module mux16_1_testbench
 # 
 # Top level modules:
 # 	mux16_1_testbench
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux32_1.sv 
 # -- Compiling module mux32_1
 # -- Compiling module mux32_1_testbench
 # 
 # Top level modules:
 # 	mux32_1_testbench
-# End time: 22:39:44 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:44 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1_64bit.sv 
 # -- Compiling module mux2_1_64bit
 # 
 # Top level modules:
 # 	mux2_1_64bit
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:01
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux2_1_5bit.sv 
 # -- Compiling module mux2_1_5bit
 # 
 # Top level modules:
 # 	mux2_1_5bit
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux4_1_64bit.sv 
 # -- Compiling module mux4_1_64bit
 # 
 # Top level modules:
 # 	mux4_1_64bit
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./mux32_64bit.sv 
 # -- Compiling module mux32_64bit
 # 
 # Top level modules:
 # 	mux32_64bit
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./register_64bit.sv 
 # -- Compiling module register_64bit
 # 
 # Top level modules:
 # 	register_64bit
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./pc.sv 
 # -- Compiling module pc
 # 
 # Top level modules:
 # 	pc
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./sign_extenders.sv 
 # -- Compiling module buf1
 # -- Compiling module zero_extender_itype
@@ -3129,101 +867,748 @@ do runlab.do
 # 	sign_extender_dtype
 # 	sign_extender_btype
 # 	sign_extender_cbtype
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./control_unit.sv 
 # -- Compiling module control_unit
 # 
 # Top level modules:
 # 	control_unit
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./datamem.sv 
 # -- Compiling module datamem
 # -- Compiling module datamem_testbench
 # 
 # Top level modules:
 # 	datamem_testbench
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./instructmem.sv 
+# ** Warning: ./instructmem.sv(8): (vlog-2263) Redefinition of macro: 'BENCHMARK' (previously defined near ./instructmem.sv(6), old value '"./benchmarks/test01_AddiB.arm"', new value '"./benchmarks/test03_CbzB.arm"') .
 # -- Compiling module instructmem
 # -- Compiling module instructmem_testbench
 # 
 # Top level modules:
 # 	instructmem_testbench
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:45 on May 09,2025
+# Start time: 22:13:58 on May 10,2025
 # vlog -reportprogress 300 ./cpu.sv 
 # -- Compiling module cpu
 # -- Compiling module cpu_tb
 # 
 # Top level modules:
 # 	cpu_tb
-# End time: 22:39:45 on May 09,2025, Elapsed time: 0:00:00
+# End time: 22:13:58 on May 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 22:39:46 on May 09,2025, Elapsed time: 0:12:02
-# Errors: 2, Warnings: 3
+# End time: 22:14:00 on May 10,2025, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 4
 # vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
-# Start time: 22:39:46 on May 09,2025
+# Start time: 22:14:00 on May 10,2025
 # Loading sv_std.std
 # Loading work.cpu_tb
 # Loading work.cpu
-# Loading work.pc
-# Loading work.instructmem
 # Loading work.control_unit
-# Loading work.mux2_1_5bit
-# Loading work.regfile
-# Loading work.decoder_5to32
-# Loading work.mux32_64bit
+# Loading work.mux2_1
+# Loading work.D_FF
 # Loading work.zero_extender_itype
 # Loading work.sign_extender_dtype
 # Loading work.sign_extender_btype
 # Loading work.sign_extender_cbtype
-# Loading work.mux4_1_64bit
-# Loading work.mux2_1_64bit
-# Loading work.alu
-# Loading work.decoder_3to8
+# Loading work.pc
 # Loading work.adder_64bit
 # Loading work.adder
+# Loading work.mux2_1_64bit
+# Loading work.instructmem
+# Loading work.mux2_1_5bit
+# Loading work.regfile
+# Loading work.decoder_5to32
+# Loading work.mux32_64bit
+# Loading work.alu
+# Loading work.decoder_3to8
 # Loading work.subtractor_64bit
 # Loading work.not_64bit
 # Loading work.and_64bit
 # Loading work.or_64bit
 # Loading work.xor_64bit
-# Loading work.mux2_1
-# Loading work.D_FF
 # Loading work.datamem
+# Loading work.buf1
 # Loading work.mux32_1
 # Loading work.mux16_1
 # Loading work.mux8_1
 # Loading work.mux4_1
 # Loading work.register_64bit
-# Loading work.buf1
-# ** Warning: Design size of 8808 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 8908 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
-#           Attempting to use alternate WLF file "./wlft01b1y5".
+#           Attempting to use alternate WLF file "./wlft6qvxnz".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft01b1y5
+#           Using alternate file: ./wlft6qvxnz
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Running benchmark: ./benchmarks/test03_CbzB.arm
+# ** Note: $stop    : ./cpu.sv(164)
+#    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
+# Break in Module cpu_tb at ./cpu.sv line 164
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./dff.sv 
+# -- Compiling module D_FF
+# 
+# Top level modules:
+# 	D_FF
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./or_64bit.sv 
+# -- Compiling module or_64bit
+# 
+# Top level modules:
+# 	or_64bit
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./and_64bit.sv 
+# -- Compiling module and_64bit
+# 
+# Top level modules:
+# 	and_64bit
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./xor_64bit.sv 
+# -- Compiling module xor_64bit
+# 
+# Top level modules:
+# 	xor_64bit
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./not_64bit.sv 
+# -- Compiling module not_64bit
+# 
+# Top level modules:
+# 	not_64bit
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./adder_64bit.sv 
+# -- Compiling module adder_64bit
+# 
+# Top level modules:
+# 	adder_64bit
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./subtractor_64bit.sv 
+# -- Compiling module subtractor_64bit
+# 
+# Top level modules:
+# 	subtractor_64bit
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./decoder_3to8.sv 
+# -- Compiling module decoder_3to8
+# 
+# Top level modules:
+# 	decoder_3to8
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./decoder_5to32.sv 
+# -- Compiling module decoder_5to32
+# 
+# Top level modules:
+# 	decoder_5to32
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 22:14:15 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:15 on May 10,2025
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./mux16_1.sv 
+# -- Compiling module mux16_1
+# -- Compiling module mux16_1_testbench
+# 
+# Top level modules:
+# 	mux16_1_testbench
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./mux32_1.sv 
+# -- Compiling module mux32_1
+# -- Compiling module mux32_1_testbench
+# 
+# Top level modules:
+# 	mux32_1_testbench
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./mux2_1_64bit.sv 
+# -- Compiling module mux2_1_64bit
+# 
+# Top level modules:
+# 	mux2_1_64bit
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./mux2_1_5bit.sv 
+# -- Compiling module mux2_1_5bit
+# 
+# Top level modules:
+# 	mux2_1_5bit
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./mux4_1_64bit.sv 
+# -- Compiling module mux4_1_64bit
+# 
+# Top level modules:
+# 	mux4_1_64bit
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./mux32_64bit.sv 
+# -- Compiling module mux32_64bit
+# 
+# Top level modules:
+# 	mux32_64bit
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./register_64bit.sv 
+# -- Compiling module register_64bit
+# 
+# Top level modules:
+# 	register_64bit
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./pc.sv 
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./sign_extenders.sv 
+# -- Compiling module buf1
+# -- Compiling module zero_extender_itype
+# -- Compiling module sign_extender_dtype
+# -- Compiling module sign_extender_btype
+# -- Compiling module sign_extender_cbtype
+# 
+# Top level modules:
+# 	zero_extender_itype
+# 	sign_extender_dtype
+# 	sign_extender_btype
+# 	sign_extender_cbtype
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./control_unit.sv 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./datamem.sv 
+# -- Compiling module datamem
+# -- Compiling module datamem_testbench
+# 
+# Top level modules:
+# 	datamem_testbench
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./instructmem.sv 
+# ** Warning: ./instructmem.sv(9): (vlog-2263) Redefinition of macro: 'BENCHMARK' (previously defined near ./instructmem.sv(6), old value '"./benchmarks/test01_AddiB.arm"', new value '"./benchmarks/test04_LdurStur.arm"') .
+# -- Compiling module instructmem
+# -- Compiling module instructmem_testbench
+# 
+# Top level modules:
+# 	instructmem_testbench
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:16 on May 10,2025
+# vlog -reportprogress 300 ./cpu.sv 
+# -- Compiling module cpu
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 22:14:16 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:14:18 on May 10,2025, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 4
+# vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
+# Start time: 22:14:18 on May 10,2025
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu
+# Loading work.control_unit
+# Loading work.mux2_1
+# Loading work.D_FF
+# Loading work.zero_extender_itype
+# Loading work.sign_extender_dtype
+# Loading work.sign_extender_btype
+# Loading work.sign_extender_cbtype
+# Loading work.pc
+# Loading work.adder_64bit
+# Loading work.adder
+# Loading work.mux2_1_64bit
+# Loading work.instructmem
+# Loading work.mux2_1_5bit
+# Loading work.regfile
+# Loading work.decoder_5to32
+# Loading work.mux32_64bit
+# Loading work.alu
+# Loading work.decoder_3to8
+# Loading work.subtractor_64bit
+# Loading work.not_64bit
+# Loading work.and_64bit
+# Loading work.or_64bit
+# Loading work.xor_64bit
+# Loading work.datamem
+# Loading work.buf1
+# Loading work.mux32_1
+# Loading work.mux16_1
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.register_64bit
+# ** Warning: Design size of 8908 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
+#           Attempting to use alternate WLF file "./wlft7mviwi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7mviwi
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
 # Running benchmark: ./benchmarks/test04_LdurStur.arm
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 32
-# ** Error: Assertion error.
-#    Time: 50 ns  Scope: cpu_tb.DUT.imem File: ./instructmem.sv Line: 33
-# ** Note: $stop    : ./cpu.sv(160)
+# ** Note: $stop    : ./cpu.sv(164)
 #    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
-# Break in Module cpu_tb at ./cpu.sv line 160
+# Break in Module cpu_tb at ./cpu.sv line 164
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./dff.sv 
+# -- Compiling module D_FF
+# 
+# Top level modules:
+# 	D_FF
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./or_64bit.sv 
+# -- Compiling module or_64bit
+# 
+# Top level modules:
+# 	or_64bit
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./and_64bit.sv 
+# -- Compiling module and_64bit
+# 
+# Top level modules:
+# 	and_64bit
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./xor_64bit.sv 
+# -- Compiling module xor_64bit
+# 
+# Top level modules:
+# 	xor_64bit
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./not_64bit.sv 
+# -- Compiling module not_64bit
+# 
+# Top level modules:
+# 	not_64bit
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./adder_64bit.sv 
+# -- Compiling module adder_64bit
+# 
+# Top level modules:
+# 	adder_64bit
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./subtractor_64bit.sv 
+# -- Compiling module subtractor_64bit
+# 
+# Top level modules:
+# 	subtractor_64bit
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./decoder_3to8.sv 
+# -- Compiling module decoder_3to8
+# 
+# Top level modules:
+# 	decoder_3to8
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./decoder_5to32.sv 
+# -- Compiling module decoder_5to32
+# 
+# Top level modules:
+# 	decoder_5to32
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./mux16_1.sv 
+# -- Compiling module mux16_1
+# -- Compiling module mux16_1_testbench
+# 
+# Top level modules:
+# 	mux16_1_testbench
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./mux32_1.sv 
+# -- Compiling module mux32_1
+# -- Compiling module mux32_1_testbench
+# 
+# Top level modules:
+# 	mux32_1_testbench
+# End time: 22:14:40 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:40 on May 10,2025
+# vlog -reportprogress 300 ./mux2_1_64bit.sv 
+# -- Compiling module mux2_1_64bit
+# 
+# Top level modules:
+# 	mux2_1_64bit
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./mux2_1_5bit.sv 
+# -- Compiling module mux2_1_5bit
+# 
+# Top level modules:
+# 	mux2_1_5bit
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./mux4_1_64bit.sv 
+# -- Compiling module mux4_1_64bit
+# 
+# Top level modules:
+# 	mux4_1_64bit
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./mux32_64bit.sv 
+# -- Compiling module mux32_64bit
+# 
+# Top level modules:
+# 	mux32_64bit
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./register_64bit.sv 
+# -- Compiling module register_64bit
+# 
+# Top level modules:
+# 	register_64bit
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./pc.sv 
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./sign_extenders.sv 
+# -- Compiling module buf1
+# -- Compiling module zero_extender_itype
+# -- Compiling module sign_extender_dtype
+# -- Compiling module sign_extender_btype
+# -- Compiling module sign_extender_cbtype
+# 
+# Top level modules:
+# 	zero_extender_itype
+# 	sign_extender_dtype
+# 	sign_extender_btype
+# 	sign_extender_cbtype
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./control_unit.sv 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./datamem.sv 
+# -- Compiling module datamem
+# -- Compiling module datamem_testbench
+# 
+# Top level modules:
+# 	datamem_testbench
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./instructmem.sv 
+# ** Warning: ./instructmem.sv(10): (vlog-2263) Redefinition of macro: 'BENCHMARK' (previously defined near ./instructmem.sv(6), old value '"./benchmarks/test01_AddiB.arm"', new value '"./benchmarks/test05_Blt.arm"') .
+# -- Compiling module instructmem
+# -- Compiling module instructmem_testbench
+# 
+# Top level modules:
+# 	instructmem_testbench
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:41 on May 10,2025
+# vlog -reportprogress 300 ./cpu.sv 
+# -- Compiling module cpu
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 22:14:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:14:43 on May 10,2025, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 4
+# vsim -voptargs=""+acc"" -t 1ps -lib work cpu_tb 
+# Start time: 22:14:43 on May 10,2025
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu
+# Loading work.control_unit
+# Loading work.mux2_1
+# Loading work.D_FF
+# Loading work.zero_extender_itype
+# Loading work.sign_extender_dtype
+# Loading work.sign_extender_btype
+# Loading work.sign_extender_cbtype
+# Loading work.pc
+# Loading work.adder_64bit
+# Loading work.adder
+# Loading work.mux2_1_64bit
+# Loading work.instructmem
+# Loading work.mux2_1_5bit
+# Loading work.regfile
+# Loading work.decoder_5to32
+# Loading work.mux32_64bit
+# Loading work.alu
+# Loading work.decoder_3to8
+# Loading work.subtractor_64bit
+# Loading work.not_64bit
+# Loading work.and_64bit
+# Loading work.or_64bit
+# Loading work.xor_64bit
+# Loading work.datamem
+# Loading work.buf1
+# Loading work.mux32_1
+# Loading work.mux16_1
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.register_64bit
+# ** Warning: Design size of 8908 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankith  Hostname: DESKTOP-5EU9M1H  ProcessID: 5244
+#           Attempting to use alternate WLF file "./wlft4ixxc2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4ixxc2
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Running benchmark: ./benchmarks/test05_Blt.arm
+# ** Note: $stop    : ./cpu.sv(164)
+#    Time: 20050 ns  Iteration: 1  Instance: /cpu_tb
+# Break in Module cpu_tb at ./cpu.sv line 164
+# Break key hit
+run
+run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 22:16:47 on May 10,2025, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 3
