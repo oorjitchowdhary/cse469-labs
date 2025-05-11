@@ -47,6 +47,7 @@ module control_unit (
 			11'b10101011000: begin
 				itype = 2'b01; // don't care selector
 				reg_write = 1'b1;
+				reg2loc = 1'b1;
 				alu_src = 1'b0; // use register
 				alu_op = 3'b010; // ALU ADD
 				flag_write = 1'b1;
@@ -56,6 +57,7 @@ module control_unit (
 			11'b11101011000: begin
 				itype = 2'b01; // don't care selector
 				reg_write = 1'b1;
+				reg2loc = 1'b1;
 				alu_src = 1'b0;
 				alu_op = 3'b011; // ALU SUB
 				flag_write = 1'b1;
@@ -86,7 +88,6 @@ module control_unit (
 				alu_src = 1'b1;
 				alu_op = 3'b010; // ALU ADD to calculate target address
 				mem_write = 1'b1;
-				reg2loc = 1'b1;
 			end
 		endcase
 		
@@ -96,6 +97,7 @@ module control_unit (
 			10'b1001000100: begin
 				itype = 2'b00; // I-type selector
 				reg_write = 1'b1;
+				reg2loc = 1'b1;
 				alu_src = 1'b1;
 				alu_op = 3'b010; // ALU ADD
 			end
