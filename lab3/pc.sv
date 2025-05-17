@@ -9,7 +9,7 @@ module pc (
 	genvar i;
 	generate
 		for (i = 0; i < 64; i = i + 1) begin : pc_bits
-			D_FF dff_i (.q(curr_pc[i]), .d(next_pc[i]), .reset(reset), .clk(clk));
+			D_FF dff_i (.q(next_pc[i]), .d(curr_pc[i]), .reset(reset), .clk(clk));
 		end
 	endgenerate
 endmodule
