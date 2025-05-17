@@ -8,9 +8,9 @@ module decoder_3to8 (
 
     logic n0, n1, n2;
 
-    not #50 g0(n0, in[0]);
-    not #50 g1(n1, in[1]);
-    not #50 g2(n2, in[2]);
+    not #50 g0 (n0, in[0]);
+    not #50 g1 (n1, in[1]);
+    not #50 g2 (n2, in[2]);
 
     and #50 g3 (out[0], enable, n2, n1, n0);       // 000
     and #50 g4 (out[1], enable, n2, n1,  in[0]);   // 001
