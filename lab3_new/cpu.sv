@@ -4,7 +4,15 @@ module cpu (
 	input logic clk,
 	input logic reset
 );
+    // program counter & instruction memory
 	logic [31:0] instruction;
+    program_counter pc_inst (
+        .clk(clk), .reset(reset),
+        .reg_data(br_reg_data), .se_shifted_imm(br_offset),
+        .pc_src(pc_src), .pc(curr_pc)
+    );
+
+    instructmem imem (.address(curr_pc), .instruction(instruction), .clk(clk));
 
 	logic [10:0] opcode;
 	assign opcode = instruction[31:21];
@@ -31,6 +39,12 @@ module cpu (
     logic [2:0] alu_op;
     logic mem_to_reg, reg2loc, alu_src;
     logic take_branch, reg_branch;
+    control_unit cu_inst (
+        .instruction(instruction),
+        .mem_read(mem_read), .mem_write(mem_write), .reg_write(reg_write),
+        .mem_to_reg(mem_to_reg), .reg2loc(reg2loc), .flag_write(flag_write),
+        .alu_src(alu_src), .alu_op(alu_op), .take_branch(take_branch), .reg_branch(reg_branch)
+    );
 
     // program counter
     // 3 ways: PC + 4, PC + offset, PC = Reg[Rd]; use 4:1 pc_src mux
