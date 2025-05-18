@@ -6,9 +6,11 @@ module control_unit (
     output logic mem_to_reg, // 1: write dmem data to reg; 0: write ALU result to reg
     output logic reg2loc, // 1: ReadReg2 = Rd; 0: ReadReg2 = Rm
     output logic flag_write,
+    output logic link_write, // 1 = BL
     output logic alu_src, // 1: ALU B = SE(imm); 0: ALU B = Reg2 data
     output logic [2:0] alu_op,
     output logic take_branch, // 1 = B, BL, BR, CBZ, B.LT
+    output logic uncond_branch, // 1 = B, BL
     output logic reg_branch // 1 = BR
 );
     logic [10:0] opcode_RD;
@@ -28,9 +30,11 @@ module control_unit (
         mem_to_reg = 1'b0;
         reg2loc = 1'b0;
         flag_write = 1'b0;
+        link_write = 1'b0;
         alu_src = 1'b0;
         alu_op = 3'b000;
         take_branch = 1'b0;
+        uncond_branch = 1'b0;
         reg_branch = 1'b0;
 
         // R-type or D-type
@@ -105,12 +109,15 @@ module control_unit (
             // B
             6'b000101: begin
                 take_branch = 1'b1;
+                uncond_branch = 1'b1;
             end
 
             // BL
             6'b100101: begin
                 take_branch = 1'b1;
+                uncond_branch = 1'b1;
                 reg_write = 1'b1;
+                link_write = 1'b1;
             end
         endcase
     end

@@ -7,25 +7,29 @@ module program_counter (
     input logic reset,
     input logic enable,
     input logic [63:0] reg_data, // for BR
-    input logic [63:0] se_shifted_imm, // sign extended, left shifted immediate
-    input logic [1:0] pc_src, // 00: pc+4, 01: imm, 10: reg, 11: no-op
+    input logic [63:0] se_shifted_brAddr, // sign extended, left shifted brAddr26
+    input logic [63:0] se_shifted_condAddr, // sign extended, left shifted condAddr19
+    input logic [1:0] pc_src, // 00: pc+4, 01: uncond branch, 10: cond branch, 11: reg
     output logic [63:0] pc
 );
-    logic [63:0] pc_plus_4, pc_plus_imm;
+    logic [63:0] pc_plus_4, pc_plus_uncond, pc_plus_cond;
     logic [63:0] next_pc;
 
     // sequential: pc + 4
     adder_64bit pc_seq_increment (.a(pc), .b(64'd4), .cin(1'b0), .sum(pc_plus_4), .cout(), .overflow());
 
-    // offset: pc + branching immediate
-    adder_64bit pc_imm_increment (.a(pc), .b(se_shifted_imm), .cin(1'b0), .sum(pc_plus_imm), .cout(), .overflow());
+    // unconditional offset: pc + SE(brAddr26) << 2
+    adder_64bit pc_uncond_increment (.a(pc), .b(se_shifted_brAddr), .cin(1'b0), .sum(pc_plus_uncond), .cout(), .overflow());
+
+    // conditional offset: pc + SE(condAddr19) << 2
+    adder_64bit pc_cond_increment (.a(pc), .b(se_shifted_condAddr), .cin(1'b0), .sum(pc_plus_cond), .cout(), .overflow());
 
     // next pc selection
     mux4_1_64bit pc_mux (
         .i0(pc_plus_4), // 00: sequential
-        .i1(pc_plus_imm), // 01: offset
-        .i2(reg_data), // 10: register
-        .i3(pc), // 11: reuse for no-op
+        .i1(pc_plus_uncond), // 01: uncond offset
+        .i2(pc_plus_cond), // 10: cond offset
+        .i3(reg_data), // 11: register jump
         .sel(pc_src),
         .out(next_pc)
     );
