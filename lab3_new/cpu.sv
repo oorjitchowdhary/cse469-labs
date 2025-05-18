@@ -35,7 +35,7 @@ module cpu (
     // program counter
     // 3 ways: PC + 4, PC + offset, PC = Reg[Rd]; use 4:1 pc_src mux
     // 00: pc = pc + 4 (ADDI, ADDS, LDUR, STUR, SUBS)
-    // 01: pc = SE(imm) << 2 (B, BL, CBZ, B.LT)
+    // 01: pc = pc + SE(imm) << 2 (B, BL, CBZ, B.LT)
     // 10: pc = Reg[Rd] (BR)
 
     // pc_src derived from take_branch, reg_branch, and branch_condition_met (using ALU flags)

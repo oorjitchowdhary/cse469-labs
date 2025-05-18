@@ -48,10 +48,10 @@ module sign_extender_btype (
     genvar i;
     generate
         for (i = 0; i < 26; i = i + 1) begin : copy_bits
-            buf1 b_copy (.in(shift_in[i]), .out(out[i]));
+            buf1 b_copy (.in(in[i]), .out(out[i]));
         end
         for (i = 26; i < 64; i = i + 1) begin : extend_sign
-            buf1 b_sign (.in(shift_in[25]), .out(out[i]));
+            buf1 b_sign (.in(in[25]), .out(out[i]));
         end
     endgenerate
 endmodule
@@ -64,10 +64,10 @@ module sign_extender_cbtype (
     genvar i;
     generate
         for (i = 0; i < 19; i = i + 1) begin : copy_bits
-            buf1 b_copy (.in(shift_in[i]), .out(out[i]));
+            buf1 b_copy (.in(in[i]), .out(out[i]));
         end
         for (i = 19; i < 64; i = i + 1) begin : extend_sign
-            buf1 b_sign (.in(shift_in[18]), .out(out[i]));
+            buf1 b_sign (.in(in[18]), .out(out[i]));
         end
     endgenerate
 endmodule
