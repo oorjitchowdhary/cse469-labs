@@ -11,12 +11,17 @@ module regfile (
   input logic reset
 );
 
-  logic [31:0] write_enable;
+  logic [31:0] raw_write_enable, write_enable;
   decoder_5to32 decoder (
-    .out(write_enable),
+    .out(raw_write_enable),
     .in(WriteRegister),
     .enable(RegWrite)
   );
+
+  // don't allow writes to X31/XZR
+  logic [63:0] forced_write_enable;
+  and_64bit and_force_xzr (.A({32'b0, raw_write_enable}), .B(64'h7FFFFFFF), .out(forced_write_enable));
+  assign write_enable = forced_write_enable[31:0];
   
   genvar i;
   generate
