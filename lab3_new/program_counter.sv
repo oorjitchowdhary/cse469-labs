@@ -5,7 +5,7 @@
 module program_counter (
     input logic clk,
     input logic reset,
-    input logic enable,
+    // input logic enable,
     input logic [63:0] reg_data, // for BR
     input logic [63:0] se_shifted_brAddr, // sign extended, left shifted brAddr26
     input logic [63:0] se_shifted_condAddr, // sign extended, left shifted condAddr19
@@ -38,7 +38,7 @@ module program_counter (
     genvar i;
     generate
         for (i = 0; i < 64; i = i + 1) begin : pc_ff
-            D_FF_en dff_en_i (.clk(clk), .reset(reset), .enable(enable), .d(next_pc[i]), .q(pc[i]));
+            D_FF dff_i (.clk(clk), .reset(reset), .d(next_pc[i]), .q(pc[i]));
         end
     endgenerate
 endmodule

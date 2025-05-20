@@ -32,22 +32,28 @@ vlog "./adders/adder_32bit.sv"
 vlog "./adders/adder_64bit.sv"
 vlog "./subtractor_64bit.sv"
 
+vlog "./utils/immediate_extenders.sv"
+vlog "./utils/left_shifter.sv"
+vlog "./utils/zero_64bits.sv"
+
 vlog "./alu.sv"
 vlog "./alustim.sv"
 
-vlog "./utils/immediate_extenders.sv"
-vlog "./utils/left_shifter.sv"
+vlog "./datamem.sv"
+vlog "./instructmem.sv"
 vlog "./program_counter.sv"
+vlog "./control_unit.sv"
+vlog "./cpu.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work tb_program_counter
+vsim -voptargs="+acc" -t 1ps -lib work cpustim
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-do pc_wave.do
+do cpu_wave.do
 
 # Set the window types
 view wave

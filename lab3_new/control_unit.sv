@@ -8,6 +8,7 @@ module control_unit (
     output logic flag_write,
     output logic link_write, // 1 = BL
     output logic alu_src, // 1: ALU B = SE(imm); 0: ALU B = Reg2 data
+    output logic imm_is_dtype, // 1 = D-type, 0 = I-type
     output logic [2:0] alu_op,
     output logic take_branch, // 1 = B, BL, BR, CBZ, B.LT
     output logic uncond_branch, // 1 = B, BL
@@ -32,6 +33,7 @@ module control_unit (
         flag_write = 1'b0;
         link_write = 1'b0;
         alu_src = 1'b0;
+        imm_is_dtype = 1'b0;
         alu_op = 3'b000;
         take_branch = 1'b0;
         uncond_branch = 1'b0;
@@ -66,6 +68,7 @@ module control_unit (
                 reg_write = 1'b1;
                 alu_op = 3'b010; // ALU ADD
                 alu_src = 1'b1;
+                imm_is_dtype = 1'b1;
             end
 
             // STUR (D)
@@ -74,6 +77,7 @@ module control_unit (
                 alu_op = 3'b010; // ALU ADD
                 alu_src = 1'b1;
                 reg2loc = 1'b1;
+                imm_is_dtype = 1'b1;
             end
         endcase
 
@@ -90,17 +94,16 @@ module control_unit (
 
         // CB-type
         case (opcode_CB)
-            // CBZ
+            // CBZ (checks Reg[Rd] - 0 == 0)
             8'b10110100: begin
                 take_branch = 1'b1;
                 reg2loc = 1'b1;
                 alu_op = 3'b011; // ALU SUB
             end
 
-            // B.LT
+            // B.LT (relies on previous instruction's flags)
             8'b01010100: if (instruction[4:0] == 5'b01011) begin
                 take_branch = 1'b1;
-                alu_op = 3'b011; // ALU SUB
             end
         endcase
 

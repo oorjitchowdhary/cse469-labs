@@ -1,4 +1,5 @@
 module regfile (
+  output logic [63:0] reg_out [31:0],
   output logic [63:0] ReadData1,
   output logic [63:0] ReadData2,
   input  logic [63:0] WriteData,
@@ -6,12 +7,11 @@ module regfile (
   input  logic [4:0] ReadRegister2,
   input  logic [4:0] WriteRegister,
   input  logic RegWrite,
-  input  logic clk
+  input  logic clk,
+  input logic reset
 );
 
   logic [31:0] write_enable;
-  logic [63:0] reg_out[31:0]; // 32 outputs of 64 bit registers
-
   decoder_5to32 decoder (
     .out(write_enable),
     .in(WriteRegister),
@@ -25,7 +25,7 @@ module regfile (
         .q(reg_out[i]),
         .d(WriteData),
         .clk(clk),
-        .reset(1'b0),
+        .reset(reset),
         .enable(write_enable[i])
       );
     end

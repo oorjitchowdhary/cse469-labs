@@ -13,7 +13,7 @@
 //`define BENCHMARK "./benchmarks/test11_Sort.arm"
 //`define BENCHMARK "./benchmarks/test12_Fibonacci.arm"
 
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 
 // How many bytes are in our memory?  Must be a power of two.
 `define INSTRUCT_MEM_SIZE		1024
