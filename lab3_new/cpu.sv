@@ -61,18 +61,41 @@ module cpu (
         .reg_branch(reg_branch), .uncond_branch(uncond_branch), .link_write(link_write)
     );
 
+    // ───────────────────────────────────────────────────────────────
     // deriving pc_src from control signals
-    // pc_src[1] = reg_branch
-    // pc_src[0] = take_branch & ~reg_branch & ~uncond_branch & branch_condition_met
-    assign pc_src[1] = reg_branch;
-    logic not_reg_branch, not_uncond_branch, branch_condition_met;
-    not #50 not_rb (not_reg_branch, reg_branch);
+    //   00 : pc + 4                          (normal sequential)
+    //   01 : pc + SE(brAddr26)<<2            (B, BL)          uncond_branch
+    //   10 : pc + SE(condAddr19)<<2          (B.<cond>, CBZ)  cond_branch_taken
+    //   11 : Reg[Rd]                         (BR)             reg_branch
+    // ───────────────────────────────────────────────────────────────
+
+    logic not_reg_branch, not_uncond_branch;
+    logic cond_branch_taken;   // TRUE only when a conditional branch **and** its condition is satisfied
+
+    // basic inversions
+    not #50 not_rb (not_reg_branch,   reg_branch);
     not #50 not_ub (not_uncond_branch, uncond_branch);
-    and #50 and_pcsrc (pc_src[0], take_branch, not_reg_branch, not_uncond_branch, branch_condition_met);
+
+    // cond_branch_taken = take_branch & ~reg_branch & ~uncond_branch & branch_condition_met
+    and #50 cond_taken_and (cond_branch_taken,
+                            take_branch,
+                            not_reg_branch,
+                            not_uncond_branch,
+                            branch_condition_met);
+
+    // pc_src[1] = reg_branch  | cond_branch_taken
+    // pc_src[0] = uncond_branch | cond_branch_taken
+    // or  #50 pcsrc1_or (pc_src[1], reg_branch,   cond_branch_taken);
+    // or  #50 pcsrc0_or (pc_src[0], uncond_branch, cond_branch_taken);
+    assign pc_src[1] = reg_branch | cond_branch_taken;
+    assign pc_src[0] = uncond_branch | reg_branch;
 
     // register file
     logic [4:0] selected_R2;
     mux2_1_5bit r2_mux (.out(selected_R2), .i0(Rm), .i1(Rd), .sel(reg2loc));
+
+    logic [4:0] selected_write_reg;
+    mux2_1_5bit wr_mux (.out(selected_write_reg), .i0(Rd), .i1(5'd30), .sel(link_write));
 
     logic [63:0] regs [31:0];
     logic [63:0] reg1_data, reg2_data, reg_write_data;
@@ -83,10 +106,13 @@ module cpu (
         .WriteData(reg_write_data), // selected using mem_to_reg mux
         .ReadRegister1(Rn),
         .ReadRegister2(selected_R2), // Rm vs Rd
-        .WriteRegister(Rd),
+        .WriteRegister(selected_write_reg), // Rd vs X30 (for BL)
         .RegWrite(reg_write),
         .clk(clk), .reset(reset)
     );
+
+    // pc logic for BR instruction
+    assign br_reg_data = reg_branch ? reg2_data : 64'd0;
 
     // check whether Reg[Rd] is zero for CBZ
     logic cbz_met;
@@ -115,17 +141,27 @@ module cpu (
     );
 
     // set flags based on flag_write
-    and #50 n_flag (negative_flag, flag_write, alu_negative);
-    and #50 z_flag (zero_flag, flag_write, alu_zero);
-    and #50 c_flag (carry_out_flag, flag_write, alu_carry_out);
-    and #50 v_flag (overflow_flag, flag_write, alu_overflow);
+    D_FF_en n_dff (.q(negative_flag), .d(alu_negative), .clk(clk), .reset(reset), .enable(flag_write));
+    D_FF_en z_dff (.q(zero_flag), .d(alu_zero), .clk(clk), .reset(reset), .enable(flag_write));
+    D_FF_en c_dff (.q(carry_out_flag), .d(alu_carry_out), .clk(clk), .reset(reset), .enable(flag_write));
+    D_FF_en v_dff (.q(overflow_flag), .d(alu_overflow), .clk(clk), .reset(reset), .enable(flag_write));
+
+    always_ff @(posedge clk) begin
+    if (flag_write)
+        $display("[FLAGS %0t] pc=%h N=%b Z=%b V=%b C=%b",
+                 $time, curr_pc,
+                 negative_flag, zero_flag, overflow_flag, carry_out_flag);
+    end
 
     // check whether B.LT condition is met
-    logic blt_met;
-    xor #50 blt_cond_xor (blt_met, negative_flag, overflow_flag);
+    logic is_blt, blt_met;
+    assign is_blt = (instruction[31:24] == 8'b01010100) && (instruction[4:0] == 5'b01011);
+    xor #50 blt_cond_xor (blt_met, alu_negative, alu_overflow);
 
     // final branch_condition_met
-    or #50 cond_branch_or (branch_condition_met, blt_met, cbz_met);
+    logic is_cbz;
+    assign is_cbz = (instruction[31:24] == 8'b10110100) & ~instruction[23];
+    or #50 cond_branch_or (branch_condition_met, is_blt & blt_met, is_cbz & cbz_met);
 
     // data memory
     logic [63:0] mem_read_data;
@@ -140,7 +176,10 @@ module cpu (
     );
 
     // reg write back mux
-    mux2_1_64bit reg_wb_mux (.out(reg_write_data), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
+    logic [63:0] reg_wb, pc_plus_4;
+    adder_64bit pc_inc4 (.a(curr_pc), .b(64'd4), .cin(1'b0), .sum(pc_plus_4), .cout(), .overflow());
+    mux2_1_64bit reg_wb_mux (.out(reg_wb), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
+    mux2_1_64bit wb_final (.out(reg_write_data), .i0(reg_wb), .i1(pc_plus_4), .sel(link_write));
 
 endmodule
 
@@ -161,10 +200,9 @@ module cpustim();
       reset = 1'b0;
     end
 
-    // run for 20 instructions
+    // run for 30 instructions
     initial begin
-      // 20 instruction cycles × 30 ns = 600 ns
-      #(20 * 2 * HALF);              // wait 600 ns
+      #(30 * 2 * HALF);
       $display("Finished 20 cycles at %0t ns", $realtime/1000.0);
       $stop;
     end

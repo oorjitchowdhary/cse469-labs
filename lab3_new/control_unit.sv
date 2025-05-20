@@ -59,6 +59,7 @@ module control_unit (
             11'b11010110000: begin
                 take_branch = 1'b1;
                 reg_branch = 1'b1;
+                reg2loc = 1'b1;
             end
 
             // LDUR (D)
