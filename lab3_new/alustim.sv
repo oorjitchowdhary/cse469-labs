@@ -56,7 +56,7 @@ module alustim();
 		//neg + neg = neg (-1 + -2 = -3)
 		A = -64'sd1; B = -64'sd2;
 		#(delay);
-		assert(result == -64'sd5 && carry_out == 1 && overflow == 0 && negative == 1 && zero == 0);
+		assert(result == -64'sd3 && carry_out == 1 && overflow == 0 && negative == 1 && zero == 0);
 		
 		//neg + pos = 0 (-5 + 5 = 0)
 		A = -64'sd5; B = 64'sd5;
@@ -67,6 +67,11 @@ module alustim();
 		A = 64'd1; B = -64'd5;
 		#(delay);
 		assert(result == -64'd4 && carry_out == 1 && overflow == 0 && negative == 1 && zero == 0);
+
+		// pos + neg = pos (11 + -3 = 8)
+		A = 64'd11; B = -64'd3;
+		#(delay);
+		assert(result == 64'd8);
 		
 		//MAX + 1 = MIN (overflow but no carry out)
 		A = 64'h7FFFFFFFFFFFFFFF; B = 64'h0000000000000001;

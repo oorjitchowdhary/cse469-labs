@@ -72,7 +72,7 @@ module cpu (
 
     // register file
     logic [4:0] selected_R2;
-    mux2_1_5bit r2_mux (.out(selected_R2), .i0(Rd), .i1(Rm), .sel(reg2loc));
+    mux2_1_5bit r2_mux (.out(selected_R2), .i0(Rm), .i1(Rd), .sel(reg2loc));
 
     logic [63:0] regs [31:0];
     logic [63:0] reg1_data, reg2_data, reg_write_data;
@@ -146,29 +146,26 @@ endmodule
 
 // top level CPU testbench
 module cpustim();
-    logic clk, reset;
+    // clock period = 30ns, half-cycle = 15ns
+    logic clk = 1'b0;
+    localparam int HALF = 15000;      // 15,000 ps = 15 ns
+    always  #HALF clk = ~clk;         // full period 30 ns
 
-    // Instantiate the CPU
-    cpu DUT (
-        .clk(clk),
-        .reset(reset)
-    );
+    logic reset;
+    cpu DUT (.clk(clk), .reset(reset));
 
-    // Clock generation: 4000ps period (2000ps half-cycle)
+    // reset active for 4 cycles
     initial begin
-        clk = 0;
-        forever #2000 clk = ~clk;
+      reset = 1'b1;
+      repeat (4) @(posedge clk);     // ≈120 ns in total
+      reset = 1'b0;
     end
 
-    // Reset pulse and simulation duration
+    // run for 20 instructions
     initial begin
-        reset = 1;
-        #4000;
-        reset = 0;
-
-        // Run for ~20 instruction cycles (adjust as needed)
-        repeat (20) @(posedge clk);
-
-        $stop;
+      // 20 instruction cycles × 30 ns = 600 ns
+      #(20 * 2 * HALF);              // wait 600 ns
+      $display("Finished 20 cycles at %0t ns", $realtime/1000.0);
+      $stop;
     end
 endmodule
