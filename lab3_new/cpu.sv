@@ -180,10 +180,10 @@ module cpustim();
       reset = 1'b0;
     end
 
-    // run for 30 instructions
+    // run for 800 instructions
     initial begin
-      #(30 * 2 * HALF);
-      $display("Finished 20 cycles at %0t ns", $realtime/1000.0);
+      #(800 * 2 * HALF);
+      $display("Finished 800 cycles at %0t ns", $realtime/1000.0);
       $stop;
     end
 endmodule
