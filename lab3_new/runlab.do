@@ -37,8 +37,6 @@ vlog "./utils/left_shifter.sv"
 vlog "./utils/zero_64bits.sv"
 
 vlog "./alu.sv"
-vlog "./alustim.sv"
-
 vlog "./datamem.sv"
 vlog "./instructmem.sv"
 vlog "./program_counter.sv"

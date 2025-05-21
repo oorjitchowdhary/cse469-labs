@@ -53,42 +53,28 @@ module cpu (
     logic [2:0] alu_op;
     logic mem_to_reg, reg2loc, alu_src, imm_is_dtype, is_cb_type;
     logic take_branch, reg_branch, uncond_branch, link_write;
+    logic is_blt, is_cbz;
     control_unit cu_inst (
         .instruction(instruction), .imm_is_dtype(imm_is_dtype), .is_cb_type(is_cb_type),
         .mem_read(mem_read), .mem_write(mem_write), .reg_write(reg_write),
         .mem_to_reg(mem_to_reg), .reg2loc(reg2loc), .flag_write(flag_write),
         .alu_src(alu_src), .alu_op(alu_op), .take_branch(take_branch),
-        .reg_branch(reg_branch), .uncond_branch(uncond_branch), .link_write(link_write)
+        .reg_branch(reg_branch), .uncond_branch(uncond_branch), .link_write(link_write),
+        .is_blt(is_blt), .is_cbz(is_cbz)
     );
 
-    // ───────────────────────────────────────────────────────────────
-    // deriving pc_src from control signals
-    //   00 : pc + 4                          (normal sequential)
-    //   01 : pc + SE(brAddr26)<<2            (B, BL)          uncond_branch
-    //   10 : pc + SE(condAddr19)<<2          (B.<cond>, CBZ)  cond_branch_taken
-    //   11 : Reg[Rd]                         (BR)             reg_branch
-    // ───────────────────────────────────────────────────────────────
-
+    // handling pc selector
     logic not_reg_branch, not_uncond_branch;
-    logic cond_branch_taken;   // TRUE only when a conditional branch **and** its condition is satisfied
+    logic cond_branch_taken; // high only when a conditional branch and its condition is satisfied
 
-    // basic inversions
     not #50 not_rb (not_reg_branch,   reg_branch);
     not #50 not_ub (not_uncond_branch, uncond_branch);
-
-    // cond_branch_taken = take_branch & ~reg_branch & ~uncond_branch & branch_condition_met
-    and #50 cond_taken_and (cond_branch_taken,
-                            take_branch,
-                            not_reg_branch,
-                            not_uncond_branch,
-                            branch_condition_met);
-
-    // pc_src[1] = reg_branch  | cond_branch_taken
-    // pc_src[0] = uncond_branch | cond_branch_taken
-    // or  #50 pcsrc1_or (pc_src[1], reg_branch,   cond_branch_taken);
-    // or  #50 pcsrc0_or (pc_src[0], uncond_branch, cond_branch_taken);
-    assign pc_src[1] = reg_branch | cond_branch_taken;
-    assign pc_src[0] = uncond_branch | reg_branch;
+    and #50 cond_taken_and (cond_branch_taken, take_branch,
+                            not_reg_branch, not_uncond_branch, 
+                            branch_condition_met
+    );
+    or #50 or_pcsrc1 (pc_src[1], reg_branch, cond_branch_taken);
+    or #50 or_pcsrc0 (pc_src[0], uncond_branch, reg_branch);
 
     // register file
     logic [4:0] selected_R1, selected_R2;
@@ -113,11 +99,11 @@ module cpu (
     );
 
     // pc logic for BR instruction
-    assign br_reg_data = reg_branch ? reg2_data : 64'd0;
+    mux2_1_64bit br_reg_mux (.out(br_reg_data), .i0(64'd0), .i1(reg2_data), .sel(reg_branch));
 
     // check whether Reg[Rd] is zero for CBZ
-    logic cbz_met;
-    zero_64bits cbz_zero (.in(reg1_data), .zero(cbz_met));
+    logic cbz_cond_met;
+    zero_64bits cbz_zero (.in(reg1_data), .zero(cbz_cond_met));
 
     // ALU
     // immediate = dAddr9 or imm12
@@ -147,22 +133,15 @@ module cpu (
     D_FF_en c_dff (.q(carry_out_flag), .d(alu_carry_out), .clk(clk), .reset(reset), .enable(flag_write));
     D_FF_en v_dff (.q(overflow_flag), .d(alu_overflow), .clk(clk), .reset(reset), .enable(flag_write));
 
-    always_ff @(posedge clk) begin
-    if (flag_write)
-        $display("[FLAGS %0t] pc=%h N=%b Z=%b V=%b C=%b",
-                 $time, curr_pc,
-                 negative_flag, zero_flag, overflow_flag, carry_out_flag);
-    end
-
     // check whether B.LT condition is met
-    logic is_blt, blt_met;
-    assign is_blt = (instruction[31:24] == 8'b01010100) && (instruction[4:0] == 5'b01011);
-    xor #50 blt_cond_xor (blt_met, negative_flag, overflow_flag);
+    logic blt_cond_met;
+    xor #50 blt_cond_xor (blt_cond_met, negative_flag, overflow_flag);
 
     // final branch_condition_met
-    logic is_cbz;
-    assign is_cbz = (instruction[31:24] == 8'b10110100);
-    or #50 cond_branch_or (branch_condition_met, is_blt & blt_met, is_cbz & cbz_met);
+    logic blt_met, cbz_met;
+    and #50 (blt_met, is_blt, blt_cond_met);
+    and #50 (cbz_met, is_cbz, cbz_cond_met);
+    or #50 cond_branch_or (branch_condition_met, blt_met, cbz_met);
 
     // data memory
     logic [63:0] mem_read_data;

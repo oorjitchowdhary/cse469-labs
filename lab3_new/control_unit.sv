@@ -10,6 +10,8 @@ module control_unit (
     output logic alu_src, // 1: ALU B = SE(imm); 0: ALU B = Reg2 data
     output logic imm_is_dtype, // 1 = D-type, 0 = I-type
     output logic is_cb_type,
+    output logic is_blt,
+    output logic is_cbz,
     output logic [2:0] alu_op,
     output logic take_branch, // 1 = B, BL, BR, CBZ, B.LT
     output logic uncond_branch, // 1 = B, BL
@@ -36,6 +38,8 @@ module control_unit (
         alu_src = 1'b0;
         imm_is_dtype = 1'b0;
         is_cb_type = 1'b0;
+        is_blt = 1'b0;
+        is_cbz = 1'b0;
         alu_op = 3'b000;
         take_branch = 1'b0;
         uncond_branch = 1'b0;
@@ -103,12 +107,14 @@ module control_unit (
                 reg2loc = 1'b1;
                 alu_op = 3'b011; // ALU SUB
                 is_cb_type = 1'b1;
+                is_cbz = 1'b1;
             end
 
             // B.LT (relies on previous instruction's flags)
             8'b01010100: if (instruction[4:0] == 5'b01011) begin
                 take_branch = 1'b1;
                 is_cb_type = 1'b1;
+                is_blt = 1'b1;
             end
         endcase
 
