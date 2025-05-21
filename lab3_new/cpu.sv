@@ -51,10 +51,10 @@ module cpu (
     // control unit
     logic mem_read, mem_write, reg_write, flag_write;
     logic [2:0] alu_op;
-    logic mem_to_reg, reg2loc, alu_src, imm_is_dtype;
+    logic mem_to_reg, reg2loc, alu_src, imm_is_dtype, is_cb_type;
     logic take_branch, reg_branch, uncond_branch, link_write;
     control_unit cu_inst (
-        .instruction(instruction), .imm_is_dtype(imm_is_dtype),
+        .instruction(instruction), .imm_is_dtype(imm_is_dtype), .is_cb_type(is_cb_type),
         .mem_read(mem_read), .mem_write(mem_write), .reg_write(reg_write),
         .mem_to_reg(mem_to_reg), .reg2loc(reg2loc), .flag_write(flag_write),
         .alu_src(alu_src), .alu_op(alu_op), .take_branch(take_branch),
@@ -91,7 +91,8 @@ module cpu (
     assign pc_src[0] = uncond_branch | reg_branch;
 
     // register file
-    logic [4:0] selected_R2;
+    logic [4:0] selected_R1, selected_R2;
+    mux2_1_5bit r1_mux (.out(selected_R1), .i0(Rn), .i1(Rd), .sel(is_cb_type));
     mux2_1_5bit r2_mux (.out(selected_R2), .i0(Rm), .i1(Rd), .sel(reg2loc));
 
     logic [4:0] selected_write_reg;
@@ -104,8 +105,8 @@ module cpu (
         .ReadData1(reg1_data),
         .ReadData2(reg2_data),
         .WriteData(reg_write_data), // selected using mem_to_reg mux
-        .ReadRegister1(Rn),
-        .ReadRegister2(selected_R2), // Rm vs Rd
+        .ReadRegister1(selected_R1), // Rn vs Rd (via is_cb_type)
+        .ReadRegister2(selected_R2), // Rm vs Rd (via reg2loc)
         .WriteRegister(selected_write_reg), // Rd vs X30 (for BL)
         .RegWrite(reg_write),
         .clk(clk), .reset(reset)
@@ -156,11 +157,11 @@ module cpu (
     // check whether B.LT condition is met
     logic is_blt, blt_met;
     assign is_blt = (instruction[31:24] == 8'b01010100) && (instruction[4:0] == 5'b01011);
-    xor #50 blt_cond_xor (blt_met, alu_negative, alu_overflow);
+    xor #50 blt_cond_xor (blt_met, negative_flag, overflow_flag);
 
     // final branch_condition_met
     logic is_cbz;
-    assign is_cbz = (instruction[31:24] == 8'b10110100) & ~instruction[23];
+    assign is_cbz = (instruction[31:24] == 8'b10110100);
     or #50 cond_branch_or (branch_condition_met, is_blt & blt_met, is_cbz & cbz_met);
 
     // data memory

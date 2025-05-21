@@ -13,3 +13,7 @@ db/
 incremental_db/
 output_files/
 work/
+
+# Ignore ModelSim files
+transcript
+vsim.wlf
