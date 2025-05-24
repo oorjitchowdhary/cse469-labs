@@ -18,33 +18,42 @@ module cpu (
     );
 
     // calculating pc+4 for WB stage
-    logic [63:0] pc_plus_4;
-    adder_64bit pc_inc4 (.a(curr_pc), .b(64'd4), .cin(1'b0), .sum(pc_plus_4), .cout(), .overflow());
+    logic [63:0] pc_plus4;
+    adder_64bit pc_inc4 (.a(curr_pc), .b(64'd4), .cin(1'b0), .sum(pc_plus4), .cout(), .overflow());
 
     // using curr_pc address to fetch instruction
 	logic [31:0] instruction;
     instructmem imem (.address(curr_pc), .instruction(instruction), .clk(clk));
 
+    // IF/ID pipeline register
+    logic [31:0] if_id_instruction;
+    logic [63:0] if_id_pc_plus4;
+    if_id_pipeline_reg if_id_reg (
+        .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+        .instr_in(instruction), .pc_plus4_in(pc_plus4),
+        .instr_out(if_id_instruction), .pc_plus4_out(if_id_pc_plus4)
+    );
+
     // ID: Instruction Decode
 	logic [10:0] opcode;
-	assign opcode = instruction[31:21];
+	assign opcode = if_id_instruction[31:21];
 
 	logic [4:0] Rd, Rn, Rm;
-    assign Rd = instruction[4:0];
-	assign Rn = instruction[9:5];
-	assign Rm = instruction[20:16];
+    assign Rd = if_id_instruction[4:0];
+	assign Rn = if_id_instruction[9:5];
+	assign Rm = if_id_instruction[20:16];
 
 	logic [25:0] brAddr26;
 	logic [18:0] condAddr19;
-	assign brAddr26 = instruction[25:0];
-	assign condAddr19 = instruction[23:5];
+	assign brAddr26 = if_id_instruction[25:0];
+	assign condAddr19 = if_id_instruction[23:5];
 
 	logic [11:0] imm12;
 	logic [8:0] dAddr9;
 	logic [5:0] shamt;
-	assign imm12 = instruction[21:10];
-	assign dAddr9 = instruction[20:12];
-	assign shamt = instruction[15:10];
+	assign imm12 = if_id_instruction[21:10];
+	assign dAddr9 = if_id_instruction[20:12];
+	assign shamt = if_id_instruction[15:10];
 
     // control unit
     logic mem_read, mem_write, reg_write, flag_write;
@@ -53,7 +62,7 @@ module cpu (
     logic take_branch, reg_branch, uncond_branch, link_write;
     logic is_blt, is_cbz;
     control_unit cu_inst (
-        .instruction(instruction), .imm_is_dtype(imm_is_dtype), .is_cb_type(is_cb_type),
+        .instruction(if_id_instruction), .imm_is_dtype(imm_is_dtype), .is_cb_type(is_cb_type),
         .mem_read(mem_read), .mem_write(mem_write), .reg_write(reg_write),
         .mem_to_reg(mem_to_reg), .reg2loc(reg2loc), .flag_write(flag_write),
         .alu_src(alu_src), .alu_op(alu_op), .take_branch(take_branch),
@@ -61,42 +70,16 @@ module cpu (
         .is_blt(is_blt), .is_cbz(is_cbz)
     );
 
-    // register file
+    // register file specifics
+    // regfile module is in WB stage
     logic [4:0] selected_R1, selected_R2;
     mux2_1_5bit r1_mux (.out(selected_R1), .i0(Rn), .i1(Rd), .sel(is_cb_type));
     mux2_1_5bit r2_mux (.out(selected_R2), .i0(Rm), .i1(Rd), .sel(reg2loc));
-
-    logic [4:0] selected_write_reg;
-    mux2_1_5bit wr_mux (.out(selected_write_reg), .i0(Rd), .i1(5'd30), .sel(link_write));
-
     logic [63:0] regs [31:0];
     logic [63:0] reg1_data, reg2_data, reg_write_data;
-    regfile rf_inst (
-        .reg_out(regs),
-        .ReadData1(reg1_data),
-        .ReadData2(reg2_data),
-        .WriteData(reg_write_data), // selected using mem_to_reg mux
-        .ReadRegister1(selected_R1), // Rn vs Rd (via is_cb_type)
-        .ReadRegister2(selected_R2), // Rm vs Rd (via reg2loc)
-        .WriteRegister(selected_write_reg), // Rd vs X30 (for BL)
-        .RegWrite(reg_write),
-        .clk(clk), .reset(reset)
-    );
 
     // populating br_reg_data for BR instruction
     mux2_1_64bit br_reg_mux (.out(br_reg_data), .i0(64'd0), .i1(reg2_data), .sel(reg_branch));
-
-    // check whether Reg[Rd] is zero for CBZ
-    logic cbz_cond_met;
-    zero_64bits cbz_zero (.in(reg1_data), .zero(cbz_cond_met));
-
-    // EX: Execution
-    // computing branch target address
-    logic [63:0] se_brAddr, se_condAddr;
-    sign_extender_btype se_b_inst (.in(brAddr26), .out(se_brAddr));
-    sign_extender_cbtype se_cb_inst (.in(condAddr19), .out(se_condAddr));
-    left_shifter_2bits ls_b_inst (.in(se_brAddr), .out(br_uncond_offset));
-    left_shifter_2bits ls_cb_inst (.in(se_condAddr), .out(br_cond_offset));
 
     // immediate = dAddr9 or imm12
     logic [63:0] se_immediate, se_dAddr, ze_imm12;
@@ -104,26 +87,92 @@ module cpu (
     sign_extender_dtype se_d_inst (.in(dAddr9), .out(se_dAddr));
     mux2_1_64bit imm_mux (.out(se_immediate), .i0(ze_imm12), .i1(se_dAddr), .sel(imm_is_dtype));
 
+    // sign extending and left shifting branch target address
+    logic [63:0] se_brAddr, se_condAddr;
+    sign_extender_btype se_b_inst (.in(brAddr26), .out(se_brAddr));
+    sign_extender_cbtype se_cb_inst (.in(condAddr19), .out(se_condAddr));
+    left_shifter_2bits ls_b_inst (.in(se_brAddr), .out(br_uncond_offset));
+    left_shifter_2bits ls_cb_inst (.in(se_condAddr), .out(br_cond_offset));
+
+    // ID/EX pipeline register
+    // ID/EX pipeline outputs
+    logic [63:0] id_ex_reg1_data, id_ex_reg2_data, id_ex_imm, id_ex_pc_plus4;
+    logic [4:0]  id_ex_rd;
+    logic [2:0] id_ex_alu_op;
+    logic id_ex_alu_src, id_ex_flag_write, id_ex_mem_read, id_ex_mem_write;
+    logic id_ex_take_branch, id_ex_uncond_branch, id_ex_reg_branch;
+    logic id_ex_reg_write, id_ex_mem_to_reg, id_ex_link_write;
+    logic id_ex_is_cbz, id_ex_is_blt;
+
+    id_ex_pipeline_reg id_ex_reg (
+        .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+        // data
+        .reg1_in(reg1_data),
+        .reg2_in(reg2_data),
+        .imm_in(se_immediate),
+        .rd_in(Rd),
+        .pc_plus4_in(if_id_pc_plus4),
+        .reg1_out(id_ex_reg1_data),
+        .reg2_out(id_ex_reg2_data),
+        .imm_out(id_ex_imm),
+        .rd_out(id_ex_rd),
+        .pc_plus4_out(id_ex_pc_plus4),
+        // EX stage controls
+        .ex_alu_op_in(alu_op),
+        .ex_alu_op_out(id_ex_alu_op),
+        .ex_alu_src_in(alu_src),
+        .ex_alu_src_out(id_ex_alu_src),
+        .ex_flag_write_in(flag_write),
+        .ex_flag_write_out(id_ex_flag_write),
+        .ex_is_blt_in(is_blt),
+        .ex_is_blt_out(id_ex_is_blt),
+        .ex_is_cbz_in(is_cbz),
+        .ex_is_cbz_out(id_ex_is_cbz),
+        // MEM stage controls
+        .mem_mem_read_in(mem_read),
+        .mem_mem_read_out(id_ex_mem_read),
+        .mem_mem_write_in(mem_write),
+        .mem_mem_write_out(id_ex_mem_write),
+        .mem_take_branch_in(take_branch),
+        .mem_take_branch_out(id_ex_take_branch),
+        .mem_uncond_branch_in(uncond_branch),
+        .mem_uncond_branch_out(id_ex_uncond_branch),
+        .mem_reg_branch_in(reg_branch),
+        .mem_reg_branch_out(id_ex_reg_branch),
+        // WB stage controls
+        .wb_reg_write_in(reg_write),
+        .wb_reg_write_out(id_ex_reg_write),
+        .wb_mem_to_reg_in(mem_to_reg),
+        .wb_mem_to_reg_out(id_ex_mem_to_reg),
+        .wb_link_write_in(link_write),
+        .wb_link_write_out(id_ex_link_write)
+    );
+
+    // EX: Execution
     // input_b = reg2_data or immediate
     logic [63:0] input_b, alu_result;
-    mux2_1_64bit alu_b_mux (.out(input_b), .i0(reg2_data), .i1(se_immediate), .sel(alu_src));
+    mux2_1_64bit alu_b_mux (.out(input_b), .i0(id_ex_reg2_data), .i1(id_ex_imm), .sel(id_ex_alu_src));
 
     // flags
     logic alu_negative, alu_zero, alu_carry_out, alu_overflow;
     logic negative_flag, zero_flag, carry_out_flag, overflow_flag;
 
     alu alu_inst (
-        .A(reg1_data), .B(input_b), .result(alu_result),
-        .cntrl(alu_op),
+        .A(id_ex_reg1_data), .B(input_b), .result(alu_result),
+        .cntrl(id_ex_alu_op),
         .negative(alu_negative), .zero(alu_zero),
         .carry_out(alu_carry_out), .overflow(alu_overflow)
     );
 
     // set flags based on flag_write
-    D_FF_en n_dff (.q(negative_flag), .d(alu_negative), .clk(clk), .reset(reset), .enable(flag_write));
-    D_FF_en z_dff (.q(zero_flag), .d(alu_zero), .clk(clk), .reset(reset), .enable(flag_write));
-    D_FF_en c_dff (.q(carry_out_flag), .d(alu_carry_out), .clk(clk), .reset(reset), .enable(flag_write));
-    D_FF_en v_dff (.q(overflow_flag), .d(alu_overflow), .clk(clk), .reset(reset), .enable(flag_write));
+    D_FF_en n_dff (.q(negative_flag), .d(alu_negative), .clk(clk), .reset(reset), .enable(id_ex_flag_write));
+    D_FF_en z_dff (.q(zero_flag), .d(alu_zero), .clk(clk), .reset(reset), .enable(id_ex_flag_write));
+    D_FF_en c_dff (.q(carry_out_flag), .d(alu_carry_out), .clk(clk), .reset(reset), .enable(id_ex_flag_write));
+    D_FF_en v_dff (.q(overflow_flag), .d(alu_overflow), .clk(clk), .reset(reset), .enable(id_ex_flag_write));
+
+    // check whether Reg[Rd] is zero for CBZ
+    logic cbz_cond_met;
+    zero_64bits cbz_zero (.in(id_ex_reg1_data), .zero(cbz_cond_met));
 
     // check whether B.LT condition is met
     logic blt_cond_met;
@@ -131,40 +180,119 @@ module cpu (
 
     // final branch_condition_met
     logic blt_met, cbz_met;
-    and #50 (blt_met, is_blt, blt_cond_met);
-    and #50 (cbz_met, is_cbz, cbz_cond_met);
+    and #50 (blt_met, id_ex_is_blt, blt_cond_met);
+    and #50 (cbz_met, id_ex_is_cbz, cbz_cond_met);
     or #50 cond_branch_or (branch_condition_met, blt_met, cbz_met);
+
+    // EX/MEM pipeline register
+    // EX/MEM outputs
+    logic [63:0] ex_mem_alu_result, ex_mem_reg2_data, ex_mem_pc_plus4;
+    logic [4:0]  ex_mem_rd;
+    logic ex_mem_branch_condition_met, ex_mem_mem_read, ex_mem_mem_write;
+    logic ex_mem_take_branch, ex_mem_uncond_branch, ex_mem_reg_branch;
+    logic ex_mem_reg_write, ex_mem_mem_to_reg, ex_mem_link_write;
+
+    ex_mem_pipeline_reg ex_mem_reg (
+        .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+        // data
+        .alu_result_in(alu_result),
+        .reg2_data_in(id_ex_reg2_data),
+        .rd_in(id_ex_rd),
+        .branch_condition_met_in(branch_condition_met),
+        .pc_plus4_in(id_ex_pc_plus4),
+        .alu_result_out(ex_mem_alu_result),
+        .reg2_data_out(ex_mem_reg2_data),
+        .rd_out(ex_mem_rd),
+        .branch_condition_met_out(ex_mem_branch_condition_met),
+        .pc_plus4_out(ex_mem_pc_plus4),
+        // MEM stage controls
+        .mem_mem_read_in(id_ex_mem_read),
+        .mem_mem_read_out(ex_mem_mem_read),
+        .mem_mem_write_in(id_ex_mem_write),
+        .mem_mem_write_out(ex_mem_mem_write),
+        .mem_take_branch_in(id_ex_take_branch),
+        .mem_take_branch_out(ex_mem_take_branch),
+        .mem_uncond_branch_in(id_ex_uncond_branch),
+        .mem_uncond_branch_out(ex_mem_uncond_branch),
+        .mem_reg_branch_in(id_ex_reg_branch),
+        .mem_reg_branch_out(ex_mem_reg_branch),
+        // WB stage controls
+        .wb_reg_write_in(id_ex_reg_write),
+        .wb_reg_write_out(ex_mem_reg_write),
+        .wb_mem_to_reg_in(id_ex_mem_to_reg),
+        .wb_mem_to_reg_out(ex_mem_mem_to_reg),
+        .wb_link_write_in(id_ex_link_write),
+        .wb_link_write_out(ex_mem_link_write)
+    );
 
     // MEM: Memory
     // handling pc selector
     logic not_reg_branch, not_uncond_branch;
     logic cond_branch_taken; // high only when a conditional branch and its condition is satisfied
 
-    not #50 not_rb (not_reg_branch,   reg_branch);
-    not #50 not_ub (not_uncond_branch, uncond_branch);
-    and #50 cond_taken_and (cond_branch_taken, take_branch,
+    not #50 not_rb (not_reg_branch, ex_mem_reg_branch);
+    not #50 not_ub (not_uncond_branch, ex_mem_uncond_branch);
+    and #50 cond_taken_and (cond_branch_taken, ex_mem_take_branch,
                             not_reg_branch, not_uncond_branch, 
-                            branch_condition_met);
-    or #50 or_pcsrc1 (pc_src[1], reg_branch, cond_branch_taken);
-    or #50 or_pcsrc0 (pc_src[0], uncond_branch, reg_branch);
+                            ex_mem_branch_condition_met);
+    or #50 or_pcsrc1 (pc_src[1], ex_mem_reg_branch, cond_branch_taken);
+    or #50 or_pcsrc0 (pc_src[0], ex_mem_uncond_branch, ex_mem_reg_branch);
 
     // data memory
     logic [63:0] mem_read_data;
     datamem dmem (
-        .address(alu_result),
-        .write_enable(mem_write),
-        .read_enable(mem_read),
-        .write_data(reg2_data),
+        .address(ex_mem_alu_result),
+        .write_enable(ex_mem_mem_write),
+        .read_enable(ex_mem_mem_read),
+        .write_data(ex_mem_reg2_data),
         .read_data(mem_read_data),
         .xfer_size(4'b1000),
         .clk(clk)
     );
 
+    // MEM/WB pipeline register
+    // MEM/WB outputs
+    logic [63:0] mem_wb_alu_result, mem_wb_mem_data, mem_wb_pc_plus4;
+    logic [4:0]  mem_wb_rd;
+    logic mem_wb_reg_write, mem_wb_mem_to_reg, mem_wb_link_write;
+
+    mem_wb_pipeline_reg mem_wb_reg (
+        .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+        // data
+        .alu_result_in(ex_mem_alu_result),
+        .mem_data_in(mem_read_data),
+        .rd_in(ex_mem_rd),
+        .pc_plus4_in(ex_mem_pc_plus4),
+        .alu_result_out(mem_wb_alu_result),
+        .mem_data_out(mem_wb_mem_data),
+        .rd_out(mem_wb_rd),
+        .pc_plus4_out(mem_wb_pc_plus4),
+        // WB stage control signals
+        .wb_reg_write_in(ex_mem_reg_write),
+        .wb_reg_write_out(mem_wb_reg_write),
+        .wb_mem_to_reg_in(ex_mem_mem_to_reg),
+        .wb_mem_to_reg_out(mem_wb_mem_to_reg),
+        .wb_link_write_in(ex_mem_link_write),
+        .wb_link_write_out(mem_wb_link_write)
+    );
+
     // WB: Write-Back
     // reg write back mux
     logic [63:0] reg_wb;
-    mux2_1_64bit reg_wb_mux (.out(reg_wb), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
-    mux2_1_64bit wb_final (.out(reg_write_data), .i0(reg_wb), .i1(pc_plus_4), .sel(link_write));
+    mux2_1_64bit reg_wb_mux (.out(reg_wb), .i0(mem_wb_alu_result), .i1(mem_wb_mem_data), .sel(mem_wb_mem_to_reg));
+    mux2_1_64bit wb_final (.out(reg_write_data), .i0(reg_wb), .i1(mem_wb_pc_plus4), .sel(mem_wb_link_write));
+
+    regfile rf_inst (
+        .ReadRegister1(selected_R1),      // from ID, Rn vs Rd selected using is_cb_type
+        .ReadRegister2(selected_R2),      // from ID, Rm vs Rd selected using reg2loc
+        .ReadData1(reg1_data),            // used in ID
+        .ReadData2(reg2_data),            // used in ID
+        .WriteRegister(mem_wb_rd),        // from WB
+        .WriteData(reg_write_data),       // from WB, selected using mem_to_reg
+        .RegWrite(mem_wb_reg_write),      // from WB
+        .reg_out(regs),
+        .clk(clk), .reset(reset)
+    );
 
 endmodule
 

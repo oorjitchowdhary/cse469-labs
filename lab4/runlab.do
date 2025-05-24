@@ -24,6 +24,10 @@ vlog "./decoders/decoder_5to32.sv"
 
 vlog "./utils/dff.sv"
 vlog "./utils/dff_en.sv"
+vlog "./utils/register_1bit.sv"
+vlog "./utils/register_3bit.sv"
+vlog "./utils/register_5bit.sv"
+vlog "./utils/register_32bit.sv"
 vlog "./utils/register_64bit.sv"
 
 vlog "./adders/adder.sv"
@@ -41,6 +45,10 @@ vlog "./datamem.sv"
 vlog "./instructmem.sv"
 vlog "./program_counter.sv"
 vlog "./control_unit.sv"
+vlog "./if_id_pipeline_reg.sv"
+vlog "./id_ex_pipeline_reg.sv"
+vlog "./ex_mem_pipeline_reg.sv"
+vlog "./mem_wb_pipeline_reg.sv"
 vlog "./cpu.sv"
 
 # Call vsim to invoke simulator
