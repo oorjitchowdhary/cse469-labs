@@ -28,10 +28,11 @@ module cpu (
     // IF/ID pipeline register
     logic [31:0] if_id_instruction;
     logic [63:0] if_id_pc_plus4;
+
     if_id_pipeline_reg if_id_reg (
         .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
-        .instr_in(instruction), .pc_plus4_in(pc_plus4),
-        .instr_out(if_id_instruction), .pc_plus4_out(if_id_pc_plus4)
+        .instr_in(instruction), .instr_out(if_id_instruction),
+        .pc_plus4_in(pc_plus4), .pc_plus4_out(if_id_pc_plus4)
     );
 
     // ID: Instruction Decode
@@ -95,7 +96,6 @@ module cpu (
     left_shifter_2bits ls_cb_inst (.in(se_condAddr), .out(br_cond_offset));
 
     // ID/EX pipeline register
-    // ID/EX pipeline outputs
     logic [63:0] id_ex_reg1_data, id_ex_reg2_data, id_ex_imm, id_ex_pc_plus4;
     logic [4:0]  id_ex_rd;
     logic [2:0] id_ex_alu_op;
@@ -106,46 +106,32 @@ module cpu (
 
     id_ex_pipeline_reg id_ex_reg (
         .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+
         // data
-        .reg1_in(reg1_data),
-        .reg2_in(reg2_data),
-        .imm_in(se_immediate),
-        .rd_in(Rd),
-        .pc_plus4_in(if_id_pc_plus4),
-        .reg1_out(id_ex_reg1_data),
-        .reg2_out(id_ex_reg2_data),
-        .imm_out(id_ex_imm),
-        .rd_out(id_ex_rd),
-        .pc_plus4_out(id_ex_pc_plus4),
+        .reg1_in(reg1_data), .reg1_out(id_ex_reg1_data),
+        .reg2_in(reg2_data), .reg2_out(id_ex_reg2_data),
+        .imm_in(se_immediate), .imm_out(id_ex_imm),
+        .rd_in(Rd), .rd_out(id_ex_rd),
+        .pc_plus4_in(if_id_pc_plus4), .pc_plus4_out(id_ex_pc_plus4),
+
         // EX stage controls
-        .ex_alu_op_in(alu_op),
-        .ex_alu_op_out(id_ex_alu_op),
-        .ex_alu_src_in(alu_src),
-        .ex_alu_src_out(id_ex_alu_src),
-        .ex_flag_write_in(flag_write),
-        .ex_flag_write_out(id_ex_flag_write),
-        .ex_is_blt_in(is_blt),
-        .ex_is_blt_out(id_ex_is_blt),
-        .ex_is_cbz_in(is_cbz),
-        .ex_is_cbz_out(id_ex_is_cbz),
+        .ex_alu_op_in(alu_op), .ex_alu_op_out(id_ex_alu_op),
+        .ex_alu_src_in(alu_src), .ex_alu_src_out(id_ex_alu_src),
+        .ex_flag_write_in(flag_write), .ex_flag_write_out(id_ex_flag_write),
+        .ex_is_blt_in(is_blt), .ex_is_blt_out(id_ex_is_blt),
+        .ex_is_cbz_in(is_cbz), .ex_is_cbz_out(id_ex_is_cbz),
+
         // MEM stage controls
-        .mem_mem_read_in(mem_read),
-        .mem_mem_read_out(id_ex_mem_read),
-        .mem_mem_write_in(mem_write),
-        .mem_mem_write_out(id_ex_mem_write),
-        .mem_take_branch_in(take_branch),
-        .mem_take_branch_out(id_ex_take_branch),
-        .mem_uncond_branch_in(uncond_branch),
-        .mem_uncond_branch_out(id_ex_uncond_branch),
-        .mem_reg_branch_in(reg_branch),
-        .mem_reg_branch_out(id_ex_reg_branch),
+        .mem_mem_read_in(mem_read), .mem_mem_read_out(id_ex_mem_read),
+        .mem_mem_write_in(mem_write), .mem_mem_write_out(id_ex_mem_write),
+        .mem_take_branch_in(take_branch), .mem_take_branch_out(id_ex_take_branch),
+        .mem_uncond_branch_in(uncond_branch), .mem_uncond_branch_out(id_ex_uncond_branch),
+        .mem_reg_branch_in(reg_branch), .mem_reg_branch_out(id_ex_reg_branch),
+
         // WB stage controls
-        .wb_reg_write_in(reg_write),
-        .wb_reg_write_out(id_ex_reg_write),
-        .wb_mem_to_reg_in(mem_to_reg),
-        .wb_mem_to_reg_out(id_ex_mem_to_reg),
-        .wb_link_write_in(link_write),
-        .wb_link_write_out(id_ex_link_write)
+        .wb_reg_write_in(reg_write), .wb_reg_write_out(id_ex_reg_write),
+        .wb_mem_to_reg_in(mem_to_reg), .wb_mem_to_reg_out(id_ex_mem_to_reg),
+        .wb_link_write_in(link_write), .wb_link_write_out(id_ex_link_write)
     );
 
     // EX: Execution
@@ -185,7 +171,6 @@ module cpu (
     or #50 cond_branch_or (branch_condition_met, blt_met, cbz_met);
 
     // EX/MEM pipeline register
-    // EX/MEM outputs
     logic [63:0] ex_mem_alu_result, ex_mem_reg2_data, ex_mem_pc_plus4;
     logic [4:0]  ex_mem_rd;
     logic ex_mem_branch_condition_met, ex_mem_mem_read, ex_mem_mem_write;
@@ -194,35 +179,25 @@ module cpu (
 
     ex_mem_pipeline_reg ex_mem_reg (
         .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+
         // data
-        .alu_result_in(alu_result),
-        .reg2_data_in(id_ex_reg2_data),
-        .rd_in(id_ex_rd),
-        .branch_condition_met_in(branch_condition_met),
-        .pc_plus4_in(id_ex_pc_plus4),
-        .alu_result_out(ex_mem_alu_result),
-        .reg2_data_out(ex_mem_reg2_data),
-        .rd_out(ex_mem_rd),
-        .branch_condition_met_out(ex_mem_branch_condition_met),
-        .pc_plus4_out(ex_mem_pc_plus4),
+        .alu_result_in(alu_result), .alu_result_out(ex_mem_alu_result),
+        .reg2_data_in(id_ex_reg2_data), .reg2_data_out(ex_mem_reg2_data),
+        .rd_in(id_ex_rd), .rd_out(ex_mem_rd),
+        .branch_condition_met_in(branch_condition_met), .branch_condition_met_out(ex_mem_branch_condition_met),
+        .pc_plus4_in(id_ex_pc_plus4), .pc_plus4_out(ex_mem_pc_plus4),
+
         // MEM stage controls
-        .mem_mem_read_in(id_ex_mem_read),
-        .mem_mem_read_out(ex_mem_mem_read),
-        .mem_mem_write_in(id_ex_mem_write),
-        .mem_mem_write_out(ex_mem_mem_write),
-        .mem_take_branch_in(id_ex_take_branch),
-        .mem_take_branch_out(ex_mem_take_branch),
-        .mem_uncond_branch_in(id_ex_uncond_branch),
-        .mem_uncond_branch_out(ex_mem_uncond_branch),
-        .mem_reg_branch_in(id_ex_reg_branch),
-        .mem_reg_branch_out(ex_mem_reg_branch),
+        .mem_mem_read_in(id_ex_mem_read),.mem_mem_read_out(ex_mem_mem_read),
+        .mem_mem_write_in(id_ex_mem_write), .mem_mem_write_out(ex_mem_mem_write),
+        .mem_take_branch_in(id_ex_take_branch), .mem_take_branch_out(ex_mem_take_branch),
+        .mem_uncond_branch_in(id_ex_uncond_branch), .mem_uncond_branch_out(ex_mem_uncond_branch),
+        .mem_reg_branch_in(id_ex_reg_branch), .mem_reg_branch_out(ex_mem_reg_branch),
+
         // WB stage controls
-        .wb_reg_write_in(id_ex_reg_write),
-        .wb_reg_write_out(ex_mem_reg_write),
-        .wb_mem_to_reg_in(id_ex_mem_to_reg),
-        .wb_mem_to_reg_out(ex_mem_mem_to_reg),
-        .wb_link_write_in(id_ex_link_write),
-        .wb_link_write_out(ex_mem_link_write)
+        .wb_reg_write_in(id_ex_reg_write), .wb_reg_write_out(ex_mem_reg_write),
+        .wb_mem_to_reg_in(id_ex_mem_to_reg), .wb_mem_to_reg_out(ex_mem_mem_to_reg),
+        .wb_link_write_in(id_ex_link_write), .wb_link_write_out(ex_mem_link_write)
     );
 
     // MEM: Memory
@@ -251,29 +226,23 @@ module cpu (
     );
 
     // MEM/WB pipeline register
-    // MEM/WB outputs
     logic [63:0] mem_wb_alu_result, mem_wb_mem_data, mem_wb_pc_plus4;
     logic [4:0]  mem_wb_rd;
     logic mem_wb_reg_write, mem_wb_mem_to_reg, mem_wb_link_write;
 
     mem_wb_pipeline_reg mem_wb_reg (
         .clk(clk), .reset(reset), .enable(1'b1), // TODO: stalling
+
         // data
-        .alu_result_in(ex_mem_alu_result),
-        .mem_data_in(mem_read_data),
-        .rd_in(ex_mem_rd),
-        .pc_plus4_in(ex_mem_pc_plus4),
-        .alu_result_out(mem_wb_alu_result),
-        .mem_data_out(mem_wb_mem_data),
-        .rd_out(mem_wb_rd),
-        .pc_plus4_out(mem_wb_pc_plus4),
+        .alu_result_in(ex_mem_alu_result), .alu_result_out(mem_wb_alu_result),
+        .mem_data_in(mem_read_data), .mem_data_out(mem_wb_mem_data),
+        .rd_in(ex_mem_rd), .rd_out(mem_wb_rd),
+        .pc_plus4_in(ex_mem_pc_plus4), .pc_plus4_out(mem_wb_pc_plus4),
+
         // WB stage control signals
-        .wb_reg_write_in(ex_mem_reg_write),
-        .wb_reg_write_out(mem_wb_reg_write),
-        .wb_mem_to_reg_in(ex_mem_mem_to_reg),
-        .wb_mem_to_reg_out(mem_wb_mem_to_reg),
-        .wb_link_write_in(ex_mem_link_write),
-        .wb_link_write_out(mem_wb_link_write)
+        .wb_reg_write_in(ex_mem_reg_write), .wb_reg_write_out(mem_wb_reg_write),
+        .wb_mem_to_reg_in(ex_mem_mem_to_reg), .wb_mem_to_reg_out(mem_wb_mem_to_reg),
+        .wb_link_write_in(ex_mem_link_write), .wb_link_write_out(mem_wb_link_write)
     );
 
     // WB: Write-Back
