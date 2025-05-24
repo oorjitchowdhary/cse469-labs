@@ -24,18 +24,18 @@ vlog "./decoders/decoder_5to32.sv"
 
 vlog "./utils/dff.sv"
 vlog "./utils/dff_en.sv"
-vlog "./register_64bit.sv"
-vlog "./regfile.sv"
+vlog "./utils/register_64bit.sv"
 
 vlog "./adders/adder.sv"
 vlog "./adders/adder_32bit.sv"
 vlog "./adders/adder_64bit.sv"
-vlog "./subtractor_64bit.sv"
+vlog "./utils/subtractor_64bit.sv"
 
 vlog "./utils/immediate_extenders.sv"
 vlog "./utils/left_shifter.sv"
 vlog "./utils/zero_64bits.sv"
 
+vlog "./regfile.sv"
 vlog "./alu.sv"
 vlog "./datamem.sv"
 vlog "./instructmem.sv"

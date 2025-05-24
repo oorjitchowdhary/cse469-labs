@@ -4,7 +4,7 @@ module cpu (
 	input logic clk,
 	input logic reset
 );
-    // instruction fetch
+    // IF: Instruction Fetch
     logic [63:0] curr_pc, br_reg_data, br_uncond_offset, br_cond_offset;
     logic [1:0] pc_src;
 
@@ -17,10 +17,15 @@ module cpu (
         .pc_src(pc_src), .pc(curr_pc)
     );
 
+    // calculating pc+4 for WB stage
+    logic [63:0] pc_plus_4;
+    adder_64bit pc_inc4 (.a(curr_pc), .b(64'd4), .cin(1'b0), .sum(pc_plus_4), .cout(), .overflow());
+
+    // using curr_pc address to fetch instruction
 	logic [31:0] instruction;
     instructmem imem (.address(curr_pc), .instruction(instruction), .clk(clk));
 
-    // instruction decode
+    // ID: Instruction Decode
 	logic [10:0] opcode;
 	assign opcode = instruction[31:21];
 
@@ -33,13 +38,6 @@ module cpu (
 	logic [18:0] condAddr19;
 	assign brAddr26 = instruction[25:0];
 	assign condAddr19 = instruction[23:5];
-
-    // handling for pc
-    logic [63:0] se_brAddr, se_condAddr;
-    sign_extender_btype se_b_inst (.in(brAddr26), .out(se_brAddr));
-    sign_extender_cbtype se_cb_inst (.in(condAddr19), .out(se_condAddr));
-    left_shifter_2bits ls_b_inst (.in(se_brAddr), .out(br_uncond_offset));
-    left_shifter_2bits ls_cb_inst (.in(se_condAddr), .out(br_cond_offset));
 
 	logic [11:0] imm12;
 	logic [8:0] dAddr9;
@@ -63,19 +61,6 @@ module cpu (
         .is_blt(is_blt), .is_cbz(is_cbz)
     );
 
-    // handling pc selector
-    logic not_reg_branch, not_uncond_branch;
-    logic cond_branch_taken; // high only when a conditional branch and its condition is satisfied
-
-    not #50 not_rb (not_reg_branch,   reg_branch);
-    not #50 not_ub (not_uncond_branch, uncond_branch);
-    and #50 cond_taken_and (cond_branch_taken, take_branch,
-                            not_reg_branch, not_uncond_branch, 
-                            branch_condition_met
-    );
-    or #50 or_pcsrc1 (pc_src[1], reg_branch, cond_branch_taken);
-    or #50 or_pcsrc0 (pc_src[0], uncond_branch, reg_branch);
-
     // register file
     logic [4:0] selected_R1, selected_R2;
     mux2_1_5bit r1_mux (.out(selected_R1), .i0(Rn), .i1(Rd), .sel(is_cb_type));
@@ -98,14 +83,21 @@ module cpu (
         .clk(clk), .reset(reset)
     );
 
-    // pc logic for BR instruction
+    // populating br_reg_data for BR instruction
     mux2_1_64bit br_reg_mux (.out(br_reg_data), .i0(64'd0), .i1(reg2_data), .sel(reg_branch));
 
     // check whether Reg[Rd] is zero for CBZ
     logic cbz_cond_met;
     zero_64bits cbz_zero (.in(reg1_data), .zero(cbz_cond_met));
 
-    // ALU
+    // EX: Execution
+    // computing branch target address
+    logic [63:0] se_brAddr, se_condAddr;
+    sign_extender_btype se_b_inst (.in(brAddr26), .out(se_brAddr));
+    sign_extender_cbtype se_cb_inst (.in(condAddr19), .out(se_condAddr));
+    left_shifter_2bits ls_b_inst (.in(se_brAddr), .out(br_uncond_offset));
+    left_shifter_2bits ls_cb_inst (.in(se_condAddr), .out(br_cond_offset));
+
     // immediate = dAddr9 or imm12
     logic [63:0] se_immediate, se_dAddr, ze_imm12;
     zero_extender_itype ze_i_inst (.in(imm12), .out(ze_imm12));
@@ -143,6 +135,19 @@ module cpu (
     and #50 (cbz_met, is_cbz, cbz_cond_met);
     or #50 cond_branch_or (branch_condition_met, blt_met, cbz_met);
 
+    // MEM: Memory
+    // handling pc selector
+    logic not_reg_branch, not_uncond_branch;
+    logic cond_branch_taken; // high only when a conditional branch and its condition is satisfied
+
+    not #50 not_rb (not_reg_branch,   reg_branch);
+    not #50 not_ub (not_uncond_branch, uncond_branch);
+    and #50 cond_taken_and (cond_branch_taken, take_branch,
+                            not_reg_branch, not_uncond_branch, 
+                            branch_condition_met);
+    or #50 or_pcsrc1 (pc_src[1], reg_branch, cond_branch_taken);
+    or #50 or_pcsrc0 (pc_src[0], uncond_branch, reg_branch);
+
     // data memory
     logic [63:0] mem_read_data;
     datamem dmem (
@@ -155,9 +160,9 @@ module cpu (
         .clk(clk)
     );
 
+    // WB: Write-Back
     // reg write back mux
-    logic [63:0] reg_wb, pc_plus_4;
-    adder_64bit pc_inc4 (.a(curr_pc), .b(64'd4), .cin(1'b0), .sum(pc_plus_4), .cout(), .overflow());
+    logic [63:0] reg_wb;
     mux2_1_64bit reg_wb_mux (.out(reg_wb), .i0(alu_result), .i1(mem_read_data), .sel(mem_to_reg));
     mux2_1_64bit wb_final (.out(reg_write_data), .i0(reg_wb), .i1(pc_plus_4), .sel(link_write));
 
