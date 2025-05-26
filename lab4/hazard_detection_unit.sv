@@ -1,8 +1,11 @@
 `timescale 1ps/1ps
 
 module hazard_detection_unit (
+    input logic clk,
+    input logic reset,
     input logic [4:0] id_ex_rd,
     input logic id_ex_mem_read,
+    input logic id_ex_valid,
     input logic [4:0] if_id_r1, // R1 (Rn vs Rd) selected using is_cb_type mux
     input logic [4:0] if_id_r2, // R2 (Rm vs Rd) selected using reg2loc
     output logic stall
@@ -17,6 +20,12 @@ module hazard_detection_unit (
     and #50 and_rn (hazard_on_r1, id_ex_mem_read, match_r1);
     and #50 and_rm (hazard_on_r2, id_ex_mem_read, match_r2);
 
+    logic hazard;
+    or #50 or_hazard (hazard, hazard_on_r1, hazard_on_r2);
+
     // stall decision
-    or #50 or_stall (stall, hazard_on_r1, hazard_on_r2);
+    logic stall_raw;
+    and #50 stall_and (stall_raw, id_ex_valid, hazard);
+
+    assign stall = reset ? 1'b0 : stall_raw;
 endmodule

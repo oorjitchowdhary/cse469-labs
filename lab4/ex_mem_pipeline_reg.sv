@@ -5,6 +5,9 @@ module ex_mem_pipeline_reg (
     input logic reset,
     input logic enable,
 
+    input logic valid_in,
+    output logic valid_out,
+
     // data I/O
     input  logic [63:0] alu_result_in,
     input  logic [63:0] reg2_data_in,
@@ -37,6 +40,8 @@ module ex_mem_pipeline_reg (
     output logic wb_mem_to_reg_out,
     output logic wb_link_write_out
 );
+
+    register_1bit valid_reg (.q(valid_out), .d(valid_in), .clk(clk), .reset(reset), .enable(enable));
 
     // data registers
     register_64bit alu_result (.q(alu_result_out), .d(alu_result_in), .clk(clk), .reset(reset), .enable(enable));

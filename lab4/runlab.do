@@ -10,6 +10,7 @@ vlog "./gates/or_64bit.sv"
 vlog "./gates/xor_64bit.sv"
 
 vlog "./muxes/mux2_1.sv"
+vlog "./muxes/mux2_1_3bit.sv"
 vlog "./muxes/mux2_1_5bit.sv"
 vlog "./muxes/mux2_1_64bit.sv"
 vlog "./muxes/mux4_1.sv"
@@ -29,6 +30,7 @@ vlog "./utils/register_3bit.sv"
 vlog "./utils/register_5bit.sv"
 vlog "./utils/register_32bit.sv"
 vlog "./utils/register_64bit.sv"
+vlog "./utils/comparator_5bit.sv"
 
 vlog "./adders/adder.sv"
 vlog "./adders/adder_32bit.sv"
@@ -49,6 +51,7 @@ vlog "./if_id_pipeline_reg.sv"
 vlog "./id_ex_pipeline_reg.sv"
 vlog "./ex_mem_pipeline_reg.sv"
 vlog "./mem_wb_pipeline_reg.sv"
+vlog "./hazard_detection_unit.sv"
 vlog "./cpu.sv"
 
 # Call vsim to invoke simulator

@@ -5,6 +5,9 @@ module id_ex_pipeline_reg (
     input  logic reset,
     input  logic enable,
 
+    input logic valid_in,
+    output logic valid_out,
+
     // data I/O
     input  logic [63:0] reg1_in,
     input  logic [63:0] reg2_in,
@@ -49,6 +52,8 @@ module id_ex_pipeline_reg (
     output logic       wb_mem_to_reg_out,
     output logic       wb_link_write_out
 );
+
+    register_1bit valid_reg (.q(valid_out), .d(valid_in), .clk(clk), .reset(reset), .enable(enable));
 
     // data registers
     register_64bit reg1      (.q(reg1_out), .d(reg1_in),      .clk(clk), .reset(reset), .enable(enable));
