@@ -263,13 +263,28 @@ module cpu (
         .clk(clk), .reset(reset)
     );
 
+always_ff @(posedge clk) begin
+  $display("[TRACE] reset=%b | reg_write_in=%b to reg_write_out=%b", reset, reg_write, id_ex_reg_write);
+end
+
+always_ff @(posedge clk) begin
+    $display("[%0t ns] PC=%h Instr=%h | EX/MEM: reg_br=%b uncond_br=%b take_br=%b | pc_src=%b",
+             $time/1000.0,
+             curr_pc,
+             instruction,
+             ex_mem_reg_branch,
+             ex_mem_uncond_branch,
+             ex_mem_take_branch,
+             pc_src);
+end
+
 endmodule
 
 // top level CPU testbench
 module cpustim();
     // clock period = 30ns, half-cycle = 15ns
     logic clk = 1'b0;
-    localparam int HALF = 15000;      // 15,000 ps = 15 ns
+    localparam int HALF = 17000;      // 15,000 ps = 15 ns
     always  #HALF clk = ~clk;         // full period 30 ns
 
     logic reset;
@@ -278,13 +293,13 @@ module cpustim();
     // reset active for 4 cycles
     initial begin
       reset = 1'b1;
-      repeat (4) @(posedge clk);     // ≈120 ns in total
+      repeat (5) @(posedge clk);     // ≈120 ns in total
       reset = 1'b0;
     end
 
     // run for 800 instructions
     initial begin
-      #(800 * 2 * HALF);
+      #(50 * 2 * HALF);
       $display("Finished 800 cycles at %0t ns", $realtime/1000.0);
       $stop;
     end

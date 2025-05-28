@@ -31,8 +31,8 @@ module mem_wb_pipeline_reg (
     register_64bit pc_plus4  (.q(pc_plus4_out), .d(pc_plus4_in), .clk(clk), .reset(reset), .enable(enable));
 
     // WB stage control signal registers
-    register_1bit reg_write   (.q(wb_reg_write_out),  .d(wb_reg_write_in),  .clk(clk), .reset(reset), .enable(enable));
-    register_1bit mem_to_reg  (.q(wb_mem_to_reg_out), .d(wb_mem_to_reg_in), .clk(clk), .reset(reset), .enable(enable));
-    register_1bit link_write  (.q(wb_link_write_out), .d(wb_link_write_in), .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en reg_write   (.q(wb_reg_write_out),  .d(wb_reg_write_in),  .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en mem_to_reg  (.q(wb_mem_to_reg_out), .d(wb_mem_to_reg_in), .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en link_write  (.q(wb_link_write_out), .d(wb_link_write_in), .clk(clk), .reset(reset), .enable(enable));
 
 endmodule

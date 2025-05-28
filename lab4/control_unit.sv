@@ -135,4 +135,10 @@ module control_unit (
             end
         endcase
     end
+
+always_comb begin
+    $display("[control_unit] instr=%h, opcode_I=%b, reg_write=%b, alu_op=%b, alu_src=%b",
+            instruction, opcode_I, reg_write, alu_op, alu_src);
+end
+
 endmodule

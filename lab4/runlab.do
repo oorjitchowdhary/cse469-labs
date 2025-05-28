@@ -24,7 +24,6 @@ vlog "./decoders/decoder_5to32.sv"
 
 vlog "./utils/dff.sv"
 vlog "./utils/dff_en.sv"
-vlog "./utils/register_1bit.sv"
 vlog "./utils/register_3bit.sv"
 vlog "./utils/register_5bit.sv"
 vlog "./utils/register_32bit.sv"

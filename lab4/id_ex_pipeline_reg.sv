@@ -59,21 +59,21 @@ module id_ex_pipeline_reg (
 
     // EX stage control signal registers
     register_3bit ex_alu_op    (.q(ex_alu_op_out),    .d(ex_alu_op_in),    .clk(clk), .reset(reset), .enable(enable));
-    register_1bit ex_alu_src   (.q(ex_alu_src_out),   .d(ex_alu_src_in),   .clk(clk), .reset(reset), .enable(enable));
-    register_1bit ex_flag_write(.q(ex_flag_write_out),.d(ex_flag_write_in),.clk(clk), .reset(reset), .enable(enable));
-    register_1bit ex_is_blt (.q(ex_is_blt_out), .d(ex_is_blt_in), .clk(clk), .reset(reset), .enable(enable));
-    register_1bit ex_is_cbz (.q(ex_is_cbz_out), .d(ex_is_cbz_in), .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en ex_alu_src   (.q(ex_alu_src_out),   .d(ex_alu_src_in),   .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en ex_flag_write(.q(ex_flag_write_out),.d(ex_flag_write_in),.clk(clk), .reset(reset), .enable(enable));
+    D_FF_en ex_is_blt (.q(ex_is_blt_out), .d(ex_is_blt_in), .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en ex_is_cbz (.q(ex_is_cbz_out), .d(ex_is_cbz_in), .clk(clk), .reset(reset), .enable(enable));
 
     // MEM stage control signal registers
-    register_1bit mem_mem_read     (.q(mem_mem_read_out),     .d(mem_mem_read_in),     .clk(clk), .reset(reset), .enable(enable));
-    register_1bit mem_mem_write    (.q(mem_mem_write_out),    .d(mem_mem_write_in),    .clk(clk), .reset(reset), .enable(enable));
-    register_1bit mem_take_branch  (.q(mem_take_branch_out),  .d(mem_take_branch_in),  .clk(clk), .reset(reset), .enable(enable));
-    register_1bit mem_uncond_branch(.q(mem_uncond_branch_out),.d(mem_uncond_branch_in),.clk(clk), .reset(reset), .enable(enable));
-    register_1bit mem_reg_branch   (.q(mem_reg_branch_out),   .d(mem_reg_branch_in),   .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en mem_mem_read     (.q(mem_mem_read_out),     .d(mem_mem_read_in),     .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en mem_mem_write    (.q(mem_mem_write_out),    .d(mem_mem_write_in),    .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en mem_take_branch  (.q(mem_take_branch_out),  .d(mem_take_branch_in),  .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en mem_uncond_branch(.q(mem_uncond_branch_out),.d(mem_uncond_branch_in),.clk(clk), .reset(reset), .enable(enable));
+    D_FF_en mem_reg_branch   (.q(mem_reg_branch_out),   .d(mem_reg_branch_in),   .clk(clk), .reset(reset), .enable(enable));
 
     // WB stage control signal registers
-    register_1bit wb_reg_write   (.q(wb_reg_write_out),   .d(wb_reg_write_in),   .clk(clk), .reset(reset), .enable(enable));
-    register_1bit wb_mem_to_reg  (.q(wb_mem_to_reg_out),  .d(wb_mem_to_reg_in),  .clk(clk), .reset(reset), .enable(enable));
-    register_1bit wb_link_write  (.q(wb_link_write_out),  .d(wb_link_write_in),  .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en wb_reg_write   (.q(wb_reg_write_out),   .d(wb_reg_write_in),   .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en wb_mem_to_reg  (.q(wb_mem_to_reg_out),  .d(wb_mem_to_reg_in),  .clk(clk), .reset(reset), .enable(enable));
+    D_FF_en wb_link_write  (.q(wb_link_write_out),  .d(wb_link_write_in),  .clk(clk), .reset(reset), .enable(enable));
 
 endmodule
