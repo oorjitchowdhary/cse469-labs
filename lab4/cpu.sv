@@ -11,14 +11,7 @@ module cpu (
     // stall signal from hazard unit (in ID)
     logic stall;
 
-    // pc_src 00: pc+4, 01: uncond branch, 10: cond branch, 11: reg
-    program_counter pc_inst (
-        .clk(clk), .reset(reset), .enable(~stall),
-        .reg_data(br_reg_data), // br_reg_data = Reg[Rd]
-        .se_shifted_brAddr(br_uncond_offset), // br_uncond_offset = SE(brAddr26) << 2
-        .se_shifted_condAddr(br_cond_offset), // br_cond_offset = SE(condAddr19) << 2
-        .pc_src(pc_src), .pc(curr_pc)
-    );
+    // pc module at the end
 
     // calculating pc+4 for WB stage
     logic [63:0] pc_plus4;
@@ -32,8 +25,12 @@ module cpu (
     logic [31:0] if_id_instruction;
     logic [63:0] if_id_pc_plus4;
 
+    logic branch_taken, flush;
+    assign branch_taken = (pc_src != 2'b00);
+    assign flush = branch_taken;
+
     if_id_pipeline_reg if_id_reg (
-        .clk(clk), .reset(reset), .enable(~stall), // TODO: stalling
+        .clk(clk), .reset(reset), .enable(~stall & ~branch_taken), // TODO: stalling
         .instr_in(instruction), .instr_out(if_id_instruction),
         .pc_plus4_in(pc_plus4), .pc_plus4_out(if_id_pc_plus4)
     );
@@ -83,7 +80,7 @@ module cpu (
     logic [63:0] reg1_data, reg2_data, reg_write_data;
 
     // populating br_reg_data for BR instruction
-    mux2_1_64bit br_reg_mux (.out(br_reg_data), .i0(64'd0), .i1(reg2_data), .sel(reg_branch));
+    mux2_1_64bit br_reg_mux (.out(br_reg_data), .i0(64'd0), .i1(reg1_data), .sel(reg_branch));
 
     // immediate = dAddr9 or imm12
     logic [63:0] se_immediate, se_dAddr, ze_imm12;
@@ -100,6 +97,7 @@ module cpu (
 
     // ID/EX pipeline register
     logic [63:0] id_ex_reg1_data, id_ex_reg2_data, id_ex_imm, id_ex_pc_plus4;
+    logic [63:0] id_ex_br_cond_offset, id_ex_br_uncond_offset, id_ex_br_reg_data;
     logic [4:0]  id_ex_rd;
     logic [2:0] id_ex_alu_op;
     logic id_ex_alu_src, id_ex_flag_write, id_ex_mem_read, id_ex_mem_write;
@@ -113,25 +111,26 @@ module cpu (
     logic link_write_stall, is_cbz_stall, is_blt_stall;
     logic [2:0] alu_op_stall;
     logic [63:0] reg1_stall, reg2_stall, imm_stall, pc_plus4_stall;
-    logic [4:0] rd_stall;
-    mux2_1        alu_src_mux         (.i0(1'b0),       .i1(alu_src),        .sel(~stall), .out(alu_src_stall));
-    mux2_1        flag_write_mux      (.i0(1'b0),       .i1(flag_write),     .sel(~stall), .out(flag_write_stall));
-    mux2_1        mem_read_mux        (.i0(1'b0),       .i1(mem_read),       .sel(~stall), .out(mem_read_stall));
-    mux2_1        mem_write_mux       (.i0(1'b0),       .i1(mem_write),      .sel(~stall), .out(mem_write_stall));
-    mux2_1        take_branch_mux     (.i0(1'b0),       .i1(take_branch),    .sel(~stall), .out(take_branch_stall));
-    mux2_1        uncond_branch_mux   (.i0(1'b0),       .i1(uncond_branch),  .sel(~stall), .out(uncond_branch_stall));
-    mux2_1        reg_branch_mux      (.i0(1'b0),       .i1(reg_branch),     .sel(~stall), .out(reg_branch_stall));
-    mux2_1        reg_write_mux       (.i0(1'b0),       .i1(reg_write),      .sel(~stall), .out(reg_write_stall));
-    mux2_1        mem_to_reg_mux      (.i0(1'b0),       .i1(mem_to_reg),     .sel(~stall), .out(mem_to_reg_stall));
-    mux2_1        link_write_mux      (.i0(1'b0),       .i1(link_write),     .sel(~stall), .out(link_write_stall));
-    mux2_1        is_cbz_mux          (.i0(1'b0),       .i1(is_cbz),         .sel(~stall), .out(is_cbz_stall));
-    mux2_1        is_blt_mux          (.i0(1'b0),       .i1(is_blt),         .sel(~stall), .out(is_blt_stall));
-    mux2_1_3bit   alu_op_mux          (.i0(3'b000),     .i1(alu_op),         .sel(~stall), .out(alu_op_stall));
-    mux2_1_5bit   rd_mux              (.i0(5'd0),       .i1(Rd),             .sel(~stall), .out(rd_stall));
-    mux2_1_64bit  reg1_mux            (.i0(64'd0),      .i1(reg1_data),      .sel(~stall), .out(reg1_stall));
-    mux2_1_64bit  reg2_mux            (.i0(64'd0),      .i1(reg2_data),      .sel(~stall), .out(reg2_stall));
-    mux2_1_64bit  imm_mux_stall       (.i0(64'd0),      .i1(se_immediate),   .sel(~stall), .out(imm_stall));
-    mux2_1_64bit  pc_plus4_mux        (.i0(64'd0),      .i1(if_id_pc_plus4), .sel(~stall), .out(pc_plus4_stall));
+    logic [4:0] rd_stall, rd_corrected;
+    assign rd_corrected = link_write ? 5'd30 : Rd;
+    mux2_1        alu_src_mux         (.i0(1'b0),       .i1(alu_src),        .sel(~stall & ~flush), .out(alu_src_stall));
+    mux2_1        flag_write_mux      (.i0(1'b0),       .i1(flag_write),     .sel(~stall & ~flush), .out(flag_write_stall));
+    mux2_1        mem_read_mux        (.i0(1'b0),       .i1(mem_read),       .sel(~stall & ~flush), .out(mem_read_stall));
+    mux2_1        mem_write_mux       (.i0(1'b0),       .i1(mem_write),      .sel(~stall & ~flush), .out(mem_write_stall));
+    mux2_1        take_branch_mux     (.i0(1'b0),       .i1(take_branch),    .sel(~stall & ~flush), .out(take_branch_stall));
+    mux2_1        uncond_branch_mux   (.i0(1'b0),       .i1(uncond_branch),  .sel(~stall & ~flush), .out(uncond_branch_stall));
+    mux2_1        reg_branch_mux      (.i0(1'b0),       .i1(reg_branch),     .sel(~stall & ~flush), .out(reg_branch_stall));
+    mux2_1        reg_write_mux       (.i0(1'b0),       .i1(reg_write),      .sel(~stall & ~flush), .out(reg_write_stall));
+    mux2_1        mem_to_reg_mux      (.i0(1'b0),       .i1(mem_to_reg),     .sel(~stall & ~flush), .out(mem_to_reg_stall));
+    mux2_1        link_write_mux      (.i0(1'b0),       .i1(link_write),     .sel(~stall & ~flush), .out(link_write_stall));
+    mux2_1        is_cbz_mux          (.i0(1'b0),       .i1(is_cbz),         .sel(~stall & ~flush), .out(is_cbz_stall));
+    mux2_1        is_blt_mux          (.i0(1'b0),       .i1(is_blt),         .sel(~stall & ~flush), .out(is_blt_stall));
+    mux2_1_3bit   alu_op_mux          (.i0(3'b000),     .i1(alu_op),         .sel(~stall & ~flush), .out(alu_op_stall));
+    mux2_1_5bit   rd_mux              (.i0(5'd0),       .i1(rd_corrected),   .sel(~stall & ~flush), .out(rd_stall));
+    mux2_1_64bit  reg1_mux            (.i0(64'd0),      .i1(reg1_data),      .sel(~stall & ~flush), .out(reg1_stall));
+    mux2_1_64bit  reg2_mux            (.i0(64'd0),      .i1(reg2_data),      .sel(~stall & ~flush), .out(reg2_stall));
+    mux2_1_64bit  imm_mux_stall       (.i0(64'd0),      .i1(se_immediate),   .sel(~stall & ~flush), .out(imm_stall));
+    mux2_1_64bit  pc_plus4_mux        (.i0(64'd0),      .i1(if_id_pc_plus4), .sel(~stall & ~flush), .out(pc_plus4_stall));
 
     id_ex_pipeline_reg id_ex_reg (
         .clk(clk), .reset(reset), .enable(~stall),
@@ -144,6 +143,9 @@ module cpu (
         .imm_in(imm_stall),         .imm_out(id_ex_imm),
         .rd_in(rd_stall),           .rd_out(id_ex_rd),
         .pc_plus4_in(pc_plus4_stall), .pc_plus4_out(id_ex_pc_plus4),
+        .br_cond_offset_in(br_cond_offset), .br_cond_offset_out(id_ex_br_cond_offset),
+        .br_uncond_offset_in(br_uncond_offset), .br_uncond_offset_out(id_ex_br_uncond_offset),
+        .br_reg_data_in(br_reg_data), .br_reg_data_out(id_ex_br_reg_data),
 
         // EX stage controls
         .ex_alu_op_in(alu_op_stall),        .ex_alu_op_out(id_ex_alu_op),
@@ -203,6 +205,7 @@ module cpu (
 
     // EX/MEM pipeline register
     logic [63:0] ex_mem_alu_result, ex_mem_reg2_data, ex_mem_pc_plus4;
+    logic [63:0] ex_mem_br_cond_offset, ex_mem_br_uncond_offset, ex_mem_br_reg_data;
     logic [4:0]  ex_mem_rd;
     logic ex_mem_branch_condition_met, ex_mem_mem_read, ex_mem_mem_write;
     logic ex_mem_take_branch, ex_mem_uncond_branch, ex_mem_reg_branch;
@@ -217,6 +220,9 @@ module cpu (
         .rd_in(id_ex_rd), .rd_out(ex_mem_rd),
         .branch_condition_met_in(branch_condition_met), .branch_condition_met_out(ex_mem_branch_condition_met),
         .pc_plus4_in(id_ex_pc_plus4), .pc_plus4_out(ex_mem_pc_plus4),
+        .br_cond_offset_in(id_ex_br_cond_offset), .br_cond_offset_out(ex_mem_br_cond_offset),
+        .br_uncond_offset_in(id_ex_br_uncond_offset), .br_uncond_offset_out(ex_mem_br_uncond_offset),
+        .br_reg_data_in(id_ex_br_reg_data), .br_reg_data_out(ex_mem_br_reg_data),
 
         // MEM stage controls
         .mem_mem_read_in(id_ex_mem_read),.mem_mem_read_out(ex_mem_mem_read),
@@ -331,9 +337,18 @@ module cpu (
         .ReadData2(reg2_data),            // used in ID
         .WriteRegister(mem_wb_rd),        // from WB
         .WriteData(reg_write_data),       // from WB, selected using mem_to_reg
-        .RegWrite(mem_wb_reg_write),      // from WB
+        .RegWrite(mem_wb_reg_write | mem_wb_link_write),      // from WB
         .reg_out(regs),
         .clk(clk), .reset(reset)
+    );
+
+    // pc_src 00: pc+4, 01: uncond branch, 10: cond branch, 11: reg
+    program_counter pc_inst (
+        .clk(clk), .reset(reset), .enable(~stall),
+        .reg_data(ex_mem_br_reg_data), // br_reg_data = Reg[Rd]
+        .se_shifted_brAddr(ex_mem_br_uncond_offset), // br_uncond_offset = SE(brAddr26) << 2
+        .se_shifted_condAddr(ex_mem_br_cond_offset), // br_cond_offset = SE(condAddr19) << 2
+        .pc_src(pc_src), .pc(curr_pc)
     );
 
 endmodule

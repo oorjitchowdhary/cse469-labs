@@ -11,11 +11,17 @@ module ex_mem_pipeline_reg (
     input  logic [4:0]  rd_in,
     input  logic        branch_condition_met_in,
     input  logic [63:0] pc_plus4_in,
+    input logic [63:0] br_cond_offset_in,
+    input logic [63:0] br_uncond_offset_in,
+    input logic [63:0] br_reg_data_in,
     output logic [63:0] alu_result_out,
     output logic [63:0] reg2_data_out,
     output logic [4:0]  rd_out,
     output logic        branch_condition_met_out,
     output logic [63:0] pc_plus4_out,
+    output logic [63:0] br_cond_offset_out,
+    output logic [63:0] br_uncond_offset_out,
+    output logic [63:0] br_reg_data_out,
 
     // MEM stage control signals I/O
     input  logic mem_mem_read_in,
@@ -44,6 +50,9 @@ module ex_mem_pipeline_reg (
     register_5bit  rd         (.q(rd_out),         .d(rd_in),         .clk(clk), .reset(reset), .enable(enable));
     D_FF_en  branch_cond(.q(branch_condition_met_out), .d(branch_condition_met_in), .clk(clk), .reset(reset), .enable(enable));
     register_64bit pc_plus4  (.q(pc_plus4_out), .d(pc_plus4_in), .clk(clk), .reset(reset), .enable(enable));
+    register_64bit br_cond_offset (.q(br_cond_offset_out), .d(br_cond_offset_in), .clk(clk), .reset(reset), .enable(enable));
+    register_64bit br_uncond_offset (.q(br_uncond_offset_out), .d(br_uncond_offset_in), .clk(clk), .reset(reset), .enable(enable));
+    register_64bit br_reg_data (.q(br_reg_data_out), .d(br_reg_data_in), .clk(clk), .reset(reset), .enable(enable));
 
     // MEM stage control signal registers
     D_FF_en mem_read     (.q(mem_mem_read_out),     .d(mem_mem_read_in),     .clk(clk), .reset(reset), .enable(enable));

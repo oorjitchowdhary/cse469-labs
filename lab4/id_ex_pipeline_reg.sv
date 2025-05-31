@@ -13,6 +13,9 @@ module id_ex_pipeline_reg (
     input  logic [63:0] imm_in,
     input  logic [4:0]  rd_in,
     input  logic [63:0] pc_plus4_in,
+    input logic [63:0] br_cond_offset_in,
+    input logic [63:0] br_uncond_offset_in,
+    input logic [63:0] br_reg_data_in,
     output logic [4:0] selected_r1_out,
     output logic [4:0] selected_r2_out,
     output logic [63:0] reg1_out,
@@ -20,6 +23,9 @@ module id_ex_pipeline_reg (
     output logic [63:0] imm_out,
     output logic [4:0]  rd_out,
     output logic [63:0] pc_plus4_out,
+    output logic [63:0] br_cond_offset_out,
+    output logic [63:0] br_uncond_offset_out,
+    output logic [63:0] br_reg_data_out,
 
     // EX stage control signals I/O
     input  logic [2:0] ex_alu_op_in,
@@ -62,6 +68,9 @@ module id_ex_pipeline_reg (
     register_64bit imm       (.q(imm_out),  .d(imm_in),       .clk(clk), .reset(reset), .enable(enable));
     register_5bit  rd        (.q(rd_out),   .d(rd_in),        .clk(clk), .reset(reset), .enable(enable));
     register_64bit pc_plus4  (.q(pc_plus4_out), .d(pc_plus4_in), .clk(clk), .reset(reset), .enable(enable));
+    register_64bit br_cond_offset (.q(br_cond_offset_out), .d(br_cond_offset_in), .clk(clk), .reset(reset), .enable(enable));
+    register_64bit br_uncond_offset (.q(br_uncond_offset_out), .d(br_uncond_offset_in), .clk(clk), .reset(reset), .enable(enable));
+    register_64bit br_reg_data (.q(br_reg_data_out), .d(br_reg_data_in), .clk(clk), .reset(reset), .enable(enable));
 
     // EX stage control signal registers
     register_3bit ex_alu_op    (.q(ex_alu_op_out),    .d(ex_alu_op_in),    .clk(clk), .reset(reset), .enable(enable));
