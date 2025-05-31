@@ -1,3 +1,5 @@
+`timescale 1ps/1ps
+
 module regfile (
   output logic [63:0] reg_out [31:0],
   output logic [63:0] ReadData1,
@@ -36,8 +38,9 @@ module regfile (
     end
   endgenerate
 
+  logic [63:0] read_raw1;
   mux32_1_64bit read_mux1 (
-    .out(ReadData1),
+    .out(read_raw1),
     .i0(reg_out[0]),  .i1(reg_out[1]),  .i2(reg_out[2]),  .i3(reg_out[3]),
     .i4(reg_out[4]),  .i5(reg_out[5]),  .i6(reg_out[6]),  .i7(reg_out[7]),
     .i8(reg_out[8]),  .i9(reg_out[9]),  .i10(reg_out[10]),.i11(reg_out[11]),
@@ -49,8 +52,9 @@ module regfile (
     .sel(ReadRegister1)
   );
 
+  logic [63:0] read_raw2;
   mux32_1_64bit read_mux2 (
-    .out(ReadData2),
+    .out(read_raw2),
     .i0(reg_out[0]),  .i1(reg_out[1]),  .i2(reg_out[2]),  .i3(reg_out[3]),
     .i4(reg_out[4]),  .i5(reg_out[5]),  .i6(reg_out[6]),  .i7(reg_out[7]),
     .i8(reg_out[8]),  .i9(reg_out[9]),  .i10(reg_out[10]),.i11(reg_out[11]),
@@ -61,5 +65,25 @@ module regfile (
     .i28(reg_out[28]),.i29(reg_out[29]),.i30(reg_out[30]),.i31(reg_out[31]),
     .sel(ReadRegister2)
   );
+
+  // synchronization logic for read-after-write hazard prevention
+  logic wr_eq_rd1, wr_eq_rd2, is_xzr, not_xzr;
+  logic bypass1, bypass2;
+
+  // check if WriteRegister == ReadRegister
+  comparator_5bit cmp_wr_rd1 (.a(WriteRegister), .b(ReadRegister1), .equal(wr_eq_rd1));
+  comparator_5bit cmp_wr_rd2 (.a(WriteRegister), .b(ReadRegister2), .equal(wr_eq_rd2));
+
+  // don't bypass if WriteRegister is XZR
+  comparator_5bit cmp_wr_xzr (.a(WriteRegister), .b(5'd31), .equal(is_xzr));
+  not #50 inv_xzr (not_xzr, is_xzr);
+
+  // bypass = RegWrite & match (WriteRegister != 31)
+  and #50 by1 (bypass1, RegWrite, wr_eq_rd1, not_xzr);
+  and #50 by2 (bypass2, RegWrite, wr_eq_rd2, not_xzr);
+
+  // if bypass, use data just written. else, use array value
+  mux2_1_64bit bypass_mux1 (.out(ReadData1), .i0(read_raw1), .i1(WriteData), .sel(bypass1));
+  mux2_1_64bit bypass_mux2 (.out(ReadData2), .i0(read_raw2), .i1(WriteData), .sel(bypass2));
 
 endmodule

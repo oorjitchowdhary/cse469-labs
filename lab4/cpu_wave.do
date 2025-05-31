@@ -27,23 +27,27 @@ add wave -noupdate -group {control unit} /cpustim/DUT/cu_inst/reg_branch
 add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/clk
 add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/reset
 add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/enable
-add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/instr_in
-add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/pc_plus4_in
-add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/instr_out
-add wave -noupdate -group {IF/ID reg} /cpustim/DUT/if_id_reg/pc_plus4_out
+add wave -noupdate -group {IF/ID reg} -radix hexadecimal /cpustim/DUT/if_id_reg/instr_in
+add wave -noupdate -group {IF/ID reg} -radix unsigned /cpustim/DUT/if_id_reg/pc_plus4_in
+add wave -noupdate -group {IF/ID reg} -radix hexadecimal /cpustim/DUT/if_id_reg/instr_out
+add wave -noupdate -group {IF/ID reg} -radix unsigned /cpustim/DUT/if_id_reg/pc_plus4_out
 add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/clk
 add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/reset
 add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/enable
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/reg1_in
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/reg2_in
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/imm_in
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/rd_in
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/pc_plus4_in
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/reg1_out
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/reg2_out
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/imm_out
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/rd_out
-add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/pc_plus4_out
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/selected_r1_in
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/selected_r2_in
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/reg1_in
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/reg2_in
+add wave -noupdate -group {ID/EX reg} -radix decimal /cpustim/DUT/id_ex_reg/imm_in
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/rd_in
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/pc_plus4_in
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/selected_r1_out
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/selected_r2_out
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/reg1_out
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/reg2_out
+add wave -noupdate -group {ID/EX reg} -radix decimal /cpustim/DUT/id_ex_reg/imm_out
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/rd_out
+add wave -noupdate -group {ID/EX reg} -radix unsigned /cpustim/DUT/id_ex_reg/pc_plus4_out
 add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/ex_alu_op_in
 add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/ex_alu_src_in
 add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/ex_flag_write_in
@@ -73,16 +77,16 @@ add wave -noupdate -group {ID/EX reg} /cpustim/DUT/id_ex_reg/wb_link_write_out
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/clk
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/reset
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/enable
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/alu_result_in
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/reg2_data_in
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/rd_in
+add wave -noupdate -group {EX/MEM reg} -radix decimal /cpustim/DUT/ex_mem_reg/alu_result_in
+add wave -noupdate -group {EX/MEM reg} -radix unsigned /cpustim/DUT/ex_mem_reg/reg2_data_in
+add wave -noupdate -group {EX/MEM reg} -radix unsigned /cpustim/DUT/ex_mem_reg/rd_in
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/branch_condition_met_in
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/pc_plus4_in
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/alu_result_out
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/reg2_data_out
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/rd_out
+add wave -noupdate -group {EX/MEM reg} -radix unsigned /cpustim/DUT/ex_mem_reg/pc_plus4_in
+add wave -noupdate -group {EX/MEM reg} -radix decimal /cpustim/DUT/ex_mem_reg/alu_result_out
+add wave -noupdate -group {EX/MEM reg} -radix unsigned /cpustim/DUT/ex_mem_reg/reg2_data_out
+add wave -noupdate -group {EX/MEM reg} -radix unsigned /cpustim/DUT/ex_mem_reg/rd_out
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/branch_condition_met_out
-add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/pc_plus4_out
+add wave -noupdate -group {EX/MEM reg} -radix unsigned /cpustim/DUT/ex_mem_reg/pc_plus4_out
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/mem_mem_read_in
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/mem_mem_write_in
 add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/mem_take_branch_in
@@ -102,25 +106,46 @@ add wave -noupdate -group {EX/MEM reg} /cpustim/DUT/ex_mem_reg/wb_link_write_out
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/clk
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/reset
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/enable
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/alu_result_in
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/alu_result_in
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/mem_data_in
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/pc_plus4_in
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/rd_in
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/alu_result_out
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/mem_data_out
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/rd_out
-add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/pc_plus4_out
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/pc_plus4_in
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/rd_in
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/alu_result_out
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/mem_data_out
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/rd_out
+add wave -noupdate -group {MEM/WB reg} -radix unsigned /cpustim/DUT/mem_wb_reg/pc_plus4_out
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/wb_reg_write_in
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/wb_mem_to_reg_in
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/wb_link_write_in
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/wb_reg_write_out
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/wb_mem_to_reg_out
 add wave -noupdate -group {MEM/WB reg} /cpustim/DUT/mem_wb_reg/wb_link_write_out
+add wave -noupdate -group {forwarding unit} -radix unsigned /cpustim/DUT/fwd_unit/id_ex_rn
+add wave -noupdate -group {forwarding unit} -radix unsigned /cpustim/DUT/fwd_unit/id_ex_rm
+add wave -noupdate -group {forwarding unit} -radix unsigned /cpustim/DUT/fwd_unit/ex_mem_rd
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/ex_mem_reg_write
+add wave -noupdate -group {forwarding unit} -radix unsigned /cpustim/DUT/fwd_unit/mem_wb_rd
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/mem_wb_reg_write
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/forwardA
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/forwardB
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/ex_mem_rn_equal
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/ex_mem_rm_equal
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/mem_wb_rn_equal
+add wave -noupdate -group {forwarding unit} /cpustim/DUT/fwd_unit/mem_wb_rm_equal
+add wave -noupdate -group {hazard unit} -radix unsigned /cpustim/DUT/hazard_unit/id_ex_rd
+add wave -noupdate -group {hazard unit} /cpustim/DUT/hazard_unit/id_ex_mem_read
+add wave -noupdate -group {hazard unit} -radix unsigned /cpustim/DUT/hazard_unit/if_id_r1
+add wave -noupdate -group {hazard unit} -radix unsigned /cpustim/DUT/hazard_unit/if_id_r2
+add wave -noupdate -group {hazard unit} /cpustim/DUT/hazard_unit/stall
+add wave -noupdate -group {hazard unit} /cpustim/DUT/hazard_unit/match_r1
+add wave -noupdate -group {hazard unit} /cpustim/DUT/hazard_unit/match_r2
+add wave -noupdate -group {hazard unit} /cpustim/DUT/hazard_unit/hazard_on_r1
+add wave -noupdate -group {hazard unit} /cpustim/DUT/hazard_unit/hazard_on_r2
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {353846 ps} 0}
+WaveRestoreCursors {{Cursor 1} {354475 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
-configure wave -valuecolwidth 100
+configure wave -valuecolwidth 160
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
 configure wave -snapdistance 10
@@ -133,4 +158,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {428324 ps}
+WaveRestoreZoom {211640 ps} {584577 ps}

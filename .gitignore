@@ -17,3 +17,4 @@ work/
 # Ignore ModelSim files
 transcript
 vsim.wlf
+wlf*

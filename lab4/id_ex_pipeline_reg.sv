@@ -6,11 +6,15 @@ module id_ex_pipeline_reg (
     input  logic enable,
 
     // data I/O
+    input logic [4:0] selected_r1_in,
+    input logic [4:0] selected_r2_in,
     input  logic [63:0] reg1_in,
     input  logic [63:0] reg2_in,
     input  logic [63:0] imm_in,
     input  logic [4:0]  rd_in,
     input  logic [63:0] pc_plus4_in,
+    output logic [4:0] selected_r1_out,
+    output logic [4:0] selected_r2_out,
     output logic [63:0] reg1_out,
     output logic [63:0] reg2_out,
     output logic [63:0] imm_out,
@@ -51,6 +55,8 @@ module id_ex_pipeline_reg (
 );
 
     // data registers
+    register_5bit  selected_r1 (.q(selected_r1_out), .d(selected_r1_in), .clk(clk), .reset(reset), .enable(enable));
+    register_5bit  selected_r2 (.q(selected_r2_out), .d(selected_r2_in), .clk(clk), .reset(reset), .enable(enable));
     register_64bit reg1      (.q(reg1_out), .d(reg1_in),      .clk(clk), .reset(reset), .enable(enable));
     register_64bit reg2      (.q(reg2_out), .d(reg2_in),      .clk(clk), .reset(reset), .enable(enable));
     register_64bit imm       (.q(imm_out),  .d(imm_in),       .clk(clk), .reset(reset), .enable(enable));
